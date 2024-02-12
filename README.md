@@ -27,7 +27,7 @@ To initialize the app, follow the steps outlined in the ReadMe in the Backend an
 - [@AnaBelenBernardez](https://github.com/AnaBelenBernardez)
 - [@AyozeJesus](https://github.com/AyozeJesus)
 
-- Wirefrime by: [@Edu0ff](https://github.com/Edu0ff)
+- Wireframe by [@Edu0ff](https://github.com/Edu0ff)
 
 ## 💻 Tech Stack
 
