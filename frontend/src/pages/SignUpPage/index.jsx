@@ -43,12 +43,12 @@ function SignUpPage() {
       return;
     }
 
-    if (!passwordRegex.test(pass1)) {
-      toast.error(
-        "Password must be at least 8 characters long and contain at least one letter, one number, and one special character."
-      );
-      return;
-    }
+    // if (!passwordRegex.test(pass1)) {
+    //   toast.error(
+    //     "Password must be at least 8 characters long and contain at least one letter, one number, and one special character."
+    //   );
+    //   return;
+    // }
 
     if (pass1 !== pass2) {
       toast.error(

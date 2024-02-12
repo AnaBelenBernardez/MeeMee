@@ -17,13 +17,6 @@ const Footer = () => {
       </div>
       <div className="footer-socials">
         <a
-          href="mailto:contact@meemee.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="../icons\mail.svg" alt="mail" />
-        </a>
-        <a
           href="https://www.tiktok.com/"
           target="_blank"
           rel="noopener noreferrer"

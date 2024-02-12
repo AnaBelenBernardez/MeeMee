@@ -77,7 +77,7 @@
 
 .landing-bottom {
   background-image: url(/img/suminagashi.svg);
-  background-size: contain;
+  background-size: cover;
   background-color: var(--lavender-ish);
   background-attachment: fixed;
 }
