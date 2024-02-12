@@ -31,4 +31,6 @@ To initialize the app, follow the steps outlined in the ReadMe in the Backend an
 
 ## 💻 Tech Stack
 
-[![Our Skills](https://skillicons.dev/icons?i=figma,ps,js,html,css,mysql,nodejs,postman,react,github,git,vscode)](https://skillicons.dev)
+<p align="center">
+    <img src="https://skillicons.dev/icons?i=figma,ps,js,html,css,mysql,nodejs,postman,react,github,git,vscode&theme=light" />
+</p>
