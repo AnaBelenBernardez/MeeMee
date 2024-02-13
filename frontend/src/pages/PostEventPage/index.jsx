@@ -27,6 +27,9 @@ function PostEventPage() {
 
   const [loading, setLoading] = useState(false);
   const [descriptionLength, setDescriptionLength] = useState(0);
+  const [previewImage, setPreviewImage] = useState(null);
+  const [eventCreated, setEventCreated] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -95,9 +98,9 @@ function PostEventPage() {
       await createMeetup(Object.fromEntries(meetupData.entries()), token);
 
       resetForm();
-      navigate("/");
+      setEventCreated(true);
+      setShowConfirmation(true);
     } catch (error) {
-      console.error("Error creating meetup:", error);
       alert("Error creating meetup. Please try again later.");
     } finally {
       setLoading(false);
@@ -119,10 +122,21 @@ function PostEventPage() {
   };
 
   const handlePictureChange = (e) => {
+    const selectedFile = e.target.files[0];
     setFormData({
       ...formData,
-      picture: e.target.files[0],
+      picture: selectedFile,
     });
+
+    if (selectedFile) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setPreviewImage(reader.result);
+      };
+      reader.readAsDataURL(selectedFile);
+    } else {
+      setPreviewImage(null);
+    }
   };
 
   const validateForm = () => {
@@ -183,6 +197,17 @@ function PostEventPage() {
       toast.error("Time is required");
     }
 
+    if (formData.date && formData.time) {
+      const selectedDateTime = new Date(formData.date);
+      const now = new Date();
+      const minimumDateTime = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+
+      if (selectedDateTime < minimumDateTime) {
+        errors.date = "The event must be at least 24 hours from now";
+        toast.error("The event must be at least 24 hours from now");
+      }
+    }
+
     setFormErrors(errors);
 
     return Object.keys(errors).length === 0;
@@ -196,6 +221,22 @@ function PostEventPage() {
     }
   };
 
+  useEffect(() => {
+    if (eventCreated) {
+      setShowConfirmation(true);
+    }
+  }, [eventCreated]);
+
+  const handleConfirmationAccept = () => {
+    setShowConfirmation(false);
+    navigate(`/events/${eventCreated}`);
+  };
+
+  const handleConfirmationClose = () => {
+    setShowConfirmation(false);
+    navigate("/");
+  };
+
   return (
     <main className="postevent-page">
       {loading ? (
@@ -206,6 +247,24 @@ function PostEventPage() {
             <h1 className="postevent-title">Event Details</h1>
           </div>
           <div className="formevent-container">
+            {showConfirmation && (
+              <>
+                <div className="overlay"></div>
+                <div className="confirmation-box">
+                  <p className="no-attendees">Event created successfully!</p>
+                  {/* <div className="button-container"> */}
+                  {/* <button onClick={handleConfirmationAccept}>Accept</button> */}
+                  <button id="close-box" onClick={handleConfirmationClose}>
+                    <img
+                      src="../icons/cross.svg"
+                      alt="Close button"
+                      id="close-img"
+                    />
+                  </button>
+                  {/* </div> */}
+                </div>
+              </>
+            )}
             <form onSubmit={handleSubmit} autoComplete="off">
               <input
                 type="text"
@@ -239,9 +298,13 @@ function PostEventPage() {
 
                 <label htmlFor="customFileInput">
                   Select a file for your event photo
-                  <img src="../../icons/upload.svg" alt="upload image icon" />
+                  <img
+                    src={previewImage ? previewImage : "../../icons/upload.svg"}
+                    alt="upload image icon"
+                  />
                 </label>
               </div>
+
               <div className="custom-select">
                 <select
                   className="select-box"

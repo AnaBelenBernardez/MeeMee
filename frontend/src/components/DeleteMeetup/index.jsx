@@ -9,6 +9,7 @@ const DeleteMeetup = ({ meetupId, isOrganizer, onDeleteMeetup }) => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [confirmDelete, setConfirmDelete] = useState(false);
 
   const handleDeleteMeetup = async () => {
     try {
@@ -22,21 +23,51 @@ const DeleteMeetup = ({ meetupId, isOrganizer, onDeleteMeetup }) => {
     }
   };
 
+  const handleConfirmDelete = () => {
+    setConfirmDelete(true);
+  };
+
+  const handleCancelDelete = () => {
+    setConfirmDelete(false);
+  };
+
   return (
     <div>
       {isOrganizer && (
-        <button
-          id="button-deletemeetup"
-          onClick={handleDeleteMeetup}
-          disabled={loading}
-        >
-          <img
-            className="event-icon"
-            src="../../icons/cross.svg"
-            alt="delete event"
-          />
-          Delete event
-        </button>
+        <div>
+          {!confirmDelete && (
+            <button
+              id="button-deletemeetup"
+              onClick={handleConfirmDelete}
+              disabled={loading}
+            >
+              <img
+                className="event-icon"
+                src="../../icons/cross.svg"
+                alt="delete event"
+              />
+              Delete event
+            </button>
+          )}
+          {confirmDelete && (
+            <>
+              <div className="overlay"></div>
+              <div className="confirmation-box">
+                <p className="no-attendees">
+                  Are you sure you want to delete this event?
+                </p>
+                <div className="button-container">
+                  <button id="delete-yes" onClick={handleDeleteMeetup}>
+                    Yes
+                  </button>
+                  <button id="delete-no" onClick={handleCancelDelete}>
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </>
+          )}
+        </div>
       )}
     </div>
   );

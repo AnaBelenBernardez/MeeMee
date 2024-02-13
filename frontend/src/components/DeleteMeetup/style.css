@@ -20,3 +20,37 @@
 #button-deletemeetup:hover {
   background-color: rgb(255, 72, 72);
 }
+
+.confirmation-box {
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-container {
+  margin-top: 2rem;
+}
+
+#delete-yes,
+#delete-no {
+  font-family: "IBM Plex Mono", monospace;
+  height: 3rem;
+  width: 8rem;
+  border: 2px solid var(--text);
+  box-shadow: -3px 3px 0 1px rgba(24, 3, 37);
+  background-color: var(--secondary);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#delete-yes {
+  margin-right: 3rem;
+  background-color: rgb(255, 72, 72);
+}
+
+#delete-yes:hover {
+  background-color: var(--yellow-ish);
+}
+
+#delete-no:hover {
+  background-color: var(--yellow-ish);
+}

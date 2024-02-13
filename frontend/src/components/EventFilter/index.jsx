@@ -6,6 +6,7 @@ function EventFilter({ locations, onFilterChange }) {
 
   const handleLocationChange = (event) => {
     const location = event.target.value;
+    setSelectedLocation(location);
     const formattedLocation = formatLocation(location);
     onFilterChange(formattedLocation);
   };

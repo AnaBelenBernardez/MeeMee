@@ -58,7 +58,6 @@ function EventPage() {
         attendees_count: attendeesData.length,
       }));
     } catch (error) {
-      console.error("Error fetching attendees:", error);
     } finally {
       setUpdatingAttendees(false);
     }
@@ -129,7 +128,7 @@ function EventPage() {
           attendees_count: attendeesData.length,
         }));
       } catch (error) {
-        console.error("Error fetching attendees:", error);
+        // console.error("Error fetching attendees:", error);
       } finally {
         setUpdatingAttendees(false);
       }

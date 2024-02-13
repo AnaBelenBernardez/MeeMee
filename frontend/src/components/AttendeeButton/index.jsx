@@ -9,6 +9,7 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [isAttendee, setIsAttendee] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   useEffect(() => {
     const checkAttendeeStatus = async () => {
@@ -43,14 +44,12 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
       setLoading(true);
       setError(null);
 
-      if (isAttendee) {
-        await deleteAttendeeService({ meetupId, userId, token });
-      } else {
+      if (!isAttendee) {
         await createAttendeeService({ meetupId, userId, token });
+        setIsAttendee(true);
+      } else {
+        setShowConfirmation(true);
       }
-
-      console.log("Attendance action successfully executed");
-      setIsAttendee(!isAttendee);
       updateAttendees();
     } catch (error) {
       console.error("Error during attendance action:", error.message);
@@ -58,6 +57,26 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleDeleteMeetup = async () => {
+    setShowConfirmation(false);
+    try {
+      setLoading(true);
+      setError(null);
+      await deleteAttendeeService({ meetupId, userId, token });
+      setIsAttendee(false);
+      updateAttendees();
+    } catch (error) {
+      console.error("Error during attendance cancellation:", error.message);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleCancelDelete = () => {
+    setShowConfirmation(false);
   };
 
   return (
@@ -75,6 +94,25 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
         />
         {isAttendee ? "I changed my mind" : "Sign me up!"}
       </button>
+
+      {showConfirmation && (
+        <>
+          <div className="overlay"></div>
+          <div className="confirmation-box">
+            <p className="no-attendees">
+              Are you sure you no longer want to attend this event?
+            </p>
+            <div className="button-container">
+              <button id="delete-yes" onClick={handleDeleteMeetup}>
+                Yes
+              </button>
+              <button id="delete-no" onClick={handleCancelDelete}>
+                Cancel
+              </button>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };
