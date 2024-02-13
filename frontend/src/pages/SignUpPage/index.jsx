@@ -111,7 +111,7 @@ function SignUpPage() {
                   type="text"
                   id="username"
                   name="username"
-                  placeholder="nickname"
+                  placeholder="Nickname"
                   onChange={(e) => setUsername(e.target.value)}
                 />
               </li>
@@ -121,7 +121,7 @@ function SignUpPage() {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="email"
+                  placeholder="Email"
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </li>
@@ -133,7 +133,7 @@ function SignUpPage() {
                     type={showPassword ? "text" : "password"}
                     id="pass1"
                     name="pass1"
-                    placeholder="password"
+                    placeholder="Password"
                     onChange={(e) => setPass1(e.target.value)}
                   />
                   {showPassword ? (
@@ -160,7 +160,7 @@ function SignUpPage() {
                   type={showPassword ? "text" : "password"}
                   id="pass2"
                   name="pass2"
-                  placeholder="repeat password"
+                  placeholder="Repeat password"
                   onChange={(e) => setPass2(e.target.value)}
                 />
               </li>
@@ -171,7 +171,7 @@ function SignUpPage() {
                   name="bio"
                   value={bio}
                   onChange={handleBioChange}
-                  placeholder="tell the world a little about you_"
+                  placeholder="Tell the world a little about you_"
                   maxLength={255}
                 />
                 <div className="character-count">{`${characterCount}/255`}</div>

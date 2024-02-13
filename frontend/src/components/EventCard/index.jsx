@@ -53,6 +53,14 @@ function EventCard({ meetup }) {
     ? format(new Date(`2022-01-01 ${meetup.time}`), "HH:mm")
     : "";
 
+  const formatLocation = (location) => {
+    return location
+      .toLowerCase()
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  };
+
   return (
     <Link to={`/event/${meetup.id}`} style={{ textDecoration: "none" }}>
       <div className="event-card">
@@ -80,7 +88,7 @@ function EventCard({ meetup }) {
                 src="icons/location.svg"
                 alt="Location"
               />
-              {meetup.location}
+              {formatLocation(meetup.location)}
             </p>
             <h1 className="eventcard-title">{meetup.title}</h1>
             <p className="eventcard-theme">{meetup.theme}</p>

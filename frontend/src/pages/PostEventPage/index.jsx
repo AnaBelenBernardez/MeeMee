@@ -212,7 +212,7 @@ function PostEventPage() {
                 className="input-reg"
                 id="title"
                 name="title"
-                placeholder="title"
+                placeholder="Title"
                 value={formData.title}
                 onChange={handleInputChange}
               />
@@ -222,7 +222,7 @@ function PostEventPage() {
                   name="description"
                   value={formData.description}
                   onChange={handleInputChange}
-                  placeholder="description"
+                  placeholder="Description"
                   maxLength={255}
                 />
                 <div className="description-count">{descriptionLength}/255</div>
@@ -238,7 +238,7 @@ function PostEventPage() {
                 />
 
                 <label htmlFor="customFileInput">
-                  select a file for your event photo
+                  Select a file for your event photo
                   <img src="../../icons/upload.svg" alt="upload image icon" />
                 </label>
               </div>
@@ -250,7 +250,7 @@ function PostEventPage() {
                   value={formData.theme}
                   onChange={handleInputChange}
                 >
-                  <option value="">category</option>
+                  <option value="">Category</option>
                   <option value="Social Events">Social Events</option>
                   <option value="Art and Culture">Art and Culture</option>
                   <option value="Videogames">Videogames</option>

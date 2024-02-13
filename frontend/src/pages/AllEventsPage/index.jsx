@@ -38,9 +38,7 @@ function AllEventsPage() {
     .filter((meetup) => new Date(meetup.date) > now)
     .filter((meetup) => !selectedCategory || meetup.theme === selectedCategory)
     .filter(
-      (meetup) =>
-        !selectedLocation ||
-        meetup.location.toLowerCase() === selectedLocation.toLowerCase()
+      (meetup) => !selectedLocation || meetup.location === selectedLocation
     )
     .sort((a, b) => new Date(a.date) - new Date(b.date));
 
@@ -49,7 +47,12 @@ function AllEventsPage() {
   };
 
   const handleLocationChange = (location) => {
-    setSelectedLocation(location);
+    const formattedLocation = location
+      .toLowerCase()
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+    setSelectedLocation(formattedLocation);
   };
 
   return (
@@ -81,9 +84,7 @@ function AllEventsPage() {
 }
 
 const getUniqueLocations = (meetups) => {
-  const locationsSet = new Set(
-    meetups.map((meetup) => meetup.location.toLowerCase())
-  );
+  const locationsSet = new Set(meetups.map((meetup) => meetup.location));
   return Array.from(locationsSet);
 };
 

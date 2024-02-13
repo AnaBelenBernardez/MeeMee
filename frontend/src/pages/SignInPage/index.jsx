@@ -102,7 +102,7 @@ function SignInPage() {
                 type="email"
                 id="email"
                 name="email"
-                placeholder="email"
+                placeholder="Email"
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
@@ -112,7 +112,7 @@ function SignInPage() {
                 type={showPassword ? "text" : "password"}
                 id="password"
                 name="password"
-                placeholder="password"
+                placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
                 onKeyPress={handleKeyPress}
               />

@@ -5,9 +5,17 @@ function EventFilter({ locations, onFilterChange }) {
   const [selectedLocation, setSelectedLocation] = useState("");
 
   const handleLocationChange = (event) => {
-    const newLocation = event.target.value;
-    setSelectedLocation(newLocation);
-    onFilterChange(newLocation);
+    const location = event.target.value;
+    const formattedLocation = formatLocation(location);
+    onFilterChange(formattedLocation);
+  };
+
+  const formatLocation = (location) => {
+    return location
+      .toLowerCase()
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
   };
 
   return (
@@ -19,12 +27,12 @@ function EventFilter({ locations, onFilterChange }) {
         onChange={handleLocationChange}
       >
         <option value="" disabled>
-          Search by city_
+          Search by city
         </option>
         <option value="">All cities</option>
         {locations.map((location) => (
           <option key={location} value={location}>
-            {location}
+            {formatLocation(location)}
           </option>
         ))}
       </select>
