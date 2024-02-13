@@ -18,7 +18,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: 4rem;
+  margin-bottom: 2rem;
   padding: 2rem;
+  position: relative;
 }
 
 #no-events {
@@ -30,6 +32,21 @@
   margin: 0;
   font-family: "IBM Plex Mono", monospace;
   z-index: 1;
+}
+
+#loadmore {
+  position: absolute;
+  font-family: "IBM Plex Mono", monospace;
+  height: 3rem;
+  width: 17rem;
+  border: 2px solid var(--text);
+  box-shadow: -3px 3px 0 1px rgba(24, 3, 37);
+  background-color: var(--secondary);
+  font-size: 20px;
+  cursor: pointer;
+  bottom: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media (max-width: 900px) {
