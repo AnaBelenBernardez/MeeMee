@@ -3,8 +3,16 @@
 }
 
 .home-link {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: var(--text);
+}
+
+.home-link > img {
+  width: 2rem;
+  height: auto;
+  margin-right: 1rem;
 }
 
 .home-link:hover {

@@ -6,6 +6,7 @@ function HomeButton() {
   return (
     <div className="home-button">
       <NavLink to="/" className="home-link">
+        <img src="/icons/logo.svg" alt="Home Button" />
         MeeMee
       </NavLink>
     </div>

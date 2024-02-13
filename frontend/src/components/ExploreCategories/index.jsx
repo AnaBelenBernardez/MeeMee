@@ -14,6 +14,8 @@ function ExploreCategories({ onCategoryChange }) {
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] =
+    useState("Explore Categories");
 
   const handleMouseEnter = () => {
     setIsMenuOpen(true);
@@ -24,6 +26,7 @@ function ExploreCategories({ onCategoryChange }) {
   };
 
   const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
     onCategoryChange(category === "All Categories" ? null : category);
     setIsMenuOpen(false);
   };
@@ -35,7 +38,7 @@ function ExploreCategories({ onCategoryChange }) {
       onMouseLeave={handleMouseLeave}
     >
       <BlackArrow id="explore-arrow" />
-      <h2>Explore Categories</h2>
+      <h2>{selectedCategory}</h2>
 
       {isMenuOpen && (
         <div className="category-menu">
