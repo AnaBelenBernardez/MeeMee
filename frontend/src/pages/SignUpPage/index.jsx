@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { registerUserService, loginUserService } from "../../services/index.js";
-import toast from "react-hot-toast";
 import { AuthContext } from "../../context/AuthContext.jsx";
 import ArrowButton from "../../components/ArrowButton";
 import Loading from "../../components/Loading";
@@ -18,6 +17,7 @@ function SignUpPage() {
   const [bio, setBio] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
 
   const handleBioChange = (event) => {
     const newBio = event.target.value.slice(0, 255);
@@ -33,27 +33,29 @@ function SignUpPage() {
   const handleForm = async (e) => {
     e.preventDefault();
 
-    const usernameRegex = /^[a-zA-Z0-9_-]{4,20}$/;
-    const passwordRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
+    const usernameRegex = /^[a-zA-Z0-9_.-]{4,20}$/;
+    const passwordRegex =
+      /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*_\-\.])(?=.{8,})/;
+    const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+
+    const errors = {};
 
     if (!usernameRegex.test(username)) {
-      toast.error(
-        "Username must be between 4 and 20 characters and can only contain letters, numbers, underscores, and hyphens."
-      );
-      return;
+      errors.username = "Nickname must be between 4 and 20 characters.";
     }
 
-    // if (!passwordRegex.test(pass1)) {
-    //   toast.error(
-    //     "Password must be at least 8 characters long and contain at least one letter, one number, and one special character."
-    //   );
-    //   return;
-    // }
+    if (!emailRegex.test(email)) {
+      errors.email = "Please enter a valid email.";
+    }
+    if (!passwordRegex.test(pass1)) {
+      errors.pass1 =
+        "Password must be at least 8 characters long and include at least one letter, one number, and one special character.";
+    } else if (pass1 !== pass2) {
+      errors.pass2 = "Passwords do not match.";
+    }
 
-    if (pass1 !== pass2) {
-      toast.error(
-        "Passwords do not match. Make sure to enter the same password in both fields."
-      );
+    setFormErrors(errors);
+    if (Object.keys(errors).length > 0) {
       return;
     }
 
@@ -67,7 +69,7 @@ function SignUpPage() {
       });
 
       if (response.error) {
-        toast.error(response.error);
+        setError(response.error);
         return;
       }
 
@@ -79,15 +81,23 @@ function SignUpPage() {
       navigate(`/`);
     } catch (error) {
       if (error.response && error.response.status === 409) {
-        toast.error("Username or email is already in use.");
+        setError("Username or email is already in use.");
       } else {
-        toast.error("Error during registration. Please try again later.");
+        setError("Error during registration. Please try again later.");
       }
     } finally {
       setTimeout(() => {
         setLoading(false);
       }, 400);
     }
+  };
+
+  const errorMessages = {
+    username: formErrors.username,
+    email: formErrors.email,
+    pass1: formErrors.pass1,
+    pass2: formErrors.pass2,
+    bio: formErrors.bio,
   };
 
   return (
@@ -103,7 +113,7 @@ function SignUpPage() {
               Sign In
             </Link>
           </div>
-          <form onSubmit={handleForm} autoComplete="off">
+          <form onSubmit={handleForm} autoComplete="off" noValidate>
             <ul>
               <li className="form-group">
                 <input
@@ -114,6 +124,9 @@ function SignUpPage() {
                   placeholder="Nickname"
                   onChange={(e) => setUsername(e.target.value)}
                 />
+                {formErrors.username && (
+                  <div className="error-message">{formErrors.username}</div>
+                )}
               </li>
               <li className="form-group">
                 <input
@@ -124,6 +137,9 @@ function SignUpPage() {
                   placeholder="Email"
                   onChange={(e) => setEmail(e.target.value)}
                 />
+                {formErrors.email && (
+                  <div className="error-message">{formErrors.email}</div>
+                )}
               </li>
               <li className="form-group">
                 <div id="signup-password">
@@ -163,15 +179,21 @@ function SignUpPage() {
                   placeholder="Repeat password"
                   onChange={(e) => setPass2(e.target.value)}
                 />
+                {formErrors.pass1 && (
+                  <div className="error-message">{formErrors.pass1}</div>
+                )}
+                {formErrors.pass2 && (
+                  <div className="error-message">{formErrors.pass2}</div>
+                )}
               </li>
-              <li className="form-group">
+              <li className="form-group" id="form-bio">
                 <textarea
                   className="input-reg"
                   id="bio"
                   name="bio"
                   value={bio}
                   onChange={handleBioChange}
-                  placeholder="Tell the world a little about you_"
+                  placeholder="Tell the world a little about you"
                   maxLength={255}
                 />
                 <div className="character-count">{`${characterCount}/255`}</div>

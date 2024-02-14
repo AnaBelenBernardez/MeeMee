@@ -45,6 +45,10 @@
   padding: 2rem;
 }
 
+.description-group {
+  position: relative;
+}
+
 .description-group > textarea {
   background-color: var(--lavender-ish);
   border-bottom: none;
@@ -68,7 +72,6 @@
   width: 10rem;
   resize: none;
   font-family: "IBM Plex Mono", monospace;
-  margin-bottom: 1rem;
   padding: 0.3rem;
 }
 
@@ -83,7 +86,6 @@
   resize: none;
   color: #757b8b;
   font-family: "IBM Plex Mono", monospace;
-  margin-bottom: 2rem;
   margin-top: 2rem;
 }
 
@@ -96,7 +98,7 @@
 
 #address,
 #location {
-  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 .custom-file-input {
@@ -113,6 +115,7 @@
   width: 50%;
   position: relative;
   padding: 0.3rem;
+  margin-top: 2rem;
 }
 
 .custom-file-input label {
@@ -133,16 +136,33 @@
   margin-right: 0.5rem;
 }
 
+#time,
+#date {
+  margin-top: 2rem;
+}
+
+.error-message {
+  position: absolute;
+  color: var(--red);
+  margin-top: 0.3rem;
+  font-size: 14px;
+}
+
 .description-count {
+  position: absolute;
   font-family: "IBM Plex Mono", monospace;
-  margin-bottom: 2rem;
-  margin-left: 0.5rem;
-  margin-top: 0.5rem;
+  bottom: 0.5rem;
+  right: 51%;
+  pointer-events: none;
 }
 
 @media (max-width: 900px) {
   .description-group > textarea {
     width: 100%;
+  }
+
+  .description-count {
+    right: 1%;
   }
 
   .select-box {

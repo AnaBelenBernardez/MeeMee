@@ -81,14 +81,15 @@ function AllEventsPage() {
               {filteredAndSortedMeetups.map((meetup) => (
                 <EventCard key={meetup.id} meetup={meetup} />
               ))}
+              {meetups.length > visibleMeetups &&
+                visibleMeetups < meetups.length && (
+                  <button onClick={loadMoreMeetups} id="loadmore">
+                    Load more
+                  </button>
+                )}
             </>
           ) : (
             <ConfirmBox id="no-events" message={"No events available"} />
-          )}
-          {meetups.length > visibleMeetups && (
-            <button onClick={loadMoreMeetups} id="loadmore">
-              Load more
-            </button>
           )}
         </div>
       )}

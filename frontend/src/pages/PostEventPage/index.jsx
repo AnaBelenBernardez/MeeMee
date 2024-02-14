@@ -143,68 +143,60 @@ function PostEventPage() {
     const errors = {};
 
     if (formData.title.trim() === "") {
-      errors.title = "Title is required";
-      toast.error("Title is required");
+      errors.title = "* Title is required";
     } else if (formData.title.length > 40) {
       errors.title = "Title must be at most 40 characters";
-      toast.error("Title must be at most 40 characters");
     }
 
     if (formData.description.trim() === "") {
-      errors.description = "Description is required";
-      toast.error("Description is required");
+      errors.description = "* Description is required";
     } else if (formData.description.length > 255) {
-      errors.description = "Description must be at most 255 characters";
-      toast.error("Description must be at most 255 characters");
+      errors.description = "Description too long";
     }
 
     if (!formData.picture) {
-      errors.picture = "Event photo is required";
-      toast.error("Event photo is required");
+      errors.picture = "Photo is required";
     } else if (!formData.picture.type.includes("image/")) {
       errors.picture = "Please select a valid image file";
-      toast.error("Please select a valid image file");
     }
 
     if (formData.theme.trim() === "") {
-      errors.theme = "Category is required";
-      toast.error("Category is required");
+      errors.theme = "* Category is required";
     }
 
     if (formData.location.trim() === "") {
-      errors.location = "City is required";
-      toast.error("City is required");
+      errors.location = "* City is required";
     } else if (formData.location.length > 40) {
       errors.location = "City must be at most 40 characters";
-      toast.error("City must be at most 40 characters");
     }
 
     if (formData.address.trim() === "") {
-      errors.address = "Address is required";
-      toast.error("Address is required");
+      errors.address = "* Address is required";
     } else if (formData.address.length > 100) {
       errors.address = "Address must be at most 100 characters";
-      toast.error("Address must be at most 100 characters");
     }
 
     if (!formData.date) {
-      errors.date = "Date is required";
-      toast.error("Date is required");
+      errors.date = "* Date is required";
     }
 
     if (formData.time.trim() === "") {
-      errors.time = "Time is required";
-      toast.error("Time is required");
+      errors.time = "* Time is required";
     }
 
     if (formData.date && formData.time) {
-      const selectedDateTime = new Date(formData.date);
-      const now = new Date();
-      const minimumDateTime = new Date(now.getTime() + 24 * 60 * 60 * 1000);
+      const selectedDate = new Date(formData.date);
+      const selectedTime = formData.time.split(":").map(Number);
+      selectedDate.setHours(selectedTime[0]);
+      selectedDate.setMinutes(selectedTime[1]);
 
-      if (selectedDateTime < minimumDateTime) {
+      const now = new Date();
+
+      const differenceInMilliseconds = selectedDate - now;
+      const twentyFourHoursInMilliseconds = 24 * 60 * 60 * 1000;
+
+      if (differenceInMilliseconds < twentyFourHoursInMilliseconds) {
         errors.date = "The event must be at least 24 hours from now";
-        toast.error("The event must be at least 24 hours from now");
       }
     }
 
@@ -237,6 +229,17 @@ function PostEventPage() {
     navigate("/");
   };
 
+  const errorMessages = {
+    title: formErrors.title,
+    description: formErrors.description,
+    picture: formErrors.picture,
+    theme: formErrors.theme,
+    location: formErrors.location,
+    address: formErrors.address,
+    date: formErrors.date,
+    time: formErrors.time,
+  };
+
   return (
     <main className="postevent-page">
       {loading ? (
@@ -266,16 +269,22 @@ function PostEventPage() {
               </>
             )}
             <form onSubmit={handleSubmit} autoComplete="off">
-              <input
-                type="text"
-                className="input-reg"
-                id="title"
-                name="title"
-                placeholder="Title"
-                value={formData.title}
-                onChange={handleInputChange}
-              />
-              <div className="description-group">
+              <div className="input-container">
+                <input
+                  type="text"
+                  className="input-reg"
+                  id="title"
+                  name="title"
+                  placeholder="Title"
+                  value={formData.title}
+                  onChange={handleInputChange}
+                />
+                {errorMessages.title && (
+                  <div className="error-message">{errorMessages.title}</div>
+                )}
+              </div>
+
+              <div className="description-group input-container">
                 <textarea
                   id="description"
                   name="description"
@@ -284,9 +293,15 @@ function PostEventPage() {
                   placeholder="Description"
                   maxLength={255}
                 />
+                {errorMessages.description && (
+                  <div className="error-message">
+                    {errorMessages.description}
+                  </div>
+                )}
                 <div className="description-count">{descriptionLength}/255</div>
               </div>
-              <div className="custom-file-input">
+
+              <div className="custom-file-input input-container">
                 <input
                   type="file"
                   name="picture"
@@ -295,9 +310,12 @@ function PostEventPage() {
                   style={{ display: "none" }}
                   id="customFileInput"
                 />
-
                 <label htmlFor="customFileInput">
-                  Select a file for your event photo
+                  {errorMessages.picture ? (
+                    <div className="error-message">{errorMessages.picture}</div>
+                  ) : (
+                    <span>Select a photo for your event</span>
+                  )}
                   <img
                     src={previewImage ? previewImage : "../../icons/upload.svg"}
                     alt="upload image icon"
@@ -305,7 +323,7 @@ function PostEventPage() {
                 </label>
               </div>
 
-              <div className="custom-select">
+              <div className="custom-select input-container">
                 <select
                   className="select-box"
                   id="theme"
@@ -323,8 +341,12 @@ function PostEventPage() {
                   </option>
                   <option value="Sports and Fitness">Sports and Fitness</option>
                 </select>
+                {errorMessages.theme && (
+                  <div className="error-message">{errorMessages.theme}</div>
+                )}
               </div>
-              <div className="location-container">
+
+              <div className="location-container input-container">
                 <div>
                   <input
                     type="text"
@@ -335,6 +357,11 @@ function PostEventPage() {
                     value={formData.location}
                     onChange={handleInputChange}
                   />
+                  {errorMessages.location && (
+                    <div className="error-message">
+                      {errorMessages.location}
+                    </div>
+                  )}
                 </div>
                 <div>
                   <input
@@ -346,9 +373,13 @@ function PostEventPage() {
                     value={formData.address}
                     onChange={handleInputChange}
                   />
+                  {errorMessages.address && (
+                    <div className="error-message">{errorMessages.address}</div>
+                  )}
                 </div>
               </div>
-              <div className="date-time-container">
+
+              <div className="date-time-container input-container">
                 <div>
                   <DatePicker
                     id="date"
@@ -364,6 +395,9 @@ function PostEventPage() {
                     placeholderText="Select a date"
                     dateFormat="dd/MM/yyyy"
                   />
+                  {errorMessages.date && (
+                    <div className="error-message">{errorMessages.date}</div>
+                  )}
                 </div>
                 <div>
                   <input
@@ -375,8 +409,12 @@ function PostEventPage() {
                     value={formData.time}
                     onChange={handleInputChange}
                   />
+                  {errorMessages.time && (
+                    <div className="error-message">{errorMessages.time}</div>
+                  )}
                 </div>
               </div>
+
               <div className="form-group" id="form-signinbutton">
                 <ArrowButton
                   id="form-signinbutton"

@@ -6,6 +6,7 @@ body {
   --primary: #b528eb;
   --secondary: #7def51;
   --lavender-ish: #f7edfd;
+  --red: rgb(255, 72, 72);
 }
 
 lavender-grid {
