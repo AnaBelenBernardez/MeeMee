@@ -101,10 +101,7 @@ export class UserRepository {
       return token
     } catch (err) {
       console.log(err)
-      throw generateError(
-        'Email or password is incorrect, please check your data.',
-        404,
-      )
+      throw generateError('Email or password incorrect', 404)
     } finally {
       if (connection) {
         connection.release()

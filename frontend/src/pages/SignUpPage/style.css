@@ -43,6 +43,7 @@ ul {
 
 #form-bio {
   position: relative;
+  margin-top: 2.5rem;
 }
 
 .character-count {
@@ -51,6 +52,10 @@ ul {
   bottom: 1.5rem;
   right: 1.5rem;
   pointer-events: none;
+}
+
+.error-message {
+  margin-right: 1.4rem;
 }
 
 @media (max-width: 900px) {

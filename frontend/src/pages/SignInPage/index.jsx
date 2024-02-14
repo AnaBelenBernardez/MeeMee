@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
-import { activateUserService, loginUserService } from "../../services/index.js";
+import { loginUserService } from "../../services/index.js";
 import ArrowButton from "../../components/ArrowButton";
 import { AuthContext } from "../../context/AuthContext.jsx";
-import Loading from "../../components/Loading/index.jsx";
 import "./style.css";
 
 function SignInPage() {
@@ -12,62 +11,66 @@ function SignInPage() {
   const navigate = useNavigate();
   const { token } = useParams();
   const [activated, setActivated] = useState(false);
-  const [initialLoad, setInitialLoad] = useState(true);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };
 
   useEffect(() => {
-    const activateAccount = async (token) => {
+    const activateAccount = async () => {
+      if (!token || activated) return;
       try {
         const response = await activateUserService({ token });
         if (response.message === "Account activated successfully") {
-          toast.success("Session initiated successfully!");
           setActivated(true);
-        }
-
-        if (response) {
-          navigate("/account/myprofile");
+          navigate("/");
         }
       } catch (error) {
         toast.error(error.message);
       } finally {
-        setTimeout(() => {
-          setLoading(false);
-        }, 400);
+        setLoading(false);
       }
     };
 
-    if (!initialLoad && token && !activated) {
-      activateAccount(token);
-    }
-    setInitialLoad(false);
-  }, [token, activated, initialLoad, navigate]);
+    activateAccount();
+  }, [token, activated, navigate]);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
 
   const submitHandler = async (e) => {
     e.preventDefault();
     setLoading(true);
 
+    const isValid = validateForm();
+    if (!isValid) {
+      setLoading(false);
+      return;
+    }
+
     try {
-      const data = await loginUserService({ email, password });
+      const data = await loginUserService(formData);
       setToken(data);
       setLogin(true);
       setAuth(true);
-
-      if (data) {
-        navigate("/");
-      }
+      navigate("/");
     } catch (error) {
-      toast.error(error.message);
-    } finally {
-      setTimeout(() => {
-        setLoading(false);
-      }, 400);
+      setFormErrors({
+        general: "Email or password is incorrect, please check your data.",
+      });
+      setLoading(false);
     }
   };
 
@@ -75,6 +78,29 @@ function SignInPage() {
     if (e.key === "Enter") {
       submitHandler(e);
     }
+  };
+
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  const validateForm = () => {
+    const errors = {};
+
+    if (!emailRegex.test(formData.email)) {
+      errors.email = "Enter a valid email";
+    }
+
+    if (formData.password.length < 8) {
+      errors.password = "Password must be at least 8 characters long";
+    }
+
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+  const errorMessages = {
+    email: formErrors.email,
+    password: formErrors.password,
+    general: formErrors.general,
   };
 
   return (
@@ -95,7 +121,7 @@ function SignInPage() {
             <span className="you-text"> you</span>
             <span className="black-text"> again!</span>
           </h2>
-          <form onSubmit={submitHandler} autoComplete="off">
+          <form onSubmit={submitHandler} autoComplete="off" noValidate>
             <div className="form-group">
               <input
                 className="input-reg"
@@ -103,8 +129,12 @@ function SignInPage() {
                 id="email"
                 name="email"
                 placeholder="Email"
-                onChange={(e) => setEmail(e.target.value)}
+                value={formData.email}
+                onChange={handleInputChange}
               />
+              {errorMessages.email && (
+                <div className="error-message">{errorMessages.email}</div>
+              )}
             </div>
             <div className="form-group" id="signin-password">
               <input
@@ -113,26 +143,27 @@ function SignInPage() {
                 id="password"
                 name="password"
                 placeholder="Password"
-                onChange={(e) => setPassword(e.target.value)}
+                value={formData.password}
+                onChange={handleInputChange}
                 onKeyPress={handleKeyPress}
               />
-              {showPassword ? (
-                <img
-                  className="eye-icon"
-                  src="../../icons/eye_opened.svg"
-                  alt="Hide Password"
-                  onClick={togglePasswordVisibility}
-                />
-              ) : (
-                <img
-                  className="eye-icon"
-                  src="../../icons/eye_closed.svg"
-                  alt="Show Password"
-                  onClick={togglePasswordVisibility}
-                />
+              {errorMessages.password && (
+                <div className="error-message">{errorMessages.password}</div>
               )}
+              {errorMessages.general && (
+                <div className="error-message">{errorMessages.general}</div>
+              )}
+              <img
+                className="eye-icon"
+                src={
+                  showPassword
+                    ? "../../icons/eye_opened.svg"
+                    : "../../icons/eye_closed.svg"
+                }
+                alt={showPassword ? "Hide Password" : "Show Password"}
+                onClick={togglePasswordVisibility}
+              />
             </div>
-
             <div className="form-group" id="form-signinbutton">
               <ArrowButton id="signin-button" type="submit" />
             </div>

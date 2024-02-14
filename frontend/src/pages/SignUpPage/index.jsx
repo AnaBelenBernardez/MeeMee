@@ -41,17 +41,17 @@ function SignUpPage() {
     const errors = {};
 
     if (!usernameRegex.test(username)) {
-      errors.username = "Nickname must be between 4 and 20 characters.";
+      errors.username = "Nickname must be between 4 and 20 characters";
     }
 
     if (!emailRegex.test(email)) {
-      errors.email = "Please enter a valid email.";
+      errors.email = "Enter a valid email";
     }
     if (!passwordRegex.test(pass1)) {
       errors.pass1 =
-        "Password must be at least 8 characters long and include at least one letter, one number, and one special character.";
+        "Password must be at least 8 characters long and include at least one letter, one number, and one special character";
     } else if (pass1 !== pass2) {
-      errors.pass2 = "Passwords do not match.";
+      errors.pass2 = "Passwords do not match";
     }
 
     setFormErrors(errors);
