@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 26px;
+  font-size: 1.6rem;
 }
 
 .header-nav {
@@ -70,8 +70,8 @@
   right: 0px;
   margin-top: 3rem;
 }
-
-@media (max-width: 970px) {
+/* 
+@media (max-width: 1500px) {
   .header {
     font-size: 91%;
   }
@@ -153,4 +153,4 @@
     transform: rotate(-45deg) translate(5px, -6px);
     background-color: var(--primary);
   }
-}
+} */
