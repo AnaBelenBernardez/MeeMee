@@ -70,7 +70,7 @@
   right: 0px;
   margin-top: 3rem;
 }
-/* 
+
 @media (max-width: 1500px) {
   .header {
     font-size: 91%;
@@ -153,4 +153,4 @@
     transform: rotate(-45deg) translate(5px, -6px);
     background-color: var(--primary);
   }
-} */
+}
