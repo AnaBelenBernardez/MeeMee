@@ -22,7 +22,7 @@ function EventFilter({ locations, onFilterChange }) {
   return (
     <div className="filter-element">
       <select
-        id="location"
+        id="filter"
         name="location"
         value={selectedLocation}
         onChange={handleLocationChange}
