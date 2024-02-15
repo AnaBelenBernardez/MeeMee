@@ -1,7 +1,6 @@
 .arrow {
   position: absolute;
   z-index: 10;
-  left: 0;
 }
 
 .arrow-button-green {
@@ -11,10 +10,6 @@
   border: 2px solid var(--text);
   box-shadow: 2px 2px 0 1px rgba(24, 3, 37);
   cursor: pointer;
-}
-
-.arrow-button-green:active {
-  box-shadow: -1px -1px 0 1px rgba(24, 3, 37);
 }
 
 .black-triangle-inside {

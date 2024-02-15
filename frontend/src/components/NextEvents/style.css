@@ -23,30 +23,33 @@
   margin-top: 1.5rem;
 }
 
-.horizontal-events {
+.carousel-controls {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  margin-top: -3rem;
+  margin-bottom: 4rem;
+}
+/* .dotgroup {
+  background-color: aqua;
+  height: 10%;
+  width: 10%;
+  margin-top: 2.7rem;
+  margin-left: 50%;
+} */
+
+#buttonback {
+  border: none;
+  margin-left: 40%;
 }
 
-.horizontal-events .event-card {
-  margin-right: 3rem;
+#buttonnext {
+  border: none;
+  margin-left: 15rem;
 }
 
-.horizontal-events .event-card {
-  flex: 1;
-}
-
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
   .next-events {
     max-height: calc(100vh - 50px);
     overflow-y: scroll;
   }
-
-  .horizontal-events {
-    flex-wrap: wrap;
-  }
-
-  .horizontal-events .event-card {
-    margin: 0.5rem;
-  }
-}
+} */
