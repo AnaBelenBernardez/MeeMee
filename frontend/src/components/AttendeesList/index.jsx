@@ -63,14 +63,25 @@ const AttendeesList = ({ updateAttendees, onClose }) => {
         ) : (
           <ul className="event-attendees-list">
             <h2 id="attendee-title">Who else has signed up?</h2>
-            {attendees.map((attendee) => (
-              <li key={attendee.id}>{attendee.username}</li>
-            ))}
+            <div className="attendees-container">
+              {attendees.map((attendee) => (
+                <li key={attendee.id}>
+                  <div className="attendee-info">
+                    <img
+                      // src={attendee.avatar}
+                      src="https://via.placeholder.com/50"
+                      alt={`${attendee.username}'s avatar`}
+                      className="list-avatar"
+                    />
+                    <span>{attendee.username}</span>
+                  </div>
+                </li>
+              ))}
+            </div>
           </ul>
         )}
       </div>
     </>
   );
 };
-
 export default AttendeesList;

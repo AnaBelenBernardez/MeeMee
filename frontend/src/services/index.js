@@ -52,7 +52,7 @@ export const getAttendeesByMeetup = async (meetupId, token) => {
     }
   } catch (error) {
     if (error.response && error.response.status === 404) {
-      console.warn("Meetup has no attendees");
+      // console.warn("Meetup has no attendees");
       return [];
     } else {
       console.error("Error in getAttendeesByMeetup:", error.message);
