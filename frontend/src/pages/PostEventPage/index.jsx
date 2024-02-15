@@ -255,16 +255,16 @@ function PostEventPage() {
                 <div className="overlay"></div>
                 <div className="confirmation-box">
                   <p className="no-attendees">Event created successfully!</p>
-                  {/* <div className="button-container"> */}
-                  {/* <button onClick={handleConfirmationAccept}>Accept</button> */}
-                  <button id="close-box" onClick={handleConfirmationClose}>
-                    <img
-                      src="../icons/cross.svg"
-                      alt="Close button"
-                      id="close-img"
-                    />
-                  </button>
-                  {/* </div> */}
+                  <div className="button-container">
+                    <button id="delete-no">Accept</button>
+                    <button id="close-box" onClick={handleConfirmationClose}>
+                      <img
+                        src="../icons/cross.svg"
+                        alt="Close button"
+                        id="close-img"
+                      />
+                    </button>
+                  </div>
                 </div>
               </>
             )}
