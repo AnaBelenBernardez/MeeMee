@@ -59,7 +59,7 @@ export class AttendeeRepository {
       )
 
       if (result.length === 0) {
-        return { message: `Meetup with ID: ${meetupId} has no attendees` }
+        // return { message: `Meetup with ID: ${meetupId} has no attendees` }
       }
 
       return result

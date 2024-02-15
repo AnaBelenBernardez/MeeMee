@@ -27,6 +27,7 @@
   z-index: 1;
   color: var(--lavender-ish);
   margin: 0 2rem;
+  margin-bottom: 3rem;
 }
 
 .confirmation-box {
@@ -52,7 +53,42 @@
   display: block;
   margin: 1rem;
   list-style: none;
+}
+
+.attendee-info {
+  display: flex;
+  align-items: center;
+}
+
+.attendee-info > span {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.list-avatar {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: cover;
+  border: dashed;
+  margin-right: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.event-attendees-list {
+  max-height: 70vh;
+  max-width: 100vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.event-attendees-list::-webkit-scrollbar {
+  display: none;
+}
+
+.attendees-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 0.5rem;
 }
