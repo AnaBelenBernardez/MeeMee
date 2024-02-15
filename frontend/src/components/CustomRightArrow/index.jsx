@@ -3,7 +3,7 @@ import "./style.css";
 
 function CustomRightArrow() {
   return (
-    <div className="arrow">
+    <div className="right-arrow">
       <button className="arrow-button-green">
         <div className="black-triangle-inside"></div>
       </button>
