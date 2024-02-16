@@ -144,12 +144,16 @@ function PostEventPage() {
 
     if (formData.title.trim() === "") {
       errors.title = "* Title is required";
+    } else if (formData.title.length < 5) {
+      errors.title = "Title must be at least 5 characters";
     } else if (formData.title.length > 40) {
       errors.title = "Title must be at most 40 characters";
     }
 
     if (formData.description.trim() === "") {
       errors.description = "* Description is required";
+    } else if (formData.description.length < 50) {
+      errors.description = "Description must be at least 50 characters long";
     } else if (formData.description.length > 255) {
       errors.description = "Description too long";
     }
@@ -166,12 +170,16 @@ function PostEventPage() {
 
     if (formData.location.trim() === "") {
       errors.location = "* City is required";
+    } else if (formData.location.length < 2) {
+      errors.location = "City name too short";
     } else if (formData.location.length > 40) {
       errors.location = "City must be at most 40 characters";
     }
 
     if (formData.address.trim() === "") {
       errors.address = "* Address is required";
+    } else if (formData.address.length < 5) {
+      errors.address = "Address too short";
     } else if (formData.address.length > 100) {
       errors.address = "Address must be at most 100 characters";
     }
