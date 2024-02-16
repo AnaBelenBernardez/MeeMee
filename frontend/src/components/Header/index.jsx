@@ -6,7 +6,7 @@ import { AuthContext } from "../../context/AuthContext.jsx";
 import "./style.css";
 
 function Header() {
-  const { auth } = useContext(AuthContext);
+  const { auth, userData } = useContext(AuthContext);
 
   return (
     <header className="header">
@@ -24,7 +24,9 @@ function Header() {
         <div className="right-section">
           <NavLink to="/events">Explore Events</NavLink>
           {auth && <NavLink to="/postevent">Post Event</NavLink>}
-          {auth && <NavLink to="/user/:nickname">My Account</NavLink>}
+          {/* {auth && (
+            <NavLink to={`/user/${userData.username}`}>My Account</NavLink>
+          )} */}
           <div className="separator"></div>
           <div className="nav-signin">
             <SignOutButton />

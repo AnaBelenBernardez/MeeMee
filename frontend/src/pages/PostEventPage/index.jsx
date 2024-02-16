@@ -326,7 +326,7 @@ function PostEventPage() {
                   )}
                   <img
                     src={previewImage ? previewImage : "../../icons/upload.svg"}
-                    alt="upload image icon"
+                    alt="upload event photo"
                   />
                 </label>
               </div>

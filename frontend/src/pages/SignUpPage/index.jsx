@@ -20,6 +20,7 @@ function SignUpPage() {
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [formErrors, setFormErrors] = useState({});
+  const [previewImage, setPreviewImage] = useState(null);
 
   const handleBioChange = (event) => {
     const newBio = event.target.value.slice(0, 255);
@@ -36,7 +37,13 @@ function SignUpPage() {
     const file = event.target.files[0];
     console.log(file);
     if (file) {
-      setAvatar(file);
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setPreviewImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setPreviewImage(null);
     }
   };
 
@@ -204,17 +211,22 @@ function SignUpPage() {
                   <div className="error-message">{formErrors.pass2}</div>
                 )}
               </li>
-              <li className="form-group">
-                <label htmlFor="avatar" className="avatar-label">
-                  Choose Avatar:
-                </label>
+              <li className="custom-file-input" id="signup-avatar">
                 <input
                   type="file"
                   id="avatar"
                   name="avatar"
                   accept="image/jpeg, image/png"
+                  style={{ display: "none" }}
                   onChange={handleAvatarChange}
                 />
+                <label htmlFor="avatar">
+                  <span>Select a photo for your avatar</span>
+                  <img
+                    src={previewImage ? previewImage : "../../icons/upload.svg"}
+                    alt="upload your avatar photo"
+                  />
+                </label>
               </li>
               <li className="form-group" id="form-bio">
                 <textarea
