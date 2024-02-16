@@ -346,6 +346,1098 @@ async function createMeetupsTable(connection) {
       time: '15:00:00',
       organizer_id: 4,
     },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
+    {
+      title: 'DnD campaign',
+      description:
+        'Roll the dice and join us for a day of dungeon fun! Whether you are a seasoned player or new to the world of dungeon and dragons, there is something for everyone.',
+      picture:
+        'https://images.unsplash.com/photo-1549056572-75914d5d5fd4?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Social Events',
+      location: 'Bilbao',
+      address: '101 Boardwalk',
+      date: '2024-03-01',
+      time: '14:00:00',
+      organizer_id: 3,
+    },
   ]
 
   for (const meetup of meetupsToInsert) {
