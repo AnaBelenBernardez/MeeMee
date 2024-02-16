@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./style.css";
 import { NavLink } from "react-router-dom";
 import Loading from "../../components/Loading";
-import SignOutButton from "../../components/SignOutButton";
 
 function ProfilePage() {
   const [loading, setLoading] = useState(true);
@@ -52,14 +51,6 @@ function ProfilePage() {
                     alt="edit profile icon"
                   />
                   Edit Profile
-                </button>
-                <button id="out-button">
-                  <img
-                    src="../../icons/sign-out.svg"
-                    className="event-icon"
-                    alt="sign out icon"
-                  />
-                  <SignOutButton />
                 </button>
               </div>
             </div>

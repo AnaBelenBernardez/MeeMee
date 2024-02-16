@@ -16,6 +16,9 @@ const Footer = () => {
         </nav>
       </div>
       <div className="footer-socials">
+        <div className="languages">
+          <span>ENG | ESP | PT</span>
+        </div>
         <a
           href="https://www.tiktok.com/"
           target="_blank"
