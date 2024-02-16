@@ -9,6 +9,7 @@ import Loading from "../../components/Loading";
 import toast from "react-hot-toast";
 import BlackArrow from "../../components/BlackArrow";
 import "./style.css";
+import GMaps from "../../components/GMaps/index.jsx";
 
 function PostEventPage() {
   const { token } = useContext(AuthContext);
@@ -277,6 +278,7 @@ function PostEventPage() {
               </>
             )}
             <form onSubmit={handleSubmit} autoComplete="off">
+              <GMaps />
               <div className="input-container">
                 <input
                   type="text"
