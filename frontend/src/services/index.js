@@ -62,37 +62,19 @@ export const getAttendeesByMeetup = async (meetupId, token) => {
     }
   }
 };
-export const registerUserService = async ({
-  username,
-  bio,
-  email,
-  password,
-}) => {
+export const registerUserService = async (userData) => {
   try {
-    const response = await fetch(
+    const response = await axios.post(
       `${import.meta.env.VITE_APP_BACKEND}/user/register`,
+      userData,
       {
-        method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          "Frontend-URL": import.meta.env.VITE_APP_FRONTEND,
+          "Content-Type": "multipart/form-data",
         },
-        body: JSON.stringify({
-          username,
-          bio,
-          email,
-          password,
-        }),
       }
     );
 
-    const json = await response.json();
-
-    if (!response.ok) {
-      throw new Error(json.message);
-    }
-
-    return json;
+    return response.data;
   } catch (error) {
     throw new Error(`The ${error.message}`);
   }

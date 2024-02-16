@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { getAttendeesByMeetup } from "../../services/index";
 import { AuthContext } from "../../context/AuthContext";
+import { getDataUserService } from "../../services/index.js";
 import { useParams } from "react-router-dom";
 import Loading from "../Loading";
 import "./style.css";
@@ -20,6 +21,25 @@ const AttendeesList = ({ updateAttendees, onClose }) => {
         if (Array.isArray(attendeesData)) {
           setAttendees(attendeesData);
         }
+
+        const attendeesWithUserData = [];
+
+        for (const userId of attendeesData.map(
+          (attendee) => attendee.user_id
+        )) {
+          try {
+            const userData = await getDataUserService({
+              id: userId,
+              token,
+            });
+
+            attendeesWithUserData.push(userData);
+          } catch (error) {
+            console.error("Error al obtener datos del usuario:", error.message);
+          }
+        }
+
+        setAttendees(attendeesWithUserData);
       } catch (error) {
         setError("Error fetching attendees: " + error.message);
       } finally {
@@ -68,8 +88,9 @@ const AttendeesList = ({ updateAttendees, onClose }) => {
                 <li key={attendee.id}>
                   <div className="attendee-info">
                     <img
-                      // src={attendee.avatar}
-                      src="https://via.placeholder.com/50"
+                      src={`${import.meta.env.VITE_APP_BACKEND}/uploads/${
+                        attendee.avatar
+                      }`}
                       alt={`${attendee.username}'s avatar`}
                       className="list-avatar"
                     />
