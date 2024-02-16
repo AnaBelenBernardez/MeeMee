@@ -15,6 +15,8 @@ function SignUpPage() {
   const [pass1, setPass1] = useState("");
   const [pass2, setPass2] = useState("");
   const [bio, setBio] = useState("");
+  const [error, setError] = useState("");
+  const [avatar, setAvatar] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [formErrors, setFormErrors] = useState({});
@@ -28,6 +30,14 @@ function SignUpPage() {
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
+  };
+
+  const handleAvatarChange = (event) => {
+    const file = event.target.files[0];
+    console.log(file);
+    if (file) {
+      setAvatar(file);
+    }
   };
 
   const handleForm = async (e) => {
@@ -61,12 +71,15 @@ function SignUpPage() {
 
     try {
       setLoading(true);
-      const response = await registerUserService({
-        username,
-        bio,
-        email,
-        password: pass1,
-      });
+
+      const userData = new FormData();
+      userData.append("username", username);
+      userData.append("bio", bio);
+      userData.append("email", email);
+      userData.append("password", pass1);
+      userData.append("avatar", avatar, avatar.name);
+
+      const response = await registerUserService(userData);
 
       if (response.error) {
         setError(response.error);
@@ -113,7 +126,12 @@ function SignUpPage() {
               Sign In
             </Link>
           </div>
-          <form onSubmit={handleForm} autoComplete="off" noValidate>
+          <form
+            onSubmit={handleForm}
+            autoComplete="off"
+            noValidate
+            encType="multipart/form-data"
+          >
             <ul>
               <li className="form-group">
                 <input
@@ -185,6 +203,18 @@ function SignUpPage() {
                 {formErrors.pass2 && (
                   <div className="error-message">{formErrors.pass2}</div>
                 )}
+              </li>
+              <li className="form-group">
+                <label htmlFor="avatar" className="avatar-label">
+                  Choose Avatar:
+                </label>
+                <input
+                  type="file"
+                  id="avatar"
+                  name="avatar"
+                  accept="image/jpeg, image/png"
+                  onChange={handleAvatarChange}
+                />
               </li>
               <li className="form-group" id="form-bio">
                 <textarea

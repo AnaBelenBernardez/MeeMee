@@ -3,6 +3,13 @@ import { generateError } from '../../../domain/utils/helpers.js'
 import UserService from '../../../domain/services/UserService.js'
 import { usersSchemas, loginSchema } from '../schemas/usersSchemas.js'
 import { v4 as uuidv4 } from 'uuid'
+import { fileURLToPath } from 'url'
+import { createPathIfNotExists } from '../../../domain/utils/helpers.js'
+import sharp from 'sharp'
+import crypto from 'crypto'
+import path from 'path'
+
+const randomName = (n) => crypto.randomBytes(n).toString('hex')
 
 const userService = new UserService()
 
@@ -21,8 +28,33 @@ export const validateNewUser = (req, res, next) => {
 
 export const newUserController = async (req, res, next) => {
   try {
-    const { username, email, password, bio, meetups_attended, avatar } =
-      req.body
+    const { username, email, password, bio, meetups_attended } = req.body
+    console.log(req.files.avatar)
+    let imageFileName
+
+    if (req.files?.avatar) {
+      const currentFilePath = fileURLToPath(import.meta.url)
+      const currentDir = path.dirname(currentFilePath)
+      const uploadsDir = path.join(currentDir, '../', 'uploads')
+      await createPathIfNotExists(uploadsDir)
+      const image = sharp(req.files.avatar.data)
+      const fileName = req.files.avatar.name
+      if (
+        fileName.endsWith('.jpg') ||
+        fileName.endsWith('.png') ||
+        fileName.endsWith('.jpeg')
+      ) {
+        image.resize(1024)
+      } else {
+        throw generateError(
+          'Please make sure to upload an image in jpg, png, or jpeg format.',
+          400,
+        )
+      }
+      imageFileName = `${randomName(16)}.jpg`
+
+      await image.toFile(path.join(uploadsDir, imageFileName))
+    }
     if (password.length < 8) {
       return res
         .status(400)
@@ -36,7 +68,7 @@ export const newUserController = async (req, res, next) => {
       password,
       bio,
       meetups_attended,
-      avatar,
+      avatar: imageFileName,
     })
     res.status(200).json({ message: 'User registered successfully.', userId })
   } catch (err) {

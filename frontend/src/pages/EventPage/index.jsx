@@ -58,6 +58,7 @@ function EventPage() {
         attendees_count: attendeesData.length,
       }));
     } catch (error) {
+      console.error("Error fetching attendees:", error);
     } finally {
       setUpdatingAttendees(false);
     }
@@ -93,6 +94,7 @@ function EventPage() {
         });
         setOrganizerUsername(organizerUserData.username);
         setOrganizerAvatar(organizerUserData.avatar);
+        console.log("organizerUserData", organizerUserData);
       } catch (error) {
         console.error("Error fetching event data:", error);
       } finally {
@@ -181,19 +183,21 @@ function EventPage() {
               }`}</span>
             </div>
             <div>
-              {/* {organizerAvatar ? (
+              {organizerAvatar ? (
                 <img
                   id="eventpage-person"
-                  src={`${import.meta.env.VITE_APP_BACKEND}/${organizerAvatar}`}
+                  src={`${
+                    import.meta.env.VITE_APP_BACKEND
+                  }/uploads/${organizerAvatar}`}
                   alt={`Avatar of ${organizerUsername || ""}`}
                 />
-              ) : ( */}
-              <img
-                id="eventpage-person"
-                src="/img/default_avatar.png"
-                alt={`Default Avatar`}
-              />
-              {/* )} */}
+              ) : (
+                <img
+                  id="eventpage-person"
+                  src="/img/default_avatar.png"
+                  alt={`Default Avatar`}
+                />
+              )}
             </div>
           </div>
           <div className="right-column">
