@@ -11,24 +11,7 @@ function PrivateRoutes() {
     }
   }, []);
 
-  return (
-    <>
-      {auth ? (
-        <>
-          <section
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              width: "100%",
-              height: "100%",
-            }}
-          >
-            <Outlet />
-          </section>
-        </>
-      ) : null}
-    </>
-  );
+  return <>{auth ? <Outlet /> : null}</>;
 }
 
 export default PrivateRoutes;

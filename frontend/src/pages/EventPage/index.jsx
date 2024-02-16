@@ -195,7 +195,7 @@ function EventPage() {
                 <img
                   id="eventpage-person"
                   src="/img/default_avatar.png"
-                  alt={`Default Avatar`}
+                  alt="Default Avatar"
                 />
               )}
             </div>

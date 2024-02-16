@@ -9,9 +9,10 @@
 }
 
 .profile-container {
-  width: 100%;
   max-width: 95vh;
   max-height: 100vh;
+  min-height: 70vh;
+  margin: 3rem;
   border-radius: none;
   border: 2px solid var(--text);
   box-sizing: border-box;

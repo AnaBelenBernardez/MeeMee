@@ -33,6 +33,23 @@ ul {
   position: relative;
 }
 
+#signup-avatar {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+}
+
+.custom-file-input img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 100%;
+  padding: 8px;
+  margin-right: 0.5rem;
+}
+
 .eye-icon-up {
   position: absolute;
   height: 1.5rem;
@@ -43,7 +60,6 @@ ul {
 
 #form-bio {
   position: relative;
-  margin-top: 2.5rem;
 }
 
 .character-count {
