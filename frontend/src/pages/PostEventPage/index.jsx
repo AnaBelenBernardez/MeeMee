@@ -46,6 +46,7 @@ function PostEventPage() {
   const [formErrors, setFormErrors] = useState({});
 
   const handleInputChange = (event) => {
+    const name = event.target.name;
     const value = event.target.value;
     setFormData({
       ...formData,
@@ -63,6 +64,22 @@ function PostEventPage() {
       ...formErrors,
       [event.target.name]: null,
     });
+
+    if (name === "location" || name === "address") {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+      setFormErrors({
+        ...formErrors,
+        [name]: null,
+      });
+    }
   };
 
   const handleCreateMeetup = async () => {
@@ -238,6 +255,14 @@ function PostEventPage() {
     navigate("/");
   };
 
+  const handleLocationSelect = (ciudad, direccion) => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      location: ciudad,
+      address: direccion,
+    }));
+  };
+
   const errorMessages = {
     title: formErrors.title,
     description: formErrors.description,
@@ -278,7 +303,15 @@ function PostEventPage() {
               </>
             )}
             <form onSubmit={handleSubmit} autoComplete="off">
-              <GMaps />
+              <GMaps
+                onLocationSelect={(ciudad, direccion) => {
+                  setFormData({
+                    ...formData,
+                    location: ciudad,
+                    address: direccion,
+                  });
+                }}
+              />
               <div className="input-container">
                 <input
                   type="text"
@@ -366,6 +399,7 @@ function PostEventPage() {
                     placeholder="Select a city"
                     value={formData.location}
                     onChange={handleInputChange}
+                    readOnly
                   />
                   {errorMessages.location && (
                     <div className="error-message">
@@ -382,6 +416,7 @@ function PostEventPage() {
                     placeholder="Select an address"
                     value={formData.address}
                     onChange={handleInputChange}
+                    readOnly
                   />
                   {errorMessages.address && (
                     <div className="error-message">{errorMessages.address}</div>
