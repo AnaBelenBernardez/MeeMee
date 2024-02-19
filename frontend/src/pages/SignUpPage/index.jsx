@@ -223,6 +223,7 @@ function SignUpPage() {
                 <label htmlFor="avatar">
                   <span>Select a photo for your avatar</span>
                   <img
+                    id="upload-avatar"
                     src={previewImage ? previewImage : "../../icons/upload.svg"}
                     alt="upload your avatar photo"
                   />

@@ -105,10 +105,7 @@
   position: relative;
   right: 6.5rem;
   bottom: 17rem;
-}
-
-#event-time {
-  font-weight: 200;
+  font-weight: 400;
 }
 
 .date-time-info {
@@ -130,7 +127,6 @@
 }
 
 #event-going {
-  font-weight: 200;
   text-decoration: none;
   cursor: pointer;
   bottom: 15rem;

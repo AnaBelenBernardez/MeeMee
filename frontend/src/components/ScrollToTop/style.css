@@ -11,3 +11,10 @@
 #scrollto-top img {
   transform: rotate(0.5turn);
 }
+
+@media (max-width: 750px) {
+  #scrollto-top {
+    bottom: 2rem;
+    right: 1rem;
+  }
+}

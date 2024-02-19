@@ -74,27 +74,33 @@ ul {
   margin-right: 1.4rem;
 }
 
-@media (max-width: 900px) {
-  .signup-image {
-    display: none;
-  }
-
+@media (max-width: 950px) {
   .signup-header {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     gap: 3rem;
   }
 
+  #upload-avatar {
+    height: 80%;
+    margin-right: -3px;
+  }
+}
+
+@media (max-width: 780px) {
+  .signup-image {
+    display: none;
+  }
   .form-group {
     margin-bottom: 0.1rem;
   }
 
   .input-reg#bio {
-    height: 10rem;
+    height: 11rem;
     resize: none;
     padding: 0.2rem;
   }
 
   .eye-icon-up {
-    right: 0.8rem;
+    right: 0.3rem;
   }
 }

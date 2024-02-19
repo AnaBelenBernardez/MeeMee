@@ -7,6 +7,7 @@ footer {
   align-items: center;
   padding: 20px;
   color: var(--text);
+  margin-top: -3.75rem;
 }
 
 .footer-links nav,
@@ -46,8 +47,8 @@ footer {
 
   filter: drop-shadow(1px 1px 0 var(--secondary))
     drop-shadow(-1px 1px 0 var(--secondary))
-    drop-shadow(1px -1px 0 var(--secondary))
-    drop-shadow(-1px -1px 0 var(--secondary));
+    drop-shadow(1px -1px 2px var(--secondary))
+    drop-shadow(-1px -1px 1px var(--secondary));
 }
 
 .triangleright-footer {
@@ -74,7 +75,7 @@ footer {
   right: 0px;
 }
 
-/* @media (max-width: 700px) {
+@media (max-width: 700px) {
   footer {
     height: fit-content;
     position: relative;
@@ -82,20 +83,15 @@ footer {
   }
 
   .footer-links nav {
-    margin-bottom: 10px;
-  }
-
-  .footer-links nav p {
-    margin-right: 10;
-  }
-
-  .footer-socials a {
-    gap: 15px;
-    align-items: center;
+    margin-bottom: 1rem;
   }
 
   .triangleright-footer,
   .triangleleft-footer {
     margin-top: -2rem;
   }
-} */
+
+  .languages {
+    margin-right: 1rem;
+  }
+}
