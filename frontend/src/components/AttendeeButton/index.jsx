@@ -82,6 +82,26 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
 
   return (
     <div className="attendee-button">
+
+      {userId === null ? (
+        <p className="sign-in-message">Sign in first</p>
+      ) : (
+        <button
+          id="button-signme"
+          onClick={handleAttendeeAction}
+          disabled={loading}
+        >
+          <img
+            className="event-icon"
+            src="../../icons/check.svg"
+            alt="signme icon"
+            id="icon-signme"
+          />
+          {isAttendee ? "I changed my mind" : "Sign me up!"}
+        </button>
+      )}
+
+
       {showConfirmation && (
         <>
           <div className="overlay"></div>
