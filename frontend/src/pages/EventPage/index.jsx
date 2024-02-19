@@ -19,6 +19,7 @@ function EventPage() {
   const [organizerUsername, setOrganizerUsername] = useState("");
   const [organizerAvatar, setOrganizerAvatar] = useState("");
   const [loading, setLoading] = useState(true);
+  const [userId, setUserId] = useState(null);
   const [username, setUsername] = useState("");
   const [attendees, setAttendees] = useState([]);
   const [updatingAttendees, setUpdatingAttendees] = useState(false);
@@ -28,9 +29,6 @@ function EventPage() {
   const handleLocationSelect = (ciudad, direccion) => {
     setSelectedLocation({ ciudad, direccion });
   };
-
-  const decodedToken = JSON.parse(atob(token.split(".")[1]));
-  const userId = parseInt(decodedToken.userId, 10);
 
   const updateAttendees = async () => {
     if (updatingAttendees) {
@@ -72,6 +70,17 @@ function EventPage() {
 
   useEffect(() => {
     let unmounted = false;
+
+    if (token && typeof token === "string" && token.trim() !== "") {
+      try {
+        const decodedToken = JSON.parse(atob(token.split(".")[1]));
+        setUserId(parseInt(decodedToken.userId, 10));
+      } catch (error) {
+        console.error("Error decoding token:", error);
+      }
+    } else {
+      setUserId(null);
+    }
 
     const fetchEventData = async () => {
       try {
