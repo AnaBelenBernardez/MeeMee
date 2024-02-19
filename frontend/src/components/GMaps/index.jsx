@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function GMaps() {
+function GMaps({ onLocationSelect }) {
   const [marcador, setMarcador] = useState(null);
 
   useEffect(() => {
@@ -23,11 +23,9 @@ function GMaps() {
 
       obtenerCiudadYDireccion(latlng);
 
-      // Si ya hay un marcador, actualiza su posición
       if (marcador) {
         marcador.setPosition(latlng);
       } else {
-        // Si no hay marcador, crea uno nuevo
         const nuevoMarcador = new window.google.maps.Marker({
           position: latlng,
           map: map,
@@ -57,6 +55,7 @@ function GMaps() {
 
             document.getElementById("ciudad").textContent = ciudad;
             document.getElementById("direccion").textContent = direccion;
+            onLocationSelect(ciudad, direccion);
           } else {
             console.error(
               "No se encontraron resultados para las coordenadas proporcionadas."
@@ -75,10 +74,10 @@ function GMaps() {
     <div>
       <div
         id="map"
-        style={{ height: "30rem", width: "80%", border: "dashed" }}
+        style={{ height: "20rem", width: "50%", border: "dashed" }}
       ></div>
-      <div id="ciudad"></div>
-      <div id="direccion"></div>
+      <div style={{ display: "none" }} id="ciudad"></div>
+      <div style={{ display: "none" }} id="direccion"></div>
     </div>
   );
 }
