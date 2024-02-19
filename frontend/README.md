@@ -13,7 +13,7 @@ npm i
 ## Server
 
 - Configure the .env in your frontend folder, you have a .env.example.
-- You will need a google api key for the index.html document.
+- You will need a [google api key](https://console.cloud.google.com/) for the index.html document.
 - To start the server:
 
 ```
