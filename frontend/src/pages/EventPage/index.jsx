@@ -8,6 +8,7 @@ import { AuthContext } from "../../context/AuthContext.jsx";
 import { getDataUserService } from "../../services/index.js";
 import { format } from "date-fns";
 import DeleteMeetup from "../../components/DeleteMeetup/index.jsx";
+import GMaps from "../../components/GMaps";
 import "./style.css";
 
 function EventPage() {
@@ -22,6 +23,11 @@ function EventPage() {
   const [attendees, setAttendees] = useState([]);
   const [updatingAttendees, setUpdatingAttendees] = useState(false);
   const [isAttendeesListOpen, setIsAttendeesListOpen] = useState(false);
+  const [selectedLocation, setSelectedLocation] = useState(null);
+
+  const handleLocationSelect = (ciudad, direccion) => {
+    setSelectedLocation({ ciudad, direccion });
+  };
 
   const decodedToken = JSON.parse(atob(token.split(".")[1]));
   const userId = parseInt(decodedToken.userId, 10);

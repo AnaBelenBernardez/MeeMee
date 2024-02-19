@@ -74,7 +74,7 @@ function GMaps({ onLocationSelect }) {
     <div>
       <div
         id="map"
-        style={{ height: "20rem", width: "50%", border: "dashed" }}
+        style={{ height: "20rem", width: "70%", border: "dashed" }}
       ></div>
       <div style={{ display: "none" }} id="ciudad"></div>
       <div style={{ display: "none" }} id="direccion"></div>
