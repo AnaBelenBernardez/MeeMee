@@ -13,8 +13,7 @@
 .basic-container {
   display: flex;
   max-width: 95vh;
-  max-height: 100vh;
-  min-height: 70vh;
+
   border-radius: none;
   border: 2px solid var(--text);
   box-sizing: border-box;
@@ -22,6 +21,7 @@
   outline: none;
   background-color: rgba(255, 255, 255, 0.5);
   position: relative;
+  margin: 5rem;
 }
 
 .signin-image {
@@ -118,19 +118,25 @@
   cursor: pointer;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
+  .signin-header {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 780px) {
   .signin-image {
     display: none;
   }
 
   .signin-section {
-    padding: 1rem;
+    padding: 0.2rem;
   }
 
   .signin-header {
-    font-size: 1.5rem;
-    margin-bottom: 0.7rem;
-    gap: 3rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
   }
 
   .signin-text {
@@ -146,6 +152,6 @@
   }
 
   .eye-icon {
-    right: 0.8rem;
+    right: 1rem;
   }
 }

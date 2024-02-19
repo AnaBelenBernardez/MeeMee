@@ -57,6 +57,7 @@
   transform: rotate(0deg);
   margin-top: 3rem;
   left: 0px;
+  z-index: 10;
 }
 
 .triangleleft-header {
@@ -69,13 +70,33 @@
   transform: rotate(180deg);
   right: 0px;
   margin-top: 3rem;
+  z-index: 10;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1220px) {
   .header {
-    font-size: 91%;
+    font-size: 1.2rem;
   }
 }
+
+@media (max-width: 1040px) {
+  .header {
+    font-size: 1rem;
+  }
+  .left-section,
+  .right-section {
+    margin-left: 2rem;
+  }
+
+  .right-section {
+    margin-right: 1rem;
+  }
+
+  .right-section a {
+    margin: 1rem;
+  }
+}
+
 @media (max-width: 750px) {
   .separator {
     display: none;
@@ -99,7 +120,8 @@
 
   .bar {
     background-color: var(--text);
-    width: 30px;
+
+    width: 2rem;
     height: 4px;
     display: block;
     margin: 5px;
@@ -112,11 +134,11 @@
   }
 
   .right-section div {
-    margin: 5px 0 10px 0;
+    margin: 0.5rem 0 1rem 0;
   }
 
   .right-section a {
-    margin: 15px 0;
+    margin: 1rem 0;
   }
 
   .right-section a {
@@ -125,17 +147,18 @@
 
   .mobile-menu-check:checked ~ .right-section {
     display: flex;
-    position: absolute;
     flex-direction: column;
-    right: 5%;
-    top: 3.5rem;
+    position: absolute;
+    top: 2.9rem;
+    left: 0;
+    right: 0;
+    margin: auto;
     z-index: 1;
-    text-align: start;
-    width: 90%;
-    transition: 0.7s ease-in-out;
+    width: 100%;
+    transition: 0.3s ease-in-out;
     background-color: var(--lavender-ish);
     border: 1px solid var(--text);
-    border-right: 0px;
+    border-right: 1px;
     box-shadow: 5px 3px 0 1px rgba(24, 3, 37);
     font-weight: bold;
   }

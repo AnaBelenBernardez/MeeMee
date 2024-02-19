@@ -90,10 +90,6 @@
 }
 
 .custom-select select {
-  /* -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-image: none; */
 }
 
 #address,
@@ -155,7 +151,7 @@
   right: 51%;
   pointer-events: none;
 }
-
+/* 
 @media (max-width: 900px) {
   .description-group > textarea {
     width: 100%;
@@ -183,4 +179,4 @@
   .location-container > div {
     margin-right: 1.5rem;
   }
-}
+} */
