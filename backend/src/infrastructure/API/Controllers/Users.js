@@ -8,6 +8,34 @@ import { createPathIfNotExists } from '../../../domain/utils/helpers.js'
 import sharp from 'sharp'
 import crypto from 'crypto'
 import path from 'path'
+import nodemailer from 'nodemailer'
+import sendgridTransport from 'nodemailer-sendgrid-transport'
+import jwt from 'jsonwebtoken'
+
+const sendConfirmationEmail = async (toEmail, token) => {
+  const transporter = nodemailer.createTransport(
+    sendgridTransport({
+      auth: {
+        api_key: process.env.SENDGRID_API_KEY,
+      },
+      from: 'meemee.aplicacion@gmail.com',
+    }),
+  )
+
+  const mailOptions = {
+    from: 'meemee.aplicacion@gmail.com',
+    to: toEmail,
+    subject: 'Confirmación de registro',
+    text: `Gracias por registrarte. Haz clic en el siguiente enlace para confirmar tu registro: http://localhost:3000/user/activate/${token}`,
+  }
+
+  try {
+    const info = await transporter.sendMail(mailOptions)
+    console.log('Correo enviado:', info.response)
+  } catch (error) {
+    console.error('Error al enviar el correo:', error)
+  }
+}
 
 const randomName = (n) => crypto.randomBytes(n).toString('hex')
 
@@ -16,20 +44,59 @@ const userService = new UserService()
 export const generateActivationToken = () => {
   return uuidv4()
 }
-export const validateNewUser = (req, res, next) => {
-  const { error } = usersSchemas.validate(req.body)
+export const validateNewUser = async (req, res, next) => {
+  try {
+    const { error } = usersSchemas.validate(req.body)
 
-  if (error) {
-    return res.status(400).json({ error: error.details[0].message })
+    if (error) {
+      throw generateError(error.details[0].message, 400)
+    }
+
+    const { email, username } = req.body
+
+    const [emailExist] = await userService.getUserByEmail(email)
+    const [usernameExist] = await userService.getUserByUserName(username)
+
+    if (emailExist || usernameExist) {
+      throw generateError(
+        'Username or email already exists in our database. Please enter a different username or email.',
+        409,
+      )
+    }
+
+    next()
+  } catch (error) {
+    next(error)
   }
+}
 
-  next()
+export const activateAccountController = async (req, res, next) => {
+  try {
+    const { token } = req.params
+
+    const user = await userService.getUserByToken(token)
+
+    console.log('User:', user)
+
+    if (!user) {
+      throw generateError('Token de activación inválido.', 400)
+    }
+
+    if (user.isActivated) {
+      throw generateError('El token ya ha sido utilizado.', 400)
+    }
+
+    await userService.activateUser(user.id)
+
+    res.status(200).json({ message: 'Cuenta activada exitosamente.' })
+  } catch (err) {
+    next(err)
+  }
 }
 
 export const newUserController = async (req, res, next) => {
   try {
     const { username, email, password, bio, meetups_attended } = req.body
-    console.log(req.files.avatar)
     let imageFileName
 
     if (req.files?.avatar) {
@@ -55,21 +122,30 @@ export const newUserController = async (req, res, next) => {
 
       await image.toFile(path.join(uploadsDir, imageFileName))
     }
+
     if (password.length < 8) {
       return res
         .status(400)
         .json({ error: 'Password length must be at least 8 characters long' })
     }
 
-    const token = generateActivationToken()
-    const userId = await userService.createUser({
+    const { userId, activationToken } = await userService.createUser({
       username,
       email,
       password,
       bio,
       meetups_attended,
       avatar: imageFileName,
+      activated: false,
     })
+
+    await userService.createEmailVerification({
+      userId,
+      token: activationToken,
+    })
+
+    await sendConfirmationEmail(email, activationToken)
+
     res.status(200).json({ message: 'User registered successfully.', userId })
   } catch (err) {
     next(err)
@@ -96,6 +172,7 @@ export const loginController = async (req, res, next) => {
     next(err)
   }
 }
+
 export const updateUserController = async (req, res, next) => {
   const userId = req.params.id
 

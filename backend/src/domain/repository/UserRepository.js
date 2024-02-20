@@ -25,23 +25,9 @@ export class UserRepository {
         throw generateError('Please enter a valid email address.', 400)
       }
 
-      if (emailExist.length > 0 && usernameExist.length > 0) {
+      if (emailExist.length > 0 || usernameExist.length > 0) {
         throw generateError(
-          'Username and email already exist in our database. Please enter a different username and email.',
-          409,
-        )
-      }
-
-      if (emailExist.length > 0) {
-        throw generateError(
-          'Email already exists in our database. Please enter a different email.',
-          409,
-        )
-      }
-
-      if (usernameExist.length > 0) {
-        throw generateError(
-          'Username already exists in our database. Please enter a different username.',
+          'Username or email already exists in our database. Please enter a different username or email.',
           409,
         )
       }
@@ -50,7 +36,7 @@ export class UserRepository {
       const hashedPassword = await bcrypt.hash(password, saltRounds)
 
       const insertUserQuery =
-        'INSERT INTO users (username, bio, email, password,  avatar) VALUES ( ?, ?, ?, ?, ?)'
+        'INSERT INTO users (username, bio, email, password, avatar) VALUES (?, ?, ?, ?, ?)'
       const [insertResult] = await connection.query(insertUserQuery, [
         username,
         bio,
@@ -59,7 +45,26 @@ export class UserRepository {
         avatar,
       ])
 
-      return insertResult.insertId
+      const activationToken = jwt.sign({ email }, process.env.JWT_SECRET, {
+        expiresIn: '24h',
+      })
+
+      return { userId: insertResult.insertId, activationToken }
+    } finally {
+      if (connection) {
+        connection.release()
+      }
+    }
+  }
+
+  async createEmailVerification({ userId, token }) {
+    let connection
+    try {
+      connection = await getConnection()
+
+      const insertEmailVerificationQuery =
+        'INSERT INTO email_verification (user_id, token) VALUES (?, ?)'
+      await connection.query(insertEmailVerificationQuery, [userId, token])
     } finally {
       if (connection) {
         connection.release()
@@ -109,6 +114,21 @@ export class UserRepository {
     }
   }
 
+  async activateUser(userId) {
+    let connection
+    try {
+      connection = await getConnection()
+
+      await connection.execute(
+        'UPDATE users SET isActivated = true WHERE id = ?',
+        [userId],
+      )
+    } finally {
+      if (connection) {
+        connection.release()
+      }
+    }
+  }
   async getUserById(userId) {
     let connection
     try {
@@ -121,6 +141,24 @@ export class UserRepository {
       return rows[0]
     } finally {
       if (connection) connection.release()
+    }
+  }
+
+  async getUserByToken(token) {
+    let connection
+    try {
+      connection = await getConnection()
+
+      const [user] = await connection.execute(
+        'SELECT * FROM users WHERE id IN (SELECT user_id FROM email_verification WHERE token = ?)',
+        [token],
+      )
+
+      return user[0]
+    } finally {
+      if (connection) {
+        connection.release()
+      }
     }
   }
 

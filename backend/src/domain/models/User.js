@@ -2,7 +2,16 @@ import { UserEmail } from './UserEmail.js'
 import { UserPassword } from './UserPassword.js'
 
 export class User {
-  static create(id, username, bio, email, password, meetups_attended, avatar) {
+  static create(
+    id,
+    username,
+    bio,
+    email,
+    password,
+    meetups_attended,
+    avatar,
+    activated,
+  ) {
     return new User(
       id,
       username,
@@ -11,6 +20,7 @@ export class User {
       UserPassword.fromPlain(password),
       meetups_attended,
       avatar,
+      activated,
     )
   }
 
@@ -22,8 +32,16 @@ export class User {
     this.password = password
     this.meetups_attended = meetups_attended
     this.avatar = avatar
+    this.activated = activated || false
   }
 
+  isActivated() {
+    return this.activated
+  }
+
+  activate() {
+    this.activated = true
+  }
   getId() {
     return this.id
   }

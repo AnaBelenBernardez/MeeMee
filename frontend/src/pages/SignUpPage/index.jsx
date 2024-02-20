@@ -35,15 +35,17 @@ function SignUpPage() {
 
   const handleAvatarChange = (event) => {
     const file = event.target.files[0];
-    console.log(file);
+
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
         setPreviewImage(reader.result);
+        setAvatar(file);
       };
       reader.readAsDataURL(file);
     } else {
       setPreviewImage(null);
+      setAvatar(null);
     }
   };
 
@@ -98,10 +100,11 @@ function SignUpPage() {
       setToken(loginToken);
       setLogin(true);
 
-      navigate(`/`);
+      navigate(`/registered`);
     } catch (error) {
       if (error.response && error.response.status === 409) {
         setError("Username or email is already in use.");
+        console.error("Error in handleForm:", error.message);
       } else {
         setError("Error during registration. Please try again later.");
       }
