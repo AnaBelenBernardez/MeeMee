@@ -34,7 +34,8 @@
   text-align: center;
   color: var(--text);
   width: 50%;
-  margin: 2rem 0 0 15%;
+  padding: 2rem;
+  margin-left: rem;
 }
 
 .Hello {
@@ -71,9 +72,9 @@
   gap: 2rem;
 }
 
-.search-bar {
+/* .search-bar {
   width: 50%;
-}
+} */
 
 .landing-bottom {
   background-image: url(/img/suminagashi.svg);
@@ -82,7 +83,7 @@
   background-attachment: fixed;
 }
 
-.landing-signup {
+/* .landing-signup {
   background-color: var(--primary);
   color: white;
   font-weight: 600;
@@ -94,7 +95,7 @@
   padding: 0 2rem;
   box-sizing: border-box;
   box-shadow: 3px 3px 0 1px rgba(24, 3, 37);
-}
+} */
 
 .triangle-right {
   position: absolute;
@@ -131,7 +132,7 @@
   }
 
   .landing-bottom {
-    background-size: contain;
+    background-size: cover;
   }
 
   .Hello {
