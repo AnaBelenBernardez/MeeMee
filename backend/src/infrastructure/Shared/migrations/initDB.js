@@ -10,13 +10,14 @@ async function main() {
     connection = await getConnection()
     console.log(chalk.green('Connected'))
     console.log(chalk.yellow('Dropping existing tables'))
+    await dropTableIfExists(connection, 'emails')
     await dropTableIfExists(connection, 'attendees')
     await dropTableIfExists(connection, 'organizers')
     await dropTableIfExists(connection, 'meetups')
     await dropTableIfExists(connection, 'users')
 
     console.log(chalk.yellow('Creating tables'))
-
+    await createEmailsTable(connection)
     await createUsersTable(connection)
     await createMeetupsTable(connection)
     await createOrganizersTable(connection)
@@ -38,6 +39,18 @@ async function dropTableIfExists(connection, tableName) {
   console.log(chalk.green(`Table ${tableName} dropped if exists.`))
 }
 
+async function createEmailsTable(connection) {
+  await connection.query(`
+CREATE TABLE IF NOT EXISTS email_verification (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT,
+    token VARCHAR(255),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+  );
+  `)
+  console.log(chalk.green('Table emails created'))
+}
+
 async function createUsersTable(connection) {
   await connection.query(`CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -47,6 +60,7 @@ async function createUsersTable(connection) {
     password VARCHAR(255) NOT NULL,
     meetups_attended INT DEFAULT 0,  
     avatar VARCHAR(255),
+    isActivated BOOLEAN DEFAULT false,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
   )`)
 
@@ -57,6 +71,7 @@ async function createUsersTable(connection) {
       email: 'user1@example.com',
       avatar: '../../uploads/default_avatar.png',
       password: 'password1',
+      isActivated: true,
     },
     {
       username: 'user2',
@@ -64,6 +79,7 @@ async function createUsersTable(connection) {
       email: 'user2@example.com',
       avatar: '../../uploads/default_avatar.png',
       password: 'password2',
+      isActivated: true,
     },
     {
       username: 'user3',
@@ -71,6 +87,7 @@ async function createUsersTable(connection) {
       email: 'user3@example.com',
       avatar: '../../uploads/default_avatar.png',
       password: 'password3',
+      isActivated: true,
     },
     {
       username: 'user4',
@@ -78,6 +95,7 @@ async function createUsersTable(connection) {
       email: 'user4@example.com',
       avatar: '../../uploads/default_avatar.png',
       password: 'password4',
+      isActivated: true,
     },
     {
       username: 'user5',
@@ -85,6 +103,7 @@ async function createUsersTable(connection) {
       email: 'user5@example.com',
       avatar: '../../uploads/default_avatar.png',
       password: 'password5',
+      isActivated: true,
     },
   ]
 

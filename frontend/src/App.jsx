@@ -16,7 +16,7 @@ import TermsPage from "./pages/TermsPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import CookiePage from "./pages/CookiePage";
 import UserProfile from "./pages/UserProfilePage";
-
+import SendEmailPage from "./pages/SendEmailPage";
 function App() {
   return (
     <div className="app">
@@ -24,6 +24,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/registered" element={<SendEmailPage />} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="*" element={<NotFoundPage />} />

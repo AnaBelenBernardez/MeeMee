@@ -50,6 +50,7 @@ class UserService {
   async getUserByEmail(email) {
     return this.userRepository.getUserByEmail(email)
   }
+
   async getUsersByMeetupsAttended(meetups_attended) {
     return this.userRepository.getUsersByMeetups_attended(meetups_attended)
   }
@@ -61,6 +62,16 @@ class UserService {
       password,
       avatar,
     })
+  }
+  async getUserByToken(token) {
+    return this.userRepository.getUserByToken(token)
+  }
+  async activateUser(userId) {
+    return this.userRepository.activateUser(userId)
+  }
+
+  async createEmailVerification({ userId, token }) {
+    return this.userRepository.createEmailVerification({ userId, token })
   }
 }
 
