@@ -34,7 +34,18 @@ export const AuthProviderComponent = ({ children }) => {
         setUserData(decodedToken);
         setAuth(true);
         if (login) {
-          toast.success(`Welcome ${decodedToken.email}`);
+          toast.success(`Welcome ${decodedToken.email}`, {
+            style: {
+              backgroundColor: "#7def51",
+              color: "#b528eb",
+              fontFamily: "IBM Plex Mono",
+              borderRadius: "0px",
+              border: "2px solid var(--text)",
+              boxShadow: "3px 3px 0 1px rgba(24, 3, 37)",
+              textAlign: "center",
+              padding: "2rem",
+            },
+          });
           setLogin(false);
         }
       } catch (error) {

@@ -25,8 +25,13 @@ const sendConfirmationEmail = async (toEmail, token) => {
   const mailOptions = {
     from: 'meemee.aplicacion@gmail.com',
     to: toEmail,
-    subject: 'Confirmación de registro',
-    text: `Gracias por registrarte. Haz clic en el siguiente enlace para confirmar tu registro: http://localhost:3000/user/activate/${token}`,
+    subject: 'Welcome to MeeMee!',
+    html: `
+<div style="padding: 20px; border-radius: none; border: 2px solid var(--text); box-sizing: border-box; box-shadow: 3px 3px 0 1px rgba(24, 3, 37); outline: none; background-color: #7def51;">
+  <h2 style="color: #b528eb; font-family: 'IBM Plex Mono', monospace; margin-bottom: 20px;">Welcome to MeeMee!</h2>
+  <p style="font-size: 16px; color: #180325; line-height: 1.6;">We're excited to have you join our community. Click <a href='http://localhost:3000/user/activate/${token}' style='color: #b528eb; text-decoration: none; font-weight: bold;'>here</a> to join the party! 🎉</p>
+</div>
+  `,
   }
 
   try {

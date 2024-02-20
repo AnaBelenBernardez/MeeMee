@@ -16,7 +16,6 @@
 #signup-image {
   border-right: 2px dashed var(--text);
   width: 50%;
-
   object-fit: cover;
 }
 
@@ -46,7 +45,7 @@ ul {
 }
 
 #signup-avatar {
-  width: 90%;
+  width: 93%;
   margin: 0 auto;
   margin-top: 3rem;
 }

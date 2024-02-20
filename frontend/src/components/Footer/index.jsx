@@ -26,7 +26,7 @@ const Footer = () => {
           <span className="languages">ENG | ESP | PT</span>
         </div>
         <a
-          href="https://www.tiktok.com/"
+          href="https://www.tiktok.com/@hackaboss_"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -40,7 +40,7 @@ const Footer = () => {
           <img src="../icons\discord.svg" alt="discord" />
         </a>
         <a
-          href="https://www.instagram.com/"
+          href="https://www.instagram.com/hackaboss_/"
           target="_blank"
           rel="noopener noreferrer"
         >
