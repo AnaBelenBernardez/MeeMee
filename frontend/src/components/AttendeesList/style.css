@@ -64,6 +64,7 @@
   font-family: "IBM Plex Mono", monospace;
   font-size: 1.2rem;
   font-weight: 400;
+  color: var(--lavender-ish);
 }
 
 .list-avatar {

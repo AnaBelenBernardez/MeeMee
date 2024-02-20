@@ -14,7 +14,3 @@
   height: auto;
   margin-right: 1rem;
 }
-
-.home-link:hover {
-  color: var(--primary);
-}

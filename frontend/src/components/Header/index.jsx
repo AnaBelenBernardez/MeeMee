@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import HomeButton from "../HomeButton";
 import SignOutButton from "../SignOutButton";
@@ -7,6 +7,15 @@ import "./style.css";
 
 function Header() {
   const { auth, userData } = useContext(AuthContext);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleMobileMenuToggle = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header className="header">
@@ -20,17 +29,32 @@ function Header() {
           type="checkbox"
           className="mobile-menu-check"
           id="expand-menu"
+          checked={isMobileMenuOpen}
+          onChange={handleMobileMenuToggle}
         ></input>
-        <div className="right-section">
-          <NavLink to="/events">Explore Events</NavLink>
-          {auth && <NavLink to="/postevent">Post Event</NavLink>}
-          {auth && <NavLink to="/user/:nickname">My Account</NavLink>}
+        <div className={`right-section ${isMobileMenuOpen ? "open" : ""}`}>
+          <NavLink to="/events" onClick={closeMobileMenu}>
+            Explore Events
+          </NavLink>
+          {auth && (
+            <NavLink to="/postevent" onClick={closeMobileMenu}>
+              Post Event
+            </NavLink>
+          )}
+          {/* {auth && (
+            <NavLink
+              to={`/user/${userData.nickname}`}
+              onClick={closeMobileMenu}
+            >
+              My Account
+            </NavLink>
+          )} */}
           <div className="separator"></div>
           <div className="nav-signin">
             <SignOutButton />
           </div>
         </div>
-        <div className="mobile-menu">
+        <div className="mobile-menu" onClick={handleMobileMenuToggle}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>

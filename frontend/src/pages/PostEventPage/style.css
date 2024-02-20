@@ -13,23 +13,37 @@
 
 .postevent-container {
   width: 100%;
-  max-width: 95vh;
-  max-height: 100vh;
-  min-height: 70vh;
+  max-width: 70%;
+  max-height: 100%;
   border-radius: none;
   border: 2px solid var(--text);
   box-sizing: border-box;
   box-shadow: 3px 3px 0 1px rgba(24, 3, 37);
   outline: none;
   background-color: rgba(255, 255, 255, 0.5);
-  margin: 2rem auto;
   position: relative;
+}
+
+.postleft-column {
+  float: left;
+  width: 45%;
+  box-sizing: border-box;
+}
+
+.postright-column {
+  float: right;
+  width: 55%;
+  box-sizing: border-box;
 }
 
 .top-line {
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid var(--text);
+}
+
+#title {
+  width: 90%;
 }
 
 .postevent-title {
@@ -56,7 +70,7 @@
   box-shadow: 3px 3px 0 1px rgba(24, 3, 37);
   outline: none;
   height: 7.3rem;
-  width: 50%;
+  width: 90%;
   resize: none;
   margin-top: 2rem;
   padding: 0.3rem;
@@ -82,14 +96,11 @@
   box-shadow: 3px 3px 0 1px rgba(24, 3, 37);
   outline: none;
   height: 2rem;
-  width: 50%;
+  width: 90%;
   resize: none;
   color: #757b8b;
   font-family: "IBM Plex Mono", monospace;
   margin-top: 2rem;
-}
-
-.custom-select select {
 }
 
 #address,
@@ -108,7 +119,7 @@
   font-size: 14px;
   cursor: pointer;
   height: 4rem;
-  width: 50%;
+  width: 90%;
   position: relative;
   padding: 0.3rem;
   margin-top: 2rem;
@@ -144,15 +155,58 @@
   font-size: 0.8rem;
 }
 
+.date-time-container {
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.date-time-container > div {
+  margin-right: 1.5rem;
+}
+
 .description-count {
   position: absolute;
   font-family: "IBM Plex Mono", monospace;
   bottom: 0.5rem;
-  right: 51%;
+  right: 12%;
   pointer-events: none;
 }
-/* 
+
 @media (max-width: 900px) {
+  #title {
+    width: 100%;
+  }
+
+  .description-group > textarea {
+    height: 8rem;
+    width: 100%;
+  }
+
+  .select-box {
+    margin-bottom: 2rem;
+  }
+
+  #time,
+  #date {
+    margin-top: 1rem;
+  }
+
+  .date-time-container {
+    margin-bottom: 0rem;
+  }
+
+  .postevent-container {
+    max-width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 9rem;
+  }
+
+  .postleft-column,
+  .postright-column {
+    float: none;
+    width: 100%;
+  }
+
   .description-group > textarea {
     width: 100%;
   }
@@ -172,6 +226,7 @@
   .date-time-container,
   .location-container {
     display: flex;
+
     margin-bottom: 1rem;
   }
 
@@ -179,4 +234,8 @@
   .location-container > div {
     margin-right: 1.5rem;
   }
-} */
+
+  .date-time-container {
+    margin-bottom: 5rem;
+  }
+}
