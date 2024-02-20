@@ -42,6 +42,12 @@ export class MeetupRepository {
 
       const newMeetupId = insertResult.insertId
 
+      await this.attendeeRepository.createAttendee(
+        newMeetupId,
+        meetupData.organizer_id,
+        true,
+      )
+
       const insertOrganizerQuery = `
       INSERT INTO organizers (user_id, meetup_id, username) 
       VALUES (?, ?, ?)`
