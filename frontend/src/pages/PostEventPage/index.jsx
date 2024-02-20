@@ -303,160 +303,175 @@ function PostEventPage() {
               </>
             )}
             <form onSubmit={handleSubmit} autoComplete="off">
-              <GMaps
-                onLocationSelect={(ciudad, direccion) => {
-                  setFormData({
-                    ...formData,
-                    location: ciudad,
-                    address: direccion,
-                  });
-                }}
-              />
-              <div className="input-container">
-                <input
-                  type="text"
-                  className="input-reg"
-                  id="title"
-                  name="title"
-                  placeholder="Title"
-                  value={formData.title}
-                  onChange={handleInputChange}
-                />
-                {errorMessages.title && (
-                  <div className="error-message">{errorMessages.title}</div>
-                )}
-              </div>
-
-              <div className="description-group input-container">
-                <textarea
-                  id="description"
-                  name="description"
-                  value={formData.description}
-                  onChange={handleInputChange}
-                  placeholder="Description"
-                  maxLength={255}
-                />
-                {errorMessages.description && (
-                  <div className="error-message">
-                    {errorMessages.description}
-                  </div>
-                )}
-                <div className="description-count">{descriptionLength}/255</div>
-              </div>
-
-              <div className="custom-file-input input-container">
-                <input
-                  type="file"
-                  name="picture"
-                  accept="image/jpeg, image/png"
-                  onChange={handlePictureChange}
-                  style={{ display: "none" }}
-                  id="customFileInput"
-                />
-                <label htmlFor="customFileInput">
-                  {errorMessages.picture ? (
-                    <div className="error-message">{errorMessages.picture}</div>
-                  ) : (
-                    <span>Select a photo for your event</span>
-                  )}
-                  <img
-                    src={previewImage ? previewImage : "../../icons/upload.svg"}
-                    alt="upload event photo"
-                  />
-                </label>
-              </div>
-
-              <div className="custom-select input-container">
-                <select
-                  className="select-box"
-                  id="theme"
-                  name="theme"
-                  value={formData.theme}
-                  onChange={handleInputChange}
-                >
-                  <option value="">Category</option>
-                  <option value="Social Events">Social Events</option>
-                  <option value="Art and Culture">Art and Culture</option>
-                  <option value="Videogames">Videogames</option>
-                  <option value="Technology">Technology</option>
-                  <option value="Travel and Outdoors">
-                    Travel and Outdoors
-                  </option>
-                  <option value="Sports and Fitness">Sports and Fitness</option>
-                </select>
-                {errorMessages.theme && (
-                  <div className="error-message">{errorMessages.theme}</div>
-                )}
-              </div>
-
-              <div className="location-container input-container">
-                <div>
+              <div className="postleft-column">
+                <div className="input-container">
                   <input
                     type="text"
-                    id="location"
-                    name="location"
                     className="input-reg"
-                    placeholder="Select a city"
-                    value={formData.location}
+                    id="title"
+                    name="title"
+                    placeholder="Title"
+                    value={formData.title}
                     onChange={handleInputChange}
-                    readOnly
                   />
-                  {errorMessages.location && (
+                  {errorMessages.title && (
+                    <div className="error-message">{errorMessages.title}</div>
+                  )}
+                </div>
+
+                <div className="description-group input-container">
+                  <textarea
+                    id="description"
+                    name="description"
+                    value={formData.description}
+                    onChange={handleInputChange}
+                    placeholder="Description"
+                    maxLength={255}
+                  />
+                  {errorMessages.description && (
                     <div className="error-message">
-                      {errorMessages.location}
+                      {errorMessages.description}
                     </div>
                   )}
+                  <div className="description-count">
+                    {descriptionLength}/255
+                  </div>
                 </div>
-                <div>
+
+                <div className="custom-file-input input-container">
                   <input
-                    type="text"
-                    className="input-reg"
-                    id="address"
-                    name="address"
-                    placeholder="Select an address"
-                    value={formData.address}
-                    onChange={handleInputChange}
-                    readOnly
+                    type="file"
+                    name="picture"
+                    accept="image/jpeg, image/png"
+                    onChange={handlePictureChange}
+                    style={{ display: "none" }}
+                    id="customFileInput"
                   />
-                  {errorMessages.address && (
-                    <div className="error-message">{errorMessages.address}</div>
+                  <label htmlFor="customFileInput">
+                    {errorMessages.picture ? (
+                      <div className="error-message">
+                        {errorMessages.picture}
+                      </div>
+                    ) : (
+                      <span>Select a photo for your event</span>
+                    )}
+                    <img
+                      src={
+                        previewImage ? previewImage : "../../icons/upload.svg"
+                      }
+                      alt="upload event photo"
+                    />
+                  </label>
+                </div>
+
+                <div className="custom-select input-container">
+                  <select
+                    className="select-box"
+                    id="theme"
+                    name="theme"
+                    value={formData.theme}
+                    onChange={handleInputChange}
+                  >
+                    <option value="">Category</option>
+                    <option value="Social Events">Social Events</option>
+                    <option value="Art and Culture">Art and Culture</option>
+                    <option value="Videogames">Videogames</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Travel and Outdoors">
+                      Travel and Outdoors
+                    </option>
+                    <option value="Sports and Fitness">
+                      Sports and Fitness
+                    </option>
+                  </select>
+                  {errorMessages.theme && (
+                    <div className="error-message">{errorMessages.theme}</div>
                   )}
                 </div>
               </div>
-
-              <div className="date-time-container input-container">
-                <div>
-                  <DatePicker
-                    id="date"
-                    name="date"
-                    className="input-form"
-                    selected={formData.date}
-                    onChange={(date) =>
-                      setFormData({
-                        ...formData,
-                        date,
-                      })
-                    }
-                    placeholderText="Select a date"
-                    dateFormat="dd/MM/yyyy"
-                  />
-                  {errorMessages.date && (
-                    <div className="error-message">{errorMessages.date}</div>
-                  )}
+              <div className="postright-column">
+                <GMaps
+                  onLocationSelect={(ciudad, direccion) => {
+                    setFormData({
+                      ...formData,
+                      location: ciudad,
+                      address: direccion,
+                    });
+                  }}
+                />
+                <div className="location-container input-container">
+                  <div>
+                    <input
+                      type="text"
+                      id="location"
+                      name="location"
+                      className="input-reg"
+                      placeholder="Select a city"
+                      value={formData.location}
+                      onChange={handleInputChange}
+                      readOnly
+                    />
+                    {errorMessages.location && (
+                      <div className="error-message">
+                        {errorMessages.location}
+                      </div>
+                    )}
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      className="input-reg"
+                      id="address"
+                      name="address"
+                      placeholder="Select an address"
+                      value={formData.address}
+                      onChange={handleInputChange}
+                      readOnly
+                    />
+                    {errorMessages.address && (
+                      <div className="error-message">
+                        {errorMessages.address}
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <div>
-                  <input
-                    type="time"
-                    id="time"
-                    name="time"
-                    className="input-form"
-                    placeholder="Select a time"
-                    value={formData.time}
-                    onChange={handleInputChange}
-                  />
-                  {errorMessages.time && (
-                    <div className="error-message">{errorMessages.time}</div>
-                  )}
+
+                <div className="date-time-container input-container">
+                  <div>
+                    <DatePicker
+                      id="date"
+                      name="date"
+                      className="input-form"
+                      selected={formData.date}
+                      onChange={(date) =>
+                        setFormData({
+                          ...formData,
+                          date,
+                        })
+                      }
+                      placeholderText="Select a date"
+                      dateFormat="dd/MM/yyyy"
+                    />
+                    {errorMessages.date && (
+                      <div className="error-message">{errorMessages.date}</div>
+                    )}
+                  </div>
+                  <div>
+                    <input
+                      type="time"
+                      id="time"
+                      name="time"
+                      className="input-form"
+                      placeholder="Select a time"
+                      value={formData.time}
+                      onChange={handleInputChange}
+                    />
+                    {errorMessages.time && (
+                      <div id="last-error" className="error-message">
+                        {errorMessages.time}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
 
