@@ -1,0 +1,41 @@
+#activation-container {
+  display: inline-block;
+  margin: 2rem auto;
+  padding: 3rem;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+#activation-container > h2 {
+  font-size: 3rem;
+  color: var(--text);
+  margin: 0 0 3rem;
+  color: var(--primary);
+}
+
+#activation-container > p {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin: 0 0 1.5rem;
+}
+
+.pay-attention {
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  #activation-container {
+    flex-direction: column;
+    width: 90%;
+    margin-bottom: 5rem;
+  }
+
+  #activation-container > h2 {
+    font-size: 1.7rem;
+  }
+
+  #activation-container > p {
+    font-size: 1rem;
+  }
+}
