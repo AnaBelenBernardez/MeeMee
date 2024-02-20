@@ -21,6 +21,7 @@ import "pure-react-carousel/dist/react-carousel.es.css";
 function NextEvents() {
   const [meetups, setMeetups] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [visibleSlides, setVisibleSlides] = useState(4);
 
   useEffect(() => {
     const fetchMeetups = async () => {
@@ -35,6 +36,27 @@ function NextEvents() {
     };
 
     fetchMeetups();
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth > 1500) {
+        setVisibleSlides(4);
+      } else if (screenWidth <= 1500 && screenWidth > 1200) {
+        setVisibleSlides(3);
+      } else {
+        setVisibleSlides(2);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const now = new Date();
@@ -57,20 +79,15 @@ function NextEvents() {
             naturalSlideWidth={40}
             naturalSlideHeight={45}
             totalSlides={firstTenMeetups.length}
+            visibleSlides={visibleSlides}
             infinite="true"
-            visibleSlides={4}
             interval={2000}
-            step={2}
-            isPlaying="true"
+            isPlaying={true}
           >
             <div className="carousel-controls">
               <ButtonBack id="buttonback">
                 <CustomLeftArrow />
               </ButtonBack>
-              {/* <DotGroup
-                showAsSelectedForCurrentSlideOnly="true"
-                className="dotgroup"
-              /> */}
               <ButtonNext id="buttonnext">
                 <CustomRightArrow />
               </ButtonNext>
