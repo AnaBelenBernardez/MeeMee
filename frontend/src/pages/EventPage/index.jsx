@@ -188,6 +188,7 @@ function EventPage() {
             <p id="eventpage-description">{eventData.description}</p>
             <div id="organized-by-container">
               <img
+                id="organizer-icon"
                 className="event-icon"
                 src="../../icons/person.svg"
                 alt="organized by"
