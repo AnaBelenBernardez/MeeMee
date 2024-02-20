@@ -13,7 +13,6 @@
 .basic-container {
   display: flex;
   max-width: 95vh;
-
   border-radius: none;
   border: 2px solid var(--text);
   box-sizing: border-box;

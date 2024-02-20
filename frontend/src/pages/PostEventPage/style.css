@@ -141,7 +141,7 @@
   position: absolute;
   color: var(--red);
   margin-top: 0.3rem;
-  font-size: 14px;
+  font-size: 0.8rem;
 }
 
 .description-count {
