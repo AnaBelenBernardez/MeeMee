@@ -82,7 +82,6 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
 
   return (
     <div className="attendee-button">
-
       {userId === null ? (
         <p className="sign-in-message">Sign in first</p>
       ) : (
@@ -100,7 +99,6 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
           {isAttendee ? "I changed my mind" : "Sign me up!"}
         </button>
       )}
-
 
       {showConfirmation && (
         <>

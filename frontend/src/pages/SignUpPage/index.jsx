@@ -72,6 +72,12 @@ function SignUpPage() {
     } else if (pass1 !== pass2) {
       errors.pass2 = "Passwords do not match";
     }
+    if (!avatar) {
+      errors.avatar = "Please select an avatar photo";
+    }
+    if (!bio.trim()) {
+      errors.bio = "Please enter a bio";
+    }
 
     setFormErrors(errors);
     if (Object.keys(errors).length > 0) {
@@ -121,6 +127,7 @@ function SignUpPage() {
     pass1: formErrors.pass1,
     pass2: formErrors.pass2,
     bio: formErrors.bio,
+    avatar: formErrors.avatar,
   };
 
   return (
@@ -226,7 +233,13 @@ function SignUpPage() {
                   onChange={handleAvatarChange}
                 />
                 <label htmlFor="avatar">
-                  <span>Select a photo for your avatar</span>
+                  {formErrors.avatar ? (
+                    <div className="error-message">{formErrors.avatar}</div>
+                  ) : (
+                    <>
+                      <span>Select a photo for your avatar</span>
+                    </>
+                  )}
                   <img
                     id="upload-avatar"
                     src={previewImage ? previewImage : "../../icons/upload.svg"}
@@ -245,11 +258,15 @@ function SignUpPage() {
                   maxLength={255}
                 />
                 <div className="character-count">{`${characterCount}/255`}</div>
+                {formErrors.bio && (
+                  <div className="error-message">{formErrors.bio}</div>
+                )}
               </li>
             </ul>
             <div className="form-group" id="form-signinbutton">
               <ArrowButton id="signin-button" type="submit" />
             </div>
+            {loading && <Loading />}
           </form>
         </div>
       </div>

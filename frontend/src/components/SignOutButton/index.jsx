@@ -15,7 +15,19 @@ function SignOutButton() {
       setLoading(true);
       await new Promise((resolve) => setTimeout(resolve, 400));
       await logoutHandler();
-      toast.success("See you later 🐊!");
+      toast.success("See you later 🐊!", {
+        style: {
+          backgroundColor: "#b528eb",
+          color: "#7def51",
+          fontFamily: "IBM Plex Mono",
+          fontWeight: "600",
+          borderRadius: "0px",
+          border: "2px solid var(--text)",
+          boxShadow: "3px 3px 0 1px rgba(24, 3, 37)",
+          textAlign: "center",
+          padding: "2rem",
+        },
+      });
       navigate("/");
     } catch (error) {
       toast.error("Error signing out. Please try again later.");
