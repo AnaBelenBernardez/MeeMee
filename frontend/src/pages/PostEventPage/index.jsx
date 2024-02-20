@@ -287,10 +287,10 @@ function PostEventPage() {
             {showConfirmation && (
               <>
                 <div className="overlay"></div>
-                <div className="confirmation-box">
+                <div id="event-created" className="confirmation-box">
                   <p className="no-attendees">Event created successfully!</p>
                   <div className="button-container">
-                    <button id="delete-no">Accept</button>
+                    {/* <button id="delete-no">Accept</button> */}
                     <button id="close-box" onClick={handleConfirmationClose}>
                       <img
                         src="../icons/cross.svg"

@@ -207,6 +207,8 @@
     transform: scale(0.7);
     right: -0.5rem;
     bottom: 0.8rem;
+    width: 70%;
+    font-size: 0.8rem;
   }
 
   #organized-by-container {
