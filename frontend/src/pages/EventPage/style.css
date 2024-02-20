@@ -28,7 +28,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  width: 100%;
+  width: 97%;
   max-width: 95vh;
   max-height: 100vh;
   min-height: 70vh;
@@ -38,7 +38,7 @@
   box-shadow: 3px 3px 0 1px rgba(24, 3, 37);
   outline: none;
   background-color: rgba(255, 255, 255, 0.5);
-  margin: 2rem auto;
+  margin: 5rem;
   padding: 2rem;
   position: relative;
 }
@@ -54,7 +54,7 @@
 
 #eventpage-description {
   margin-top: 3rem;
-  margin-right: 30%;
+  margin-right: 40%;
   font-size: 20px;
 }
 
@@ -138,73 +138,106 @@
   text-align: right;
 }
 
-@media (max-width: 900px) {
-  .event-container {
-    grid-template-columns: 1fr 1fr;
-    padding: 1rem;
-    max-width: 90%;
-    max-height: 80%;
+@media (max-width: 700px) {
+  #goback-banner {
+    display: none;
   }
 
-  #goback-banner {
-    top: 3rem;
+  #goback-button {
+    display: none;
+  }
+
+  .event-container {
+    grid-template-columns: 1fr;
+    max-width: 90%;
+    max-height: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
   }
 
   .event-title {
-    font-size: 22px;
+    font-size: 1.5rem;
   }
 
   #eventpage-description {
     margin-right: 0.2rem;
-    font-size: 18px;
-  }
-
-  #organized-by-container {
-    position: static;
-    margin-top: 2rem;
-    margin-left: 0;
-  }
-
-  #organized-by-username {
-    text-align: left;
-  }
-
-  #eventpage-person {
-    position: static;
-    left: auto;
-    bottom: auto;
-    margin-top: 2rem;
-  }
-
-  #event-time {
-    right: auto;
-    bottom: auto;
-    margin-top: 0.5rem;
-    margin-right: auto;
-  }
-
-  #event-signme {
-    right: auto;
-    bottom: auto;
-    margin-top: -2rem;
-    margin-right: auto;
-  }
-
-  #event-going {
-    left: 40%;
-    bottom: 9%;
-    margin-right: auto;
-  }
-
-  .event-locationinfo {
-    text-align: right;
-    margin-right: 1rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   #eventpage-image {
-    width: 22rem;
-    height: 25rem;
+    position: absolute;
+    width: 20rem;
+    height: 15rem;
     object-fit: cover;
     border: dashed;
+    top: 10rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 0.3rem;
+  }
+
+  #event-time,
+  #event-signme,
+  #event-going {
+    transform: scale(0.7);
+    position: absolute;
+  }
+
+  #event-time {
+    bottom: 3.8rem;
+    left: 1.5rem;
+  }
+
+  #event-going {
+    bottom: 3.8rem;
+    left: 8rem;
+  }
+
+  #event-signme {
+    bottom: 3.8rem;
+    left: 14.5rem;
+  }
+
+  .event-locationinfo {
+    position: absolute;
+    transform: scale(0.7);
+    right: -0.5rem;
+    bottom: 0.8rem;
+  }
+
+  #organized-by-container {
+    position: absolute;
+    text-align: right;
+    transform: scale(0.6);
+    bottom: 0.2rem;
+    left: 3rem;
+  }
+
+  #organized-by {
+    margin-left: 0.1rem;
+  }
+
+  #organized-by-username {
+    display: block;
+    text-align: left;
+    margin-top: 0.3rem;
+  }
+
+  #eventpage-person {
+    position: absolute;
+    margin-top: 2rem;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    left: 1rem;
+    bottom: 0.5rem;
+    border: none;
+  }
+  #organizer-icon {
+    display: none;
   }
 }

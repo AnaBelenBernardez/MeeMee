@@ -9,7 +9,13 @@ const Footer = () => {
       <div className="triangleleft-footer"></div>
       <div className="footer-links">
         <nav>
-          <p>© 2024 MeeMee</p>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            to="https://github.com/AnaBelenBernardez/MeeMee"
+          >
+            ©2024 MeeMee
+          </Link>
           <Link to="/terms">Terms of Service</Link>
           <Link to="/privacy">Privacy Policy</Link>
           <Link to="/cookie">Cookies Policy</Link>
