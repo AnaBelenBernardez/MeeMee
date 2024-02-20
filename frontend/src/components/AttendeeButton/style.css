@@ -38,16 +38,13 @@
   opacity: 1;
   cursor: pointer;
   color: var(--text);
-
   border-radius: none;
   border: none;
   font-size: 18px;
   display: flex;
   align-items: center;
   box-sizing: border-box;
-
   text-decoration: none;
-
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
 }

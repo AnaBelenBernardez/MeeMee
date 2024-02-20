@@ -79,7 +79,9 @@ const AttendeesList = ({ updateAttendees, onClose }) => {
           <img src="../icons/cross.svg" alt="Close button" id="close-img" />
         </button>
         {attendees.length === 0 ? (
-          <p className="no-attendees">No attendees for this event (yet).</p>
+          <p id="no-attendees" className="no-attendees">
+            No attendees for this event (yet).
+          </p>
         ) : (
           <ul className="event-attendees-list">
             <h2 id="attendee-title">Who else has signed up?</h2>

@@ -93,3 +93,16 @@
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   gap: 0.5rem;
 }
+
+#no-attendees {
+  padding: 2rem;
+}
+
+@media (max-width: 900px) {
+  #close-box {
+    left: 85%;
+  }
+  #no-attendees {
+    font-size: 2.3rem;
+  }
+}

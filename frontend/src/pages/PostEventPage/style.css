@@ -238,4 +238,10 @@
   .date-time-container {
     margin-bottom: 5rem;
   }
+
+  #event-created {
+    max-width: 95%;
+    padding: 5rem;
+    max-height: 100%;
+  }
 }
