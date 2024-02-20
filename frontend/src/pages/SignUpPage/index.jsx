@@ -126,8 +126,8 @@ function SignUpPage() {
   return (
     <main className="signin-page">
       <div className="basic-container">
-        <img className="signin-image" src="/img/cosplay.avif" alt="" />
-        <div className="signin-section">
+        <img id="signup-image" src="/img/cosplay.avif" alt="" />
+        <div className="signin-section" id="signup-section">
           <div className="signup-header">
             <Link to="/signup" className="link-sign" id="link-signup">
               Sign Up
@@ -208,7 +208,9 @@ function SignUpPage() {
                   onChange={(e) => setPass2(e.target.value)}
                 />
                 {formErrors.pass1 && (
-                  <div className="error-message">{formErrors.pass1}</div>
+                  <div id="pass1-error" className="error-message">
+                    {formErrors.pass1}
+                  </div>
                 )}
                 {formErrors.pass2 && (
                   <div className="error-message">{formErrors.pass2}</div>
