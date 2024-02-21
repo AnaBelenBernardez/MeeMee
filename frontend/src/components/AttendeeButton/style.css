@@ -49,6 +49,10 @@
     sans-serif;
 }
 
+.sign-in-message {
+  justify-content: center;
+}
+
 #signin-first:hover {
   background-color: var(--yellow-ish);
 }
