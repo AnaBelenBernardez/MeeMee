@@ -4,8 +4,10 @@ import { AuthContext } from "../../context/AuthContext.jsx";
 import toast from "react-hot-toast";
 import Loading from "../../components/Loading/index.jsx";
 import "./style.css";
+import { useTranslation } from "react-i18next";
 
 function SignOutButton() {
+  const { t } = useTranslation();
   const { auth, logoutHandler } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -44,11 +46,11 @@ function SignOutButton() {
         <>
           {auth ? (
             <NavLink onClick={handleSignOut} className="sign-out-link">
-              Sign Out
+              {t("translation.signOut")}
             </NavLink>
           ) : (
             <NavLink to="/signin" className="sign-out-link">
-              Sign In
+              {t("translation.signIn")}
             </NavLink>
           )}
         </>

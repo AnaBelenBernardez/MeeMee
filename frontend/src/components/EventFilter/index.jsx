@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import "./style.css";
 
 function EventFilter({ locations, onFilterChange }) {
+  const { t } = useTranslation();
   const [selectedLocation, setSelectedLocation] = useState("");
 
   const handleLocationChange = (event) => {
@@ -28,9 +30,9 @@ function EventFilter({ locations, onFilterChange }) {
         onChange={handleLocationChange}
       >
         <option value="" disabled>
-          Search by city
+          {t("translation.searchCity")}
         </option>
-        <option value="">All cities</option>
+        <option value="">{t("translation.allCities")}</option>
         {locations.map((location) => (
           <option key={location} value={location}>
             {formatLocation(location)}

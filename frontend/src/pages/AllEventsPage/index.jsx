@@ -8,9 +8,11 @@ import EventFilter from "../../components/EventFilter";
 import ScrollToTop from "../../components/ScrollToTop";
 import ScrollBar from "../../components/ScrollBar";
 import ConfirmBox from "../../components/ConfirmBox";
+import { useTranslation } from "react-i18next";
 import "./style.css";
 
 function AllEventsPage() {
+  const { t } = useTranslation();
   const [meetups, setMeetups] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -84,12 +86,12 @@ function AllEventsPage() {
               {meetups.length > visibleMeetups &&
                 visibleMeetups < meetups.length && (
                   <button onClick={loadMoreMeetups} id="loadmore">
-                    Load more
+                    {t("translation.loadMore")}
                   </button>
                 )}
             </>
           ) : (
-            <ConfirmBox id="no-events" message={"No events available"} />
+            <ConfirmBox id="no-events" message={t("translation.noEvents")} />
           )}
         </div>
       )}

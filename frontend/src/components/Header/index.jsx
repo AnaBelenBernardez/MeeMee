@@ -4,8 +4,10 @@ import HomeButton from "../HomeButton";
 import SignOutButton from "../SignOutButton";
 import { AuthContext } from "../../context/AuthContext.jsx";
 import "./style.css";
+import { useTranslation } from "react-i18next";
 
 function Header() {
+  const { t } = useTranslation();
   const { auth, userData } = useContext(AuthContext);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -34,11 +36,11 @@ function Header() {
         ></input>
         <div className={`right-section ${isMobileMenuOpen ? "open" : ""}`}>
           <NavLink to="/events" onClick={closeMobileMenu}>
-            Explore Events
+            {t("header.exploreEvents")}
           </NavLink>
           {auth && (
             <NavLink to="/postevent" onClick={closeMobileMenu}>
-              Post Event
+              {t("header.postEvent")}
             </NavLink>
           )}
           {/* {auth && (

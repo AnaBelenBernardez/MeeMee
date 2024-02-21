@@ -5,8 +5,10 @@ import { getDataUserService } from "../../services/index.js";
 import { useParams } from "react-router-dom";
 import Loading from "../Loading";
 import "./style.css";
+import { useTranslation } from "react-i18next";
 
 const AttendeesList = ({ updateAttendees, onClose }) => {
+  const { t } = useTranslation();
   const { id } = useParams();
   const { token } = useContext(AuthContext);
   const [attendees, setAttendees] = useState([]);
@@ -80,11 +82,11 @@ const AttendeesList = ({ updateAttendees, onClose }) => {
         </button>
         {attendees.length === 0 ? (
           <p id="no-attendees" className="no-attendees">
-            No attendees for this event (yet).
+            {t("translation.noAttendees")}
           </p>
         ) : (
           <ul className="event-attendees-list">
-            <h2 id="attendee-title">Who else has signed up?</h2>
+            <h2 id="attendee-title">{t("translation.attendeesList")}</h2>
             <div className="attendees-container">
               {attendees.map((attendee) => (
                 <li key={attendee.id}>

@@ -5,8 +5,11 @@ import {
 } from "../../services/index.js";
 import { NavLink } from "react-router-dom";
 import "./style.css";
+import { useTranslation } from "react-i18next";
 
 const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
+  const { t } = useTranslation();
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [isAttendee, setIsAttendee] = useState(false);
@@ -83,7 +86,7 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
   return (
     <div className="attendee-button">
       {userId === null ? (
-        <p className="sign-in-message">Sign in first</p>
+        <p className="sign-in-message">{t("translation.signInFirst")}</p>
       ) : (
         <button
           id="button-signme"
@@ -104,15 +107,13 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
         <>
           <div className="overlay"></div>
           <div className="confirmation-box">
-            <p className="no-attendees">
-              Are you sure you no longer want to attend this event?
-            </p>
+            <p className="no-attendees">{t("translation.changedMind")}</p>
             <div className="button-container">
               <button id="delete-yes" onClick={handleDeleteMeetup}>
-                Yes
+                {t("translation.yes")}
               </button>
               <button id="delete-no" onClick={handleCancelDelete}>
-                Cancel
+                {t("translation.cancel")}
               </button>
             </div>
           </div>
@@ -133,7 +134,7 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
           />
           {userId === null ? (
             <NavLink id="signin-first" to="/signin">
-              Sign in to attend
+              {t("translation.signInFirst")}
             </NavLink>
           ) : isAttendee ? (
             "I changed my mind"

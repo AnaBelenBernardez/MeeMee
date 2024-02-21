@@ -1,89 +1,79 @@
 import React from "react";
-import "./style.css";
 import ScrollToTop from "../../components/ScrollToTop";
+import "./style.css";
+import { useTranslation } from "react-i18next";
 
 function PrivacyPage() {
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+
   return (
     <main className="privacy-page">
       <ScrollToTop />
       <div id="privacy-page">
-        <h1>Privacy Policy for MeeMee</h1>
+        <h1>{t("translation.privacyPolicyPage")}</h1>
 
-        <h2>
-          At MeeMee, your privacy is our top priority. This Privacy Policy
-          outlines how we collect, use, and safeguard your information.
-        </h2>
+        <h2>{t("translation.privacyPolicyIntro")}</h2>
 
         <p>
-          <strong>Information We Collect</strong>
+          <strong>{t("translation.informationCollected")}</strong>
           <br />
-          We collect information you provide when creating or updating your
-          MeeMee account, such as your name, email, and profile details.
+          {t("translation.informationCollectedText")}
         </p>
 
         <p>
-          <strong>Event Contributions</strong>
+          <strong>{t("translation.eventContributionsPrivacy")}</strong>
           <br />
-          When you create or participate in events on MeeMee, we collect
-          information related to those events, including descriptions,
-          locations, and attendee lists.
+          {t("translation.eventContributionsText")}
         </p>
 
         <p>
-          <strong>Device Information</strong>
+          <strong>{t("translation.deviceInformation")}</strong>
           <br />
-          We may collect information about the device you use to access MeeMee,
-          including device type, operating system, and browser details.
+          {t("translation.deviceInformationText")}
         </p>
 
         <p>
-          <strong>Cookies</strong>
+          <strong>{t("translation.cookies")}</strong>
           <br />
-          MeeMee uses cookies to enhance your browsing experience. You can
-          disable cookies in your browser settings if you prefer. Check our{" "}
-          <a href="/cookie">Cookies Policy.</a>
+          {t("translation.cookiesText")}
         </p>
 
         <p>
-          <strong>How We Use Your Information</strong>
+          <strong>{t("translation.howWeUseYourInformation")}</strong>
           <br />
-          We use your information to personalize your MeeMee experience, improve
-          our services, and communicate with you about events and updates.
+          {t("translation.howWeUseYourInformationText")}
         </p>
 
         <p>
-          <strong>Information Sharing</strong>
+          <strong>{t("translation.informationSharing")}</strong>
           <br />
-          We do not share your personal information with third parties without
-          your consent, except as required by law.
+          {t("translation.informationSharingText")}
         </p>
 
         <p>
-          <strong>Data Security</strong>
+          <strong>{t("translation.dataSecurity")}</strong>
           <br />
-          We take measures to protect your information, but no method of
-          transmission over the internet is 100% secure. We encourage
-          responsible use of your MeeMee account.
+          {t("translation.dataSecurityText")}
         </p>
 
         <p>
-          <strong>Changes to Privacy Policy</strong>
+          <strong>{t("translation.changesToPrivacyPolicy")}</strong>
           <br />
-          We may update this Privacy Policy from time to time. You will be
-          notified of any significant changes.
+          {t("translation.changesToPrivacyPolicyText")}
         </p>
 
         <p>
-          <strong>Contact Us</strong>
+          <strong>{t("translation.contactUs")}</strong>
           <br />
-          Questions or concerns about your privacy? Reach out to us at{" "}
-          <a href="mailto:privacy@meemee.com">privacy@MeeMee.com</a>.
+          {t("translation.contactUsText")}
+          <a href="mailto:privacy@meemee.com">privacy@MeeMee.com</a>
         </p>
 
         <p>
-          Enjoy your MeeMee experience with confidence!
+          {t("translation.enjoyMeeMeeExperience")}
           <br />
-          MeeMee Privacy Team
+          {t("translation.meeMeePrivacyTeam")}
           <br />
         </p>
       </div>

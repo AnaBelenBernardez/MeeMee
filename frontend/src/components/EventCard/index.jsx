@@ -3,8 +3,10 @@ import Loading from "../Loading";
 import { Link } from "react-router-dom";
 import { format } from "date-fns";
 import "./style.css";
+import { useTranslation } from "react-i18next";
 
 function EventCard({ meetup }) {
+  const { t } = useTranslation();
   const [attendeesCount, setAttendeesCount] = useState(0);
 
   useEffect(() => {
@@ -104,12 +106,12 @@ function EventCard({ meetup }) {
               </div>
               <div className="eventcard-going">
                 <img className="event-icon" src="icons/check.svg" alt="Going" />
-                {attendeesCount} going
+                {attendeesCount} {t("translation.going")}
               </div>
             </div>
           </>
         ) : (
-          <p>No event data available.</p>
+          <p>{t("translation.eventDataNo")}</p>
         )}
       </div>
     </Link>

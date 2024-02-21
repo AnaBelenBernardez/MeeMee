@@ -7,6 +7,7 @@ import NoNextEvents from "../NoNextEvents";
 import CustomLeftArrow from "../CustomLeftArrow";
 import CustomRightArrow from "../CustomRightArrow";
 import "./style.css";
+import { useTranslation } from "react-i18next";
 
 import {
   CarouselProvider,
@@ -19,6 +20,7 @@ import {
 import "pure-react-carousel/dist/react-carousel.es.css";
 
 function NextEvents() {
+  const { t } = useTranslation();
   const [meetups, setMeetups] = useState([]);
   const [loading, setLoading] = useState(true);
   const [visibleSlides, setVisibleSlides] = useState(4);
@@ -73,7 +75,7 @@ function NextEvents() {
       ) : firstTenMeetups.length > 0 ? (
         <div className="event-cards-container">
           <div className="green-banner" id="nextevents-banner">
-            <p>Next Events!</p>
+            <p>{t("translation.nextEvents")}</p>
           </div>
           <CarouselProvider
             naturalSlideWidth={40}
