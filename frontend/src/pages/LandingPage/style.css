@@ -35,22 +35,25 @@
   color: var(--text);
   width: 50%;
   padding: 2rem;
-  margin-left: rem;
+  margin-left: 6rem;
 }
 
 .Hello {
   background-color: var(--lavender-ish);
   position: absolute;
   width: fit-content;
-  height: fit-content;
+  min-width: 15rem;
+  height: 7rem;
+  text-align: center;
   border: solid 2px var(--text);
   box-shadow: 3px 3px 0 1px rgba(24, 3, 37);
   font-family: "Roboto", sans-serif;
-  font-size: 6rem;
+  font-size: 5rem;
   font-weight: 500;
   padding: 0 15px 0 15px;
   color: var(--text);
   right: 20%;
+  text-align: center;
 }
 
 .Hello::after {

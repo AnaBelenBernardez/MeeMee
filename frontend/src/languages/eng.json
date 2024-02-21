@@ -133,7 +133,8 @@
     "avatarError": "Please select an avatar photo",
     "bioError": "Please enter a bio",
     "registrationConflictError": "Username or email is already in use.",
-    "registrationError": "Error during registration. Please try again later."
+    "registrationError": "Error during registration. Please try again later.",
+    "exploreCategories": "Explore Categories"
   },
 
   "landingPage": {

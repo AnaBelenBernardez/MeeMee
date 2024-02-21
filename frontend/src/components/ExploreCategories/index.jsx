@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import BlackArrow from "../BlackArrow";
 import "./style.css";
-
 import { useTranslation } from "react-i18next";
 import "./style.css";
 
 function ExploreCategories({ onCategoryChange }) {
+  const { t } = useTranslation();
   const categories = [
     "All Categories",
     "Online Events",
@@ -17,9 +17,9 @@ function ExploreCategories({ onCategoryChange }) {
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t } = useTranslation();
-  const [selectedCategory, setSelectedCategory] =
-    useState("Explore Categories");
+  const [selectedCategory, setSelectedCategory] = useState(
+    t("translation.exploreCategories")
+  );
 
   const handleMouseEnter = () => {
     setIsMenuOpen(true);
