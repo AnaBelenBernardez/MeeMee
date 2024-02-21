@@ -133,7 +133,7 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
             id="icon-signme"
           />
           {userId === null ? (
-            <NavLink id="signin-first" to="/signin">
+            <NavLink id="signin-first" className="sign-in-message" to="/signin">
               {t("translation.signInFirst")}
             </NavLink>
           ) : isAttendee ? (
