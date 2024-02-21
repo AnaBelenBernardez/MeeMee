@@ -27,7 +27,7 @@ const sendConfirmationEmail = async (toEmail, token) => {
     to: toEmail,
     subject: 'Welcome to MeeMee!',
     html: `
-<div style="padding: 20px; border-radius: none; border: 2px solid var(--text); box-sizing: border-box; box-shadow: 3px 3px 0 1px rgba(24, 3, 37); outline: none; background-color: #7def51;">
+<div style="padding: 20px; border-radius: none; border: 2px solid var(--text); box-sizing: border-box; box-shadow: 3px 3px 0 1px rgba(24, 3, 37); outline: none;">
   <h2 style="color: #b528eb; font-family: 'IBM Plex Mono', monospace; margin-bottom: 20px;">Welcome to MeeMee!</h2>
   <p style="font-size: 16px; color: #180325; line-height: 1.6;">We're excited to have you join our community. Click <a href='http://localhost:3000/user/activate/${token}' style='color: #b528eb; text-decoration: none; font-weight: bold;'>here</a> to join the party! 🎉</p>
 </div>
@@ -93,7 +93,8 @@ export const activateAccountController = async (req, res, next) => {
 
     await userService.activateUser(user.id)
 
-    res.status(200).json({ message: 'Cuenta activada exitosamente.' })
+    // res.status(200).json({ message: 'Cuenta activada exitosamente.' })
+    res.redirect('http://localhost:5173/')
   } catch (err) {
     next(err)
   }

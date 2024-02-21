@@ -144,7 +144,8 @@
     top: 2rem;
     right: 2rem;
     font-size: 4rem;
-    right: 30%;
+    right: 25%;
+    transform: scale(0.7);
   }
 
   .header-text {
