@@ -1,8 +1,12 @@
 import React from "react";
 import "./style.css";
 import ScrollToTop from "../../components/ScrollToTop";
+import { useTranslation } from "react-i18next";
 
 function TermsPage() {
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+
   return (
     <main className="terms-page">
       <ScrollToTop />

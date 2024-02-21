@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
+import LanguageSelector from "../LanguageSelector";
 
 const Footer = () => {
   return (
@@ -22,9 +23,7 @@ const Footer = () => {
         </nav>
       </div>
       <div className="footer-socials">
-        <div>
-          <span className="languages">ENG | ESP | PT</span>
-        </div>
+        <div>{/* <LanguageSelector /> */}</div>
         <a
           href="https://www.tiktok.com/@hackaboss_"
           target="_blank"
