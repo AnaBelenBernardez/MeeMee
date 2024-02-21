@@ -3,8 +3,10 @@ import { AuthContext } from "../../context/AuthContext";
 import { deleteMeetup } from "../../services/index";
 import { useParams, useNavigate } from "react-router-dom";
 import "./style.css";
+import { useTranslation } from "react-i18next";
 
 const DeleteMeetup = ({ meetupId, isOrganizer, onDeleteMeetup }) => {
+  const { t } = useTranslation();
   const { token } = useContext(AuthContext);
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -46,22 +48,20 @@ const DeleteMeetup = ({ meetupId, isOrganizer, onDeleteMeetup }) => {
                 src="../../icons/cross.svg"
                 alt="delete event"
               />
-              Delete event
+              {t("translation.deleteEvent")}
             </button>
           )}
           {confirmDelete && (
             <>
               <div className="overlay"></div>
               <div className="confirmation-box">
-                <p className="no-attendees">
-                  Are you sure you want to delete this event?
-                </p>
+                <p className="no-attendees">{t("translation.deleteSure")}</p>
                 <div className="button-container">
                   <button id="delete-yes" onClick={handleDeleteMeetup}>
-                    Yes
+                    {t("translation.yes")}
                   </button>
                   <button id="delete-no" onClick={handleCancelDelete}>
-                    Cancel
+                    {t("translation.cancel")}
                   </button>
                 </div>
               </div>

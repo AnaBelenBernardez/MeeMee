@@ -4,9 +4,11 @@ import { registerUserService, loginUserService } from "../../services/index.js";
 import { AuthContext } from "../../context/AuthContext.jsx";
 import ArrowButton from "../../components/ArrowButton";
 import Loading from "../../components/Loading";
+import { useTranslation } from "react-i18next";
 import "./style.css";
 
 function SignUpPage() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const { setToken, setLogin } = useContext(AuthContext);
 
@@ -60,23 +62,22 @@ function SignUpPage() {
     const errors = {};
 
     if (!usernameRegex.test(username)) {
-      errors.username = "Nickname must be between 4 and 20 characters";
+      errors.username = t("translation.usernameError");
     }
 
     if (!emailRegex.test(email)) {
-      errors.email = "Enter a valid email";
+      errors.email = t("translation.emailError");
     }
     if (!passwordRegex.test(pass1)) {
-      errors.pass1 =
-        "Password must be at least 8 characters long and include at least one letter, one number, and one special character";
+      errors.pass1 = t("translation.passwordErrorUp");
     } else if (pass1 !== pass2) {
-      errors.pass2 = "Passwords do not match";
+      errors.pass2 = t("translation.passwordMatchError");
     }
     if (!avatar) {
-      errors.avatar = "Please select an avatar photo";
+      errors.avatar = t("translation.avatarError");
     }
     if (!bio.trim()) {
-      errors.bio = "Please enter a bio";
+      errors.bio = t("translation.bioError");
     }
 
     setFormErrors(errors);
@@ -109,10 +110,10 @@ function SignUpPage() {
       navigate(`/registered`);
     } catch (error) {
       if (error.response && error.response.status === 409) {
-        setError("Username or email is already in use.");
+        setError(t("translation.registrationConflictError"));
         console.error("Error in handleForm:", error.message);
       } else {
-        setError("Error during registration. Please try again later.");
+        setError(t("translation.registrationError"));
       }
     } finally {
       setTimeout(() => {
@@ -137,10 +138,10 @@ function SignUpPage() {
         <div className="signin-section" id="signup-section">
           <div className="signup-header">
             <Link to="/signup" className="link-sign" id="link-signup">
-              Sign Up
+              {t("translation.signUp")}
             </Link>
             <Link to="/signin" className="link-sign">
-              Sign In
+              {t("translation.signIn")}
             </Link>
           </div>
           <form
@@ -156,7 +157,7 @@ function SignUpPage() {
                   type="text"
                   id="username"
                   name="username"
-                  placeholder="Nickname"
+                  placeholder={t("translation.usernamePlaceholder")}
                   onChange={(e) => setUsername(e.target.value)}
                 />
                 {formErrors.username && (
@@ -169,7 +170,7 @@ function SignUpPage() {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Email"
+                  placeholder={t("translation.emailPlaceholder")}
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 {formErrors.email && (
@@ -184,21 +185,21 @@ function SignUpPage() {
                     type={showPassword ? "text" : "password"}
                     id="pass1"
                     name="pass1"
-                    placeholder="Password"
+                    placeholder={t("translation.passwordPlaceholder")}
                     onChange={(e) => setPass1(e.target.value)}
                   />
                   {showPassword ? (
                     <img
                       className="eye-icon-up"
                       src="../../icons/eye_opened.svg"
-                      alt="Hide Password"
+                      alt={t("translation.hidePassword")}
                       onClick={togglePasswordVisibility}
                     />
                   ) : (
                     <img
                       className="eye-icon-up"
                       src="../../icons/eye_closed.svg"
-                      alt="Show Password"
+                      alt={t("translation.showPassword")}
                       onClick={togglePasswordVisibility}
                     />
                   )}
@@ -211,7 +212,7 @@ function SignUpPage() {
                   type={showPassword ? "text" : "password"}
                   id="pass2"
                   name="pass2"
-                  placeholder="Repeat password"
+                  placeholder={t("translation.repeatPasswordPlaceholder")}
                   onChange={(e) => setPass2(e.target.value)}
                 />
                 {formErrors.pass1 && (
@@ -237,13 +238,13 @@ function SignUpPage() {
                     <div className="error-message">{formErrors.avatar}</div>
                   ) : (
                     <>
-                      <span>Select a photo for your avatar</span>
+                      <span>{t("translation.selectAvatar")}</span>
                     </>
                   )}
                   <img
                     id="upload-avatar"
                     src={previewImage ? previewImage : "../../icons/upload.svg"}
-                    alt="upload your avatar photo"
+                    alt={t("translation.uploadAvatar")}
                   />
                 </label>
               </li>
@@ -254,7 +255,7 @@ function SignUpPage() {
                   name="bio"
                   value={bio}
                   onChange={handleBioChange}
-                  placeholder="Tell the world a little about you"
+                  placeholder={t("translation.bioPlaceholder")}
                   maxLength={255}
                 />
                 <div className="character-count">{`${characterCount}/255`}</div>

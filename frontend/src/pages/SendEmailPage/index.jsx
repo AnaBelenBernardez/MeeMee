@@ -1,27 +1,25 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./style.css";
 
 const SendEmailPage = () => {
+  const { t } = useTranslation();
+
   return (
     <main className="postevent-page">
       <div className="postevent-container" id="activation-container">
-        <h2>You're almost there!</h2>
+        <h2>{t("translation.almostThere")}</h2>
         <p>
-          Just <span className="pay-attention">check your email</span> for a
-          message from us.
+          {t("translation.checkEmail")}{" "}
+          <span className="pay-attention">
+            {t("translation.activationNote")}
+          </span>
         </p>
-        <p>We've sent you a quick note to activate your account.</p>
-        <p>Make sure to peek inside your inbox!</p>
+        <p>{t("translation.peekInside")}</p>
+        <p>{t("translation.didntSeeEmail")}</p>
+        <p>{t("translation.clickSpecialLink")}</p>
         <p>
-          Didn't see our email? Don't sweat it!{" "}
-          <span className="pay-attention">Check your spam folder too.</span>
-        </p>
-        <p>
-          Once you find our email, just click on the special link inside, and
-          voila! You're officially part of the crew.
-        </p>
-        <p>
-          <span className="pay-attention">Can't wait to see you around!</span>
+          <span className="pay-attention">{t("translation.cantWait")}</span>
         </p>
       </div>
     </main>

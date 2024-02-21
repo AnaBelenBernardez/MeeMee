@@ -27,7 +27,7 @@ const resources = {
 
 i18n.init({
   resources,
-  lng: "en",
+  lng: "eng",
   fallbackLng: "en",
   interpolation: {
     escapeValue: false,

@@ -11,7 +11,10 @@ import DeleteMeetup from "../../components/DeleteMeetup/index.jsx";
 import GMaps from "../../components/GMaps";
 import "./style.css";
 
+import { useTranslation } from "react-i18next";
+
 function EventPage() {
+  const { t } = useTranslation();
   const { id } = useParams();
   const navigate = useNavigate();
   const { token } = useContext(AuthContext);
@@ -176,7 +179,7 @@ function EventPage() {
     <main className="event-page">
       <div className="green-banner" id="goback-banner">
         <Link to="/events">
-          <button id="goback-button">Go back</button>
+          <button id="goback-button">{t("translation.goBack")}</button>
         </Link>
       </div>
       {loading ? (
@@ -193,7 +196,7 @@ function EventPage() {
                 src="../../icons/person.svg"
                 alt="organized by"
               />
-              <span id="organized-by">{`Organized by`}</span>
+              <span id="organized-by">{t("translation.organizedBy")}</span>
               <span id="organized-by-username">{` ${
                 organizerUsername || ""
               }`}</span>
@@ -260,7 +263,7 @@ function EventPage() {
                 src="../../icons/attendees.svg"
                 alt="signme"
               />
-              {eventData.attendees_count} going
+              {eventData.attendees_count} {t("translation.going")}
             </div>
             <div
               className={`green-banner ${

@@ -11,79 +11,71 @@ function TermsPage() {
     <main className="terms-page">
       <ScrollToTop />
       <div id="terms-page">
-        <h1>Terms of Service for Meemee</h1>
+        <h1>{t("translation.terms")}</h1>
         <h2>
           Welcome to Meemee! Before you dive into the app, here's a quick
           rundown of our straightforward Terms of Service:
         </h2>
 
         <p>
-          <strong>Acceptance of Terms</strong>
+          <strong>{t("translation.acceptanceOfTerms")}</strong>
           <br />
-          By using MeeMee, you agree to abide by these Terms of Service. If
-          these terms don't vibe with you, feel free to step away from our
-          gathering.
+          {t("translation.acceptanceOfTermsText")}
         </p>
 
         <p>
-          <strong>Community Spirit</strong>
+          <strong>{t("translation.communitySpirit")}</strong>
           <br />
-          MeeMee thrives on community vibes. No vibes that dampen the spirit of
-          togetherness will be tolerated.
+          {t("translation.communitySpiritText")}
         </p>
 
         <p>
-          <strong>Your MeeMee Space</strong>
+          <strong>{t("translation.yourMeeMeeSpace")}</strong>
           <br />
-          Your account is your MeeMee space. Safeguard it like you would your
-          secret recipe for the perfect potluck dish.
+          {t("translation.yourMeeMeeSpaceText")}
         </p>
 
         <p>
-          <strong>Event Contributions</strong>
+          <strong>{t("translation.eventContributions")}</strong>
           <br />
-          Your events, your rules. While hosting a gathering, be the gracious
-          host you'd want to meet at someone else's event.
+          {t("translation.eventContributionsText")}
         </p>
 
         <p>
-          <strong>Privacy and Mingling</strong>
+          <strong>{t("translation.privacyAndMingling")}</strong>
           <br />
-          We respect your privacy like a whispered conversation in a cozy
-          corner. Check our <a href="/privacy">Privacy Policy</a> for the inside
-          scoop.
+          {t("translation.privacyAndMinglingText")}
+          <a href="/privacy">{t("translation.privacyPolicy")}</a>
+          {t("translation.privacyAndMinglingText2")}
         </p>
 
         <p>
-          <strong>Intellectual Gathering</strong>
+          <strong>{t("translation.intellectualGathering")}</strong>
           <br />
-          MeeMee is our collective masterpiece. No swiping ideas – let's keep
-          the creative potluck going.
+          {t("translation.intellectualGatheringText")}
         </p>
 
         <p>
-          <strong>Limitation of Event Liability</strong>
+          <strong>{t("translation.limitationOfEventLiability")}</strong>
           <br />
-          The real magic happens when people connect. We're not liable for any
-          extraordinary connections or memorable moments.
+          {t("translation.limitationOfEventLiabilityText")}
         </p>
 
         <p>
-          <strong>Harmony Law</strong>
+          <strong>{t("translation.harmonyLaw")}</strong>
           <br />
-          These terms dance to the rhythm of community harmony. Any disputes
-          will be settled with a friendly dialogue, not a courtroom drama.
+          {t("translation.harmonyLawText")}
         </p>
 
         <p>
-          Questions or want to share your event tales? Drop us a line at{" "}
+          {t("translation.questionsOrShareEventTales")}
           <a href="mailto:support@meemee.com">support@MeeMee.com</a>.
         </p>
 
         <p>
-          Happy MeeMee-ing!
+          {t("translation.happyMeeMeeing")}
           <br />
-          MeeMee Team
+          {t("translation.meeMeeTeam")}
           <br />
         </p>
       </div>

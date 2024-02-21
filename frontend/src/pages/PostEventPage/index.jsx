@@ -10,8 +10,10 @@ import toast from "react-hot-toast";
 import BlackArrow from "../../components/BlackArrow";
 import "./style.css";
 import GMaps from "../../components/GMaps/index.jsx";
+import { useTranslation } from "react-i18next";
 
 function PostEventPage() {
+  const { t } = useTranslation();
   const { token } = useContext(AuthContext);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -161,53 +163,53 @@ function PostEventPage() {
     const errors = {};
 
     if (formData.title.trim() === "") {
-      errors.title = "* Title is required";
+      errors.title = t("translation.titleRequired");
     } else if (formData.title.length < 5) {
-      errors.title = "Title must be at least 5 characters";
+      errors.title = t("translation.titleTooShort");
     } else if (formData.title.length > 40) {
-      errors.title = "Title must be at most 40 characters";
+      errors.title = t("translation.titleTooLong");
     }
 
     if (formData.description.trim() === "") {
-      errors.description = "* Description is required";
+      errors.description = t("translation.descriptionRequired");
     } else if (formData.description.length < 50) {
-      errors.description = "Description must be at least 50 characters long";
+      errors.description = t("translation.descriptionTooShort");
     } else if (formData.description.length > 255) {
-      errors.description = "Description too long";
+      errors.description = t("translation.descriptionTooLong");
     }
 
     if (!formData.picture) {
-      errors.picture = "Photo is required";
+      errors.picture = t("translation.photoRequired");
     } else if (!formData.picture.type.includes("image/")) {
-      errors.picture = "Please select a valid image file";
+      errors.picture = t("translation.invalidImageFile");
     }
 
     if (formData.theme.trim() === "") {
-      errors.theme = "* Category is required";
+      errors.theme = t("translation.categoryRequired");
     }
 
     if (formData.location.trim() === "") {
-      errors.location = "* City is required";
+      errors.location = t("translation.cityRequired");
     } else if (formData.location.length < 2) {
-      errors.location = "City name too short";
+      errors.location = t("translation.cityTooShort");
     } else if (formData.location.length > 40) {
-      errors.location = "City must be at most 40 characters";
+      errors.location = t("translation.cityTooLong");
     }
 
     if (formData.address.trim() === "") {
-      errors.address = "* Address is required";
+      errors.address = t("translation.addressRequired");
     } else if (formData.address.length < 5) {
-      errors.address = "Address too short";
+      errors.address = t("translation.addressTooShort");
     } else if (formData.address.length > 100) {
-      errors.address = "Address must be at most 100 characters";
+      errors.address = t("translation.addressTooLong");
     }
 
     if (!formData.date) {
-      errors.date = "* Date is required";
+      errors.date = t("translation.dateRequired");
     }
 
     if (formData.time.trim() === "") {
-      errors.time = "* Time is required";
+      errors.time = t("translation.timeRequired");
     }
 
     if (formData.date && formData.time) {
@@ -222,7 +224,7 @@ function PostEventPage() {
       const twentyFourHoursInMilliseconds = 24 * 60 * 60 * 1000;
 
       if (differenceInMilliseconds < twentyFourHoursInMilliseconds) {
-        errors.date = "The event must be at least 24 hours from now";
+        errors.date = t("translation.eventMin24Hours");
       }
     }
 
@@ -281,14 +283,16 @@ function PostEventPage() {
       ) : (
         <div className="postevent-container">
           <div className="top-line">
-            <h1 className="postevent-title">Event Details</h1>
+            <h1 className="postevent-title">{t("translation.eventDetails")}</h1>
           </div>
           <div className="formevent-container">
             {showConfirmation && (
               <>
                 <div className="overlay"></div>
                 <div id="event-created" className="confirmation-box">
-                  <p className="no-attendees">Event created successfully!</p>
+                  <p className="no-attendees">
+                    {t("translation.eventCreatedSuccessfully")}
+                  </p>
                   <div className="button-container">
                     {/* <button id="delete-no">Accept</button> */}
                     <button id="close-box" onClick={handleConfirmationClose}>
@@ -310,7 +314,7 @@ function PostEventPage() {
                     className="input-reg"
                     id="title"
                     name="title"
-                    placeholder="Title"
+                    placeholder={t("translation.title")}
                     value={formData.title}
                     onChange={handleInputChange}
                   />
@@ -325,7 +329,7 @@ function PostEventPage() {
                     name="description"
                     value={formData.description}
                     onChange={handleInputChange}
-                    placeholder="Description"
+                    placeholder={t("translation.description")}
                     maxLength={255}
                   />
                   {errorMessages.description && (
@@ -353,7 +357,7 @@ function PostEventPage() {
                         {errorMessages.picture}
                       </div>
                     ) : (
-                      <span>Select a photo for your event</span>
+                      <span>{t("translation.selectPhoto")}</span>
                     )}
                     <img
                       src={
@@ -406,7 +410,7 @@ function PostEventPage() {
                       id="location"
                       name="location"
                       className="input-reg"
-                      placeholder="Select a city"
+                      placeholder={t("translation.selectCity")}
                       value={formData.location}
                       onChange={handleInputChange}
                       readOnly
@@ -423,7 +427,7 @@ function PostEventPage() {
                       className="input-reg"
                       id="address"
                       name="address"
-                      placeholder="Select an address"
+                      placeholder={t("translation.selectAddress")}
                       value={formData.address}
                       onChange={handleInputChange}
                       readOnly
@@ -449,7 +453,7 @@ function PostEventPage() {
                           date,
                         })
                       }
-                      placeholderText="Select a date"
+                      placeholderText={t("translation.selectDate")}
                       dateFormat="dd/MM/yyyy"
                     />
                     {errorMessages.date && (
@@ -462,7 +466,7 @@ function PostEventPage() {
                       id="time"
                       name="time"
                       className="input-form"
-                      placeholder="Select a time"
+                      placeholder={t("translation.selectTime")}
                       value={formData.time}
                       onChange={handleInputChange}
                     />

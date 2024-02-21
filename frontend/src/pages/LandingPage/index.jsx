@@ -1,23 +1,23 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./style.css";
 
 import SearchBar from "../../components/SearchBar";
 import NextEvents from "../../components/NextEvents";
 
 function LandingPage() {
+  const { t } = useTranslation();
+
   return (
     <main className="LandingPage">
       <section className="landing-top">
         <div className="first-row">
-          <h1 className="header-text">
-            Join our vibrant community 🎉 Make friends, learn new things and
-            have fun!
-          </h1>
-          <div className="Hello">Hello!</div>
+          <h1 className="header-text">{t("landingPage.joinCommunity")}</h1>
+          <div className="Hello">{t("landingPage.hello")}</div>
         </div>
         {/* <div className="second-row">
-          <SearchBar placeholderText="Search events_" />
-          <button className="landing-signup">Sign Up</button>
+          <SearchBar placeholderText={t("landingPage.searchPlaceholder")} />
+          <button className="landing-signup">{t("landingPage.signUp")}</button>
         </div> */}
       </section>
 

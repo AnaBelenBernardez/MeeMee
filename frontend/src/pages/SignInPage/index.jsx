@@ -4,9 +4,11 @@ import toast from "react-hot-toast";
 import { loginUserService } from "../../services/index.js";
 import ArrowButton from "../../components/ArrowButton";
 import { AuthContext } from "../../context/AuthContext.jsx";
+import { useTranslation } from "react-i18next";
 import "./style.css";
 
 function SignInPage() {
+  const { t } = useTranslation();
   const { setToken, setLogin, setAuth } = useContext(AuthContext);
   const navigate = useNavigate();
   const { token } = useParams();
@@ -86,11 +88,11 @@ function SignInPage() {
     const errors = {};
 
     if (!emailRegex.test(formData.email)) {
-      errors.email = "Enter a valid email";
+      errors.email = t("translation.validEmail");
     }
 
     if (formData.password.length < 8) {
-      errors.password = "Password must be at least 8 characters long";
+      errors.password = t("translation.passwordLong");
     }
 
     setFormErrors(errors);
@@ -110,10 +112,10 @@ function SignInPage() {
         <div className="signin-section">
           <div className="signin-header">
             <Link to="/signup" className="link-sign">
-              Sign Up
+              {t("translation.signUp")}
             </Link>
             <Link to="/signin" id="link-signin" className="link-sign">
-              Sign In
+              {t("translation.signIn")}
             </Link>
           </div>
           <h2 className="signin-text">
@@ -128,7 +130,7 @@ function SignInPage() {
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Email"
+                placeholder={t("translation.email")}
                 value={formData.email}
                 onChange={handleInputChange}
               />
@@ -142,7 +144,7 @@ function SignInPage() {
                 type={showPassword ? "text" : "password"}
                 id="password"
                 name="password"
-                placeholder="Password"
+                placeholder={t("translation.password")}
                 value={formData.password}
                 onChange={handleInputChange}
                 onKeyPress={handleKeyPress}

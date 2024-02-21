@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 import LanguageSelector from "../LanguageSelector";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer>
       <div className="triangleright-footer"></div>
@@ -17,13 +19,13 @@ const Footer = () => {
           >
             ©2024 MeeMee
           </Link>
-          <Link to="/terms">Terms of Service</Link>
-          <Link to="/privacy">Privacy Policy</Link>
-          <Link to="/cookie">Cookies Policy</Link>
+          <Link to="/terms">{t("footer.terms")}</Link>
+          <Link to="/privacy">{t("footer.privacy")}</Link>
+          <Link to="/cookie">{t("footer.cookies")}</Link>
         </nav>
       </div>
       <div className="footer-socials">
-        <div>{/* <LanguageSelector /> */}</div>
+        <LanguageSelector />
         <a
           href="https://www.tiktok.com/@hackaboss_"
           target="_blank"

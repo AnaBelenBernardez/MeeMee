@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import BlackArrow from "../BlackArrow";
 import "./style.css";
 
+import { useTranslation } from "react-i18next";
+import "./style.css";
+
 function ExploreCategories({ onCategoryChange }) {
   const categories = [
     "All Categories",
@@ -14,6 +17,7 @@ function ExploreCategories({ onCategoryChange }) {
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] =
     useState("Explore Categories");
 
