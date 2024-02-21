@@ -373,15 +373,15 @@ function PostEventPage() {
                     onChange={handleInputChange}
                   >
                     <option value="">Category</option>
-                    <option value="Social Events">Social Events</option>
-                    <option value="Art and Culture">Art and Culture</option>
+                    <option value="Online Events">Online Events</option>
                     <option value="Videogames">Videogames</option>
                     <option value="Technology">Technology</option>
+                    <option value="Board Games">Board Games</option>
+                    <option value="Conventions and Cosplay">
+                      Conventions and Cosplay
+                    </option>
                     <option value="Travel and Outdoors">
                       Travel and Outdoors
-                    </option>
-                    <option value="Sports and Fitness">
-                      Sports and Fitness
                     </option>
                   </select>
                   {errorMessages.theme && (

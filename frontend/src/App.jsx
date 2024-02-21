@@ -17,10 +17,13 @@ import PrivacyPage from "./pages/PrivacyPage";
 import CookiePage from "./pages/CookiePage";
 import UserProfile from "./pages/UserProfilePage";
 import SendEmailPage from "./pages/SendEmailPage";
+import PageTitle from "./components/PageTitle";
+
 function App() {
   return (
     <div className="app">
       <Toaster position="top-left" richColors />
+      <PageTitle />
       <Header />
       <Routes>
         <Route path="/" element={<LandingPage />} />

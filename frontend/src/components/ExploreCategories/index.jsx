@@ -5,12 +5,12 @@ import "./style.css";
 function ExploreCategories({ onCategoryChange }) {
   const categories = [
     "All Categories",
-    "Social Events",
-    "Art and Culture",
+    "Online Events",
     "Videogames",
     "Technology",
+    "Board Games",
+    "Conventions and Cosplay",
     "Travel and Outdoors",
-    "Sports and Fitness",
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
