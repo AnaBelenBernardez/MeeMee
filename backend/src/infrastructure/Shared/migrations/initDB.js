@@ -303,7 +303,7 @@ async function createMeetupsTable(connection) {
       description:
         'Engage in insightful discussions on cutting-edge tech topics. Join us virtually to stay updated and connected with the latest advancements in technology.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://media.istockphoto.com/id/1059088660/es/foto/garantizaremos-que-su-pregunta-obtiene-respuesta.jpg?s=612x612&w=0&k=20&c=ca9ma5FxudtqSKoe_66cYqHRcx73Vspm6bln55evB2s=',
       theme: 'Online Events',
       location: 'Valencia',
       address: 'Virtual Event',
@@ -316,7 +316,7 @@ async function createMeetupsTable(connection) {
       description:
         'Join us for a live gaming session with fellow enthusiasts. Connect, play, and have a blast in the virtual gaming world!',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://media.istockphoto.com/id/959932406/es/foto/grupo-de-j%C3%B3venes-profesionales-creativos-en-la-oficina.jpg?s=612x612&w=0&k=20&c=IvYJPuEpQmxOB4R5udCCPri2PB6kGtGqMQq9ATXVSEI=',
       theme: 'Online Events',
       location: 'A Coruña',
       address: 'Virtual Event',
@@ -329,7 +329,7 @@ async function createMeetupsTable(connection) {
       description:
         'Dive into the world of virtual reality! Experience the latest VR innovations and connect with like-minded individuals.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://media.istockphoto.com/id/1424138962/es/foto/el-equipo-de-ingenieros-se-re%C3%BAne-para-inspeccionar-los-planos-de-construcci%C3%B3n-el-plan-de.jpg?s=612x612&w=0&k=20&c=I9jva69Ezyzqt-2UyO0YSERfHLXzDdFTcetvknMbLBw=',
       theme: 'Online Events',
       location: 'La Laguna',
       address: 'Virtual Event',
@@ -342,7 +342,7 @@ async function createMeetupsTable(connection) {
       description:
         'Grab your favorite digital board game and join us for a night of strategy, fun, and friendly competition.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://media.istockphoto.com/id/134029186/es/foto/socios-trabajando-en-una-computadora-port%C3%A1til.jpg?s=612x612&w=0&k=20&c=lyzmOM0BeymII513Vf6uhAlveVGCFGr6oLGC6-uiT-o=',
       theme: 'Online Events',
       location: 'Sao Paulo',
       address: 'Virtual Event',
@@ -355,7 +355,7 @@ async function createMeetupsTable(connection) {
       description:
         'Showcase your amazing cosplay creations in our virtual cosplay event. Join us for a celebration of creativity and fandom!',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://media.istockphoto.com/id/178968109/es/foto/sonriente-joven-pareja-mirando-televisi%C3%B3n.jpg?s=612x612&w=0&k=20&c=qINHsabaUNvrqgwR-tUffWd4M1S82RoBXcEAKzOm6ds=',
       theme: 'Online Events',
       location: 'Lisboa',
       address: 'Virtual Event',
@@ -368,7 +368,7 @@ async function createMeetupsTable(connection) {
       description:
         'Participate in a virtual symposium discussing the latest trends and innovations in technology. Join us for insightful talks and engaging discussions!',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://media.istockphoto.com/id/610966282/es/foto/chica-mirando-en-el-caj%C3%B3n-del-escritorio.jpg?s=612x612&w=0&k=20&c=c_HCvHuGG2sthWBixm_E8ddDOrh-QalDgLT-Rv6kXTQ=',
       theme: 'Online Events',
       location: 'Tokyo',
       address: 'Virtual Event',
@@ -381,7 +381,7 @@ async function createMeetupsTable(connection) {
       description:
         'Immerse yourself in the world of digital gaming! Explore new releases, connect with gaming communities, and experience the excitement of virtual gaming.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fE9ubGluZSUyMEV2ZW50c3xlbnwwfHwwfHx8MA%3D%3D',
       theme: 'Online Events',
       location: 'Santa Cruz de Tenerife',
       address: 'Virtual Event',
@@ -394,7 +394,7 @@ async function createMeetupsTable(connection) {
       description:
         'Learn and create in our virtual reality workshop. Dive into the basics of VR development and explore the limitless possibilities of virtual reality!',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fE9ubGluZSUyMEV2ZW50c3xlbnwwfHwwfHx8MA%3D%3D',
       theme: 'Online Events',
       location: 'Bogota',
       address: 'Virtual Event',
@@ -420,7 +420,7 @@ async function createMeetupsTable(connection) {
       description:
         'Get ready for a virtual cosplay party! Dress up as your favorite characters and join us for a night of fun, creativity, and cosplay showcases.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1616587226960-4a03badbe8bf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fE9ubGluZSUyMEV2ZW50c3xlbnwwfHwwfHx8MA%3D%3D',
       theme: 'Online Events',
       location: 'Toronto',
       address: 'Virtual Event',
@@ -435,7 +435,7 @@ async function createMeetupsTable(connection) {
       description:
         'Embark on a gaming marathon with fellow gamers. Play, compete, and share your gaming experiences!',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://plus.unsplash.com/premium_photo-1677870728152-685a7cb67da2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dmlkZW9nYW1lc3xlbnwwfHwwfHx8MA%3D%3D',
       theme: 'Videogames',
       location: 'Londres',
       address: '123 Gaming Street',
@@ -448,7 +448,7 @@ async function createMeetupsTable(connection) {
       description:
         'Take a trip down memory lane with classic retro games. Join us for a night of nostalgia and gaming fun!',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmlkZW9nYW1lc3xlbnwwfHwwfHx8MA%3D%3D',
       theme: 'Videogames',
       location: 'Tokio',
       address: '456 Retro Avenue',
@@ -461,7 +461,7 @@ async function createMeetupsTable(connection) {
       description:
         'Compete in our esports tournament and showcase your gaming skills. Join us for an adrenaline-fueled gaming experience!',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://plus.unsplash.com/premium_photo-1677870728110-3b3b41677a9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dmlkZW9nYW1lc3xlbnwwfHwwfHx8MA%3D%3D',
       theme: 'Videogames',
       location: 'Santa Cruz de Tenerife',
       address: '789 Esports Lane',
@@ -474,7 +474,7 @@ async function createMeetupsTable(connection) {
       description:
         'Discover hidden gems in the world of indie games. Join us for an evening of unique and innovative gaming experiences.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://plus.unsplash.com/premium_photo-1665203485797-6fe4e8755beb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dmlkZW9nYW1lc3xlbnwwfHwwfHx8MA%3D%3D',
       theme: 'Videogames',
       location: 'Bogota',
       address: '890 Indie Court',
@@ -487,7 +487,7 @@ async function createMeetupsTable(connection) {
       description:
         'Immerse yourself in the world of virtual reality gaming. Join us for a night of cutting-edge technology and gaming excitement!',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHZpZGVvZ2FtZXN8ZW58MHx8MHx8fDA%3D',
       theme: 'Videogames',
       location: 'Lima',
       address: 'Virtual Event',
@@ -502,7 +502,7 @@ async function createMeetupsTable(connection) {
       description:
         'Engage in insightful discussions on cutting-edge tech topics. Network with fellow tech enthusiasts and professionals.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVjaG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D',
       theme: 'Technology',
       location: 'Toronto',
       address: '234 Tech Boulevard',
@@ -515,7 +515,7 @@ async function createMeetupsTable(connection) {
       description:
         'Discover the latest innovations in the startup world. Join us for a showcase of groundbreaking ideas and entrepreneurial spirit.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://plus.unsplash.com/premium_photo-1661898424988-a5f6d40d3db2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D',
       theme: 'Technology',
       location: 'Valencia',
       address: '567 Startup Street',
@@ -528,7 +528,7 @@ async function createMeetupsTable(connection) {
       description:
         'Explore the future of AI and robotics. Join experts in the field for a symposium on the latest advancements and applications.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D',
       theme: 'Technology',
       location: 'La Laguna',
       address: '789 Tech Lane',
@@ -541,7 +541,7 @@ async function createMeetupsTable(connection) {
       description:
         'Enhance your cybersecurity knowledge and skills. Join us for a hands-on workshop led by industry experts.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://plus.unsplash.com/premium_photo-1678566111481-8e275550b700?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D',
       theme: 'Technology',
       location: 'Sao Paulo',
       address: '890 Cyber Street',
@@ -554,7 +554,7 @@ async function createMeetupsTable(connection) {
       description:
         'Participate in our virtual hackathon and showcase your coding skills. Collaborate with fellow developers and solve real-world challenges.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://plus.unsplash.com/premium_photo-1683121696175-d05600fefb85?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D',
       theme: 'Technology',
       location: 'Lisboa',
       address: 'Virtual Event',
@@ -569,7 +569,7 @@ async function createMeetupsTable(connection) {
       description:
         'Get ready for a night of board game fun with fellow enthusiasts. Roll the dice, strategize, and enjoy a friendly competition.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1585504198199-20277593b94f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Qm9hcmQlMjBHYW1lc3xlbnwwfHwwfHx8MA%3D%3D',
       theme: 'Board Games',
       location: 'Tokio',
       address: '101 Boardwalk',
@@ -582,7 +582,7 @@ async function createMeetupsTable(connection) {
       description:
         'Test your strategic skills in a day dedicated to strategy board games. Join us for a day of tactical gameplay and fun.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1640461470346-c8b56497850a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fEJvYXJkJTIwR2FtZXN8ZW58MHx8MHx8fDA%3D',
       theme: 'Board Games',
       location: 'Santa Cruz de Tenerife',
       address: '456 Strategy Court',
@@ -595,7 +595,7 @@ async function createMeetupsTable(connection) {
       description:
         'Bring your family for an afternoon of board game bonding. Discover new family favorites and create lasting memories.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1637120149073-54319e6f9fc3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fEJvYXJkJTIwR2FtZXN8ZW58MHx8MHx8fDA%3D',
       theme: 'Board Games',
       location: 'Bogota',
       address: '890 Family Lane',
@@ -608,7 +608,7 @@ async function createMeetupsTable(connection) {
       description:
         'Explore the world of Euro-style board games. Join us for an evening of strategy, resource management, and friendly competition.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1577897113292-3b95936e5206?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fEJvYXJkJTIwR2FtZXN8ZW58MHx8MHx8fDA%3D',
       theme: 'Board Games',
       location: 'Lima',
       address: '567 Euro Avenue',
@@ -621,7 +621,7 @@ async function createMeetupsTable(connection) {
       description:
         'Connect with fellow board game enthusiasts in our virtual hangout. Play your favorite games and make new friends!',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1549056630-ee2626bb5ad5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fEJvYXJkJTIwR2FtZXN8ZW58MHx8MHx8fDA%3D',
       theme: 'Board Games',
       location: 'Toronto',
       address: 'Virtual Event',
@@ -636,7 +636,7 @@ async function createMeetupsTable(connection) {
       description:
         'Celebrate the art of cosplay at our annual convention. Showcase your costumes, attend panels, and join the cosplay community.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1658999185075-3d24b187643f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q29udmVudGlvbnMlMjBhbmQlMjBDb3NwbGF5fGVufDB8fDB8fHww',
       theme: 'Conventions and Cosplay',
       location: 'A Coruña',
       address: '123 Cosplay Street',
@@ -649,7 +649,7 @@ async function createMeetupsTable(connection) {
       description:
         'Immerse yourself in the world of anime at our expo. Enjoy screenings, meet voice actors, and connect with fellow anime enthusiasts.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1612373856198-8ff66f376aaa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Q29udmVudGlvbnMlMjBhbmQlMjBDb3NwbGF5fGVufDB8fDB8fHww',
       theme: 'Conventions and Cosplay',
       location: 'Valencia',
       address: '567 Anime Lane',
@@ -662,7 +662,7 @@ async function createMeetupsTable(connection) {
       description:
         'Explore a diverse selection of comic books at our fair. Discover rare finds, meet artists, and celebrate the world of comics.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1620258606133-5f7328c98fd0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Q29udmVudGlvbnMlMjBhbmQlMjBDb3NwbGF5fGVufDB8fDB8fHww',
       theme: 'Conventions and Cosplay',
       location: 'La Laguna',
       address: '789 Comic Court',
@@ -675,7 +675,7 @@ async function createMeetupsTable(connection) {
       description:
         'Step into a world of fantasy at our cosplay ball. Dress up as your favorite characters and dance the night away in a magical atmosphere.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1658999109686-c1d354090b6e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q29udmVudGlvbnMlMjBhbmQlMjBDb3NwbGF5fGVufDB8fDB8fHww',
       theme: 'Conventions and Cosplay',
       location: 'Sao Paulo',
       address: '456 Fantasy Avenue',
@@ -688,7 +688,7 @@ async function createMeetupsTable(connection) {
       description:
         'Explore the wonders of science fiction at our convention. Engage in discussions, meet authors, and celebrate the world of sci-fi.',
       picture:
-        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'https://images.unsplash.com/photo-1611567798785-dc07e90a6b7a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fENvbnZlbnRpb25zJTIwYW5kJTIwQ29zcGxheXxlbnwwfHwwfHx8MA%3D%3D',
       theme: 'Conventions and Cosplay',
       location: 'Lisboa',
       address: '890 Sci-Fi Lane',
