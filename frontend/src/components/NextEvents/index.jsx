@@ -83,7 +83,7 @@ function NextEvents() {
             totalSlides={firstTenMeetups.length}
             visibleSlides={visibleSlides}
             infinite="true"
-            interval={2000}
+            interval={5000}
             isPlaying={true}
           >
             <div className="carousel-controls">

@@ -132,7 +132,8 @@
     "avatarError": "Por favor, selecione uma foto de avatar",
     "bioError": "Por favor, insira uma biografia",
     "registrationConflictError": "Nome de usuário ou e-mail já estão em uso.",
-    "registrationError": "Erro durante o registro. Por favor, tente novamente mais tarde."
+    "registrationError": "Erro durante o registro. Por favor, tente novamente mais tarde.",
+    "exploreCategories": "Explorar categorias"
   },
 
   "landingPage": {
