@@ -363,6 +363,71 @@ async function createMeetupsTable(connection) {
       time: '17:30:00',
       organizer_id: 5,
     },
+    {
+      title: 'Virtual Tech Symposium',
+      description:
+        'Participate in a virtual symposium discussing the latest trends and innovations in technology. Join us for insightful talks and engaging discussions!',
+      picture:
+        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Online Events',
+      location: 'Tokyo',
+      address: 'Virtual Event',
+      date: '2024-04-10',
+      time: '18:30:00',
+      organizer_id: 26,
+    },
+    {
+      title: 'Digital Gaming Expo',
+      description:
+        'Immerse yourself in the world of digital gaming! Explore new releases, connect with gaming communities, and experience the excitement of virtual gaming.',
+      picture:
+        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Online Events',
+      location: 'Santa Cruz de Tenerife',
+      address: 'Virtual Event',
+      date: '2024-04-15',
+      time: '19:00:00',
+      organizer_id: 27,
+    },
+    {
+      title: 'Virtual Reality Workshop',
+      description:
+        'Learn and create in our virtual reality workshop. Dive into the basics of VR development and explore the limitless possibilities of virtual reality!',
+      picture:
+        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Online Events',
+      location: 'Bogota',
+      address: 'Virtual Event',
+      date: '2024-04-20',
+      time: '17:30:00',
+      organizer_id: 28,
+    },
+    {
+      title: 'Digital Board Game Extravaganza',
+      description:
+        'Join us for a digital board game extravaganza! Explore a variety of digital board games, make new friends, and enjoy a night of gaming fun.',
+      picture:
+        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Online Events',
+      location: 'Lima',
+      address: 'Virtual Event',
+      date: '2024-04-25',
+      time: '20:00:00',
+      organizer_id: 29,
+    },
+    {
+      title: 'Virtual Cosplay Party',
+      description:
+        'Get ready for a virtual cosplay party! Dress up as your favorite characters and join us for a night of fun, creativity, and cosplay showcases.',
+      picture:
+        'https://images.unsplash.com/photo-1698622946425-09076f9fb5de?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      theme: 'Online Events',
+      location: 'Toronto',
+      address: 'Virtual Event',
+      date: '2024-05-01',
+      time: '19:30:00',
+      organizer_id: 30,
+    },
 
     // Videogames
     {
@@ -700,6 +765,11 @@ async function insertData(connection) {
     { user_id: 23, meetup_id: 23, username: 'elena_martinez' },
     { user_id: 24, meetup_id: 24, username: 'pablo_rodriguez' },
     { user_id: 25, meetup_id: 25, username: 'irene_sanchez' },
+    { user_id: 10, meetup_id: 26, username: 'david_lopez' },
+    { user_id: 10, meetup_id: 27, username: 'david_lopez' },
+    { user_id: 10, meetup_id: 28, username: 'david_lopez' },
+    { user_id: 10, meetup_id: 29, username: 'david_lopez' },
+    { user_id: 10, meetup_id: 30, username: 'david_lopez' },
   ]
 
   const attendeesToInsert = [
