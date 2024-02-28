@@ -62,12 +62,14 @@
   font-size: 20px;
   position: absolute;
   bottom: 2rem;
-  left: 2rem;
+  left: 2.5rem;
 }
 
 #organized-by {
   color: var(--text);
   margin-left: 0.5rem;
+  display: block;
+  text-align: right;
 }
 
 #organized-by-username {
@@ -76,6 +78,12 @@
   display: block;
   text-align: right;
   margin-top: 0.3rem;
+}
+
+#organizer-icon {
+  position: relative;
+  top: 0.7em;
+  transform: translateY(50%);
 }
 
 #eventpage-image {
@@ -91,7 +99,7 @@
   object-fit: cover;
   border: dashed;
   position: absolute;
-  left: 13rem;
+  left: 14rem;
   bottom: 2rem;
 }
 

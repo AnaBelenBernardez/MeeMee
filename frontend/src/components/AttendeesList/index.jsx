@@ -97,6 +97,7 @@ const AttendeesList = ({ updateAttendees, onClose }) => {
                       }`}
                       alt={`${attendee.username}'s avatar`}
                       className="list-avatar"
+                      loading="lazy"
                     />
                     <span>{attendee.username}</span>
                   </div>

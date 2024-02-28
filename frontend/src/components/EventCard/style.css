@@ -12,6 +12,13 @@
   flex-direction: column;
   align-items: center;
   color: var(--text);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.event-card:hover {
+  border-color: var(--secondary);
+  box-shadow: 3px 3px 0 1px #7def51;
+  transform: scale(1.03);
 }
 
 .eventcard-image {

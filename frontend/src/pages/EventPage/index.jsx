@@ -208,7 +208,7 @@ function EventPage() {
                   src={`${
                     import.meta.env.VITE_APP_BACKEND
                   }/uploads/${organizerAvatar}`}
-                  alt={`Avatar of ${organizerUsername || ""}`}
+                  alt={`Avatar of ${organizerUsername || "unknown"}`}
                 />
               ) : (
                 <img

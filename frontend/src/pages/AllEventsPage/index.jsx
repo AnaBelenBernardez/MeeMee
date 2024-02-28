@@ -17,7 +17,7 @@ function AllEventsPage() {
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedLocation, setSelectedLocation] = useState("");
-  const [visibleMeetups, setVisibleMeetups] = useState(50);
+  const [visibleMeetups, setVisibleMeetups] = useState(15);
 
   useEffect(() => {
     const fetchMeetups = async () => {
@@ -60,7 +60,7 @@ function AllEventsPage() {
   };
 
   const loadMoreMeetups = () => {
-    setVisibleMeetups((prevVisibleMeetups) => prevVisibleMeetups + 20);
+    setVisibleMeetups((prevVisibleMeetups) => prevVisibleMeetups + 10);
   };
 
   return (

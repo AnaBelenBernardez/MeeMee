@@ -13,6 +13,7 @@
   padding: 20px;
   overflow: auto;
   z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
 .confirmation-content {

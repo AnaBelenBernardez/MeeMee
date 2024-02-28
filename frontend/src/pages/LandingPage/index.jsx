@@ -7,9 +7,8 @@ import NextEvents from "../../components/NextEvents";
 
 function LandingPage() {
   const { t } = useTranslation();
-  const [helloText, setHelloText] = useState(t("landingPage.hello"));
+  const [helloText, setHelloText] = useState("Hello");
   const words = [
-    "Hello",
     "Hola",
     "Olá",
     "안녕",

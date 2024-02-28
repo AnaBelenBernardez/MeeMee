@@ -22,24 +22,29 @@ footer {
   margin-right: clamp(0.2rem, 2vmax, 15px);
   text-decoration: none;
   color: var(--text);
+  transition: color 0.5s ease;
 }
 
 .footer-links a:hover {
   color: var(--primary);
+  transition: color 0.5s ease;
 }
 
 .footer-socials a {
   margin-left: clamp(0.1rem, 1vmax, 10px);
   text-decoration: none;
   color: var(--text);
+  transition: color 0.5s ease;
 }
 
 .footer-socials a img {
   height: clamp(1.5rem, 1.85vmax, 1.8rem);
   margin: clamp(0.1rem, 0.2vmax, 5px);
+  transition: color 0.5s ease;
 }
 
 .footer-socials a img:hover {
+  transition: color 0.5s ease;
   -webkit-filter: drop-shadow(1px 1px 0 var(--secondary))
     drop-shadow(-1px 1px 0 var(--secondary))
     drop-shadow(1px -1px 0 var(--secondary))
