@@ -50,6 +50,7 @@
   cursor: pointer;
   font-family: "IBM Plex Mono", monospace;
   font-size: 1.5rem;
+  transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
 .category-menu li:hover {

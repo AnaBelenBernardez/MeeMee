@@ -383,7 +383,7 @@ async function createMeetupsTable(connection) {
       picture:
         'https://images.unsplash.com/photo-1652197881268-d625ad54402b?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       theme: 'Online Events',
-      location: 'Santa Cruz de Tenerife',
+      location: 'Praga',
       address: 'Virtual Event',
       date: '2024-04-15',
       time: '19:00:00',
@@ -396,7 +396,7 @@ async function createMeetupsTable(connection) {
       picture:
         'https://images.unsplash.com/photo-1605714048976-892f6b95320e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHZyfGVufDB8fDB8fHww',
       theme: 'Online Events',
-      location: 'Bogota',
+      location: 'Amsterdam',
       address: 'Virtual Event',
       date: '2024-04-20',
       time: '17:30:00',
@@ -463,7 +463,7 @@ async function createMeetupsTable(connection) {
       picture:
         'https://images.unsplash.com/photo-1587095951604-b9d924a3fda0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZXNwb3J0c3xlbnwwfHwwfHx8MA%3D%3D',
       theme: 'Videogames',
-      location: 'Santa Cruz de Tenerife',
+      location: 'Praga',
       address: '789 Esports Lane',
       date: '2024-04-20',
       time: '17:00:00',
@@ -476,7 +476,7 @@ async function createMeetupsTable(connection) {
       picture:
         'https://plus.unsplash.com/premium_photo-1687881775384-74ec3b09e9d6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW5kaWUlMjBnYW1lfGVufDB8fDB8fHww',
       theme: 'Videogames',
-      location: 'Bogota',
+      location: 'Amsterdam',
       address: '890 Indie Court',
       date: '2024-04-25',
       time: '19:30:00',
@@ -543,7 +543,7 @@ async function createMeetupsTable(connection) {
       picture:
         'https://plus.unsplash.com/premium_photo-1678566111481-8e275550b700?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHRlY2hub2xvZ3l8ZW58MHx8MHx8fDA%3D',
       theme: 'Technology',
-      location: 'Sao Paulo',
+      location: 'Toronto',
       address: '890 Cyber Street',
       date: '2024-05-20',
       time: '16:30:00',
@@ -584,7 +584,7 @@ async function createMeetupsTable(connection) {
       picture:
         'https://plus.unsplash.com/premium_photo-1677671874468-2dfb9d94c948?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9hcmQlMjBnYW1lfGVufDB8fDB8fHww',
       theme: 'Board Games',
-      location: 'Santa Cruz de Tenerife',
+      location: 'A Coruña',
       address: '456 Strategy Court',
       date: '2024-06-05',
       time: '15:30:00',
@@ -597,7 +597,7 @@ async function createMeetupsTable(connection) {
       picture:
         'https://images.unsplash.com/photo-1577897113292-3b95936e5206?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJvYXJkJTIwZ2FtZXxlbnwwfHwwfHx8MA%3D%3D',
       theme: 'Board Games',
-      location: 'Bogota',
+      location: 'Lima',
       address: '890 Family Lane',
       date: '2024-06-10',
       time: '14:00:00',
@@ -677,7 +677,7 @@ async function createMeetupsTable(connection) {
       picture:
         'https://images.unsplash.com/photo-1665384051434-a22ca89fe5c8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVkaWV2YWwlMjBmYWlyfGVufDB8fDB8fHww',
       theme: 'Conventions and Cosplay',
-      location: 'Sao Paulo',
+      location: 'Londres',
       address: '456 Fantasy Avenue',
       date: '2024-07-10',
       time: '20:00:00',
