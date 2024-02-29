@@ -1,5 +1,11 @@
 # 💬 MeeMee
 
+<div align="center">
+  <img src="https://github.com/AnaBelenBernardez/MeeMee/raw/main/assets/hello.gif" alt="Hello">
+</div>
+
+
+
 MeeMee it's a platform to connect people with similar interests. You can join, search for events, or create your own. Perfect for meeting people with similar tastes, whether in art, video games, or sports. Have fun connecting with others!
 
 ## 📋 Description
