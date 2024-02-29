@@ -5,6 +5,7 @@ MeeMee it's a platform to connect people with similar interests. You can join, s
 ## 📋 Description
 
 - Anonymous users can:
+  - Translate the page to English, Spanish or Portuguese.
   - View available events:
     - Sorted by the nearest date.
     - Past events are not displayed.
@@ -27,7 +28,7 @@ To initialize the app, follow the steps outlined in the ReadMe in the Backend an
 - [@AnaBelenBernardez](https://github.com/AnaBelenBernardez)
 - [@AyozeJesus](https://github.com/AyozeJesus)
 
-- Wireframe by [@Edu0ff](https://github.com/Edu0ff)
+- Design by [@Edu0ff](https://github.com/Edu0ff)
 
 ## 💻 Tech Stack
 
