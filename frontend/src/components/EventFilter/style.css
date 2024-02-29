@@ -2,16 +2,22 @@
   display: flex;
   align-items: center;
   width: 50%;
+  z-index: 99;
 }
 
-.filter-element > select {
+.custom-select-wrapper {
   background-color: white;
+  position: relative;
+  width: 100%;
+}
+
+.custom-select {
+  display: inline-block;
+  cursor: pointer;
   border-radius: none;
   border: 2px solid var(--text);
-  font-size: large;
   width: 100%;
   height: 3.5rem;
-  padding: 0 3rem;
   box-sizing: border-box;
   box-shadow: 3px 3px 0 1px rgba(24, 3, 37);
   outline: none;
@@ -22,6 +28,52 @@
   background-position-x: 0.5rem;
   color: #757b8b;
   font-family: "IBM Plex Mono", monospace;
+}
+
+.custom-select span {
+  display: flex;
+  height: 100%;
+  margin-left: 3rem;
+  align-items: center;
+}
+
+.custom-select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.custom-select-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  display: none;
+  border: 2px solid var(--text);
+  border-top: none;
+  box-shadow: 3px 3px 0 1px rgba(24, 3, 37);
+}
+
+.custom-select.open .custom-select-options {
+  display: block;
+}
+
+.custom-select-options li {
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-select-options li:hover {
+  font-weight: 600;
+  background-color: var(--secondary);
+  color: var(--primary);
 }
 
 @media (max-width: 900px) {
