@@ -59,7 +59,7 @@
 .Hello::after {
   content: "";
   position: absolute;
-  top: 100%;
+  top: 101%;
   right: 0;
   border-left: 70px solid var(--text);
   border-bottom: 35px solid transparent;
@@ -143,7 +143,6 @@
     bottom: auto;
     top: 2rem;
     right: 2rem;
-    font-size: 4rem;
     right: 25%;
     transform: scale(0.7);
   }

@@ -21,6 +21,7 @@ function LandingPage() {
     "Ahoj",
     "नमस्ते",
     "你好",
+    "Hello",
   ];
   const intervalTime = 2000;
 
