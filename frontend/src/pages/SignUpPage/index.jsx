@@ -134,7 +134,7 @@ function SignUpPage() {
   return (
     <main className="signin-page">
       <div className="basic-container">
-        <img id="signup-image" src="/img/cosplay.avif" alt="" />
+        <img id="signup-image" src="/img/show.avif" alt="" />
         <div className="signin-section" id="signup-section">
           <div className="signup-header">
             <Link to="/signup" className="link-sign" id="link-signup">
