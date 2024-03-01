@@ -4,9 +4,11 @@
   <img src="https://github.com/AnaBelenBernardez/MeeMee/raw/main/assets/hello.gif" alt="Hello">
 </div>
 
-
-
 MeeMee it's a platform to connect people with similar interests. You can join, search for events, or create your own. Perfect for meeting people with similar tastes, whether in art, video games, or sports. Have fun connecting with others!
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/AnaBelenBernardez/MeeMee/main/assets/MeeMee.png" alt="MeeMee-MockUp">
+</div>
 
 ## 📋 Description
 
@@ -26,10 +28,8 @@ MeeMee it's a platform to connect people with similar interests. You can join, s
   - Sign up for or withdraw from an event.
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/AnaBelenBernardez/MeeMee/main/assets/MeeMee.png" alt="MeeMee-MockUp">
+  <img src="https://raw.githubusercontent.com/AnaBelenBernardez/MeeMee/main/assets/MeeMeeTranslate.gif" alt="MeeMee-Translate">
 </div>
-
-
 
 ## ⚙ Initialization
 
