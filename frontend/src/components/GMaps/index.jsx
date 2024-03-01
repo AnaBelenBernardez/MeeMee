@@ -1,13 +1,23 @@
 import React, { useEffect, useState } from "react";
 
 function GMaps({ onLocationSelect }) {
-  const [marcador, setMarcador] = useState(null);
+  const [marker, setMarker] = useState(null);
 
   useEffect(() => {
-    initMap();
-
-    return () => {};
+    if (window.google && window.google.maps) {
+      initMap();
+    } else {
+      loadGoogleMapsScript();
+    }
   }, []);
+
+  function loadGoogleMapsScript() {
+    const script = document.createElement("script");
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyAMlgox7U_-XmP0Lp2rmAzGXHIujpH1beo&callback=initMap`;
+    script.defer = true;
+    script.async = true;
+    document.head.appendChild(script);
+  }
 
   function initMap() {
     const map = new window.google.maps.Map(document.getElementById("map"), {
@@ -23,14 +33,14 @@ function GMaps({ onLocationSelect }) {
 
       obtenerCiudadYDireccion(latlng);
 
-      if (marcador) {
-        marcador.setPosition(latlng);
+      if (marker) {
+        marker.setPosition(latlng);
       } else {
         const nuevoMarcador = new window.google.maps.Marker({
           position: latlng,
           map: map,
         });
-        setMarcador(nuevoMarcador);
+        setMarker(nuevoMarcador);
       }
     });
 
