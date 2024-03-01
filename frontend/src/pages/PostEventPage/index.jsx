@@ -368,7 +368,7 @@ function PostEventPage() {
                   </label>
                 </div>
 
-                <div className="custom-select input-container">
+                <div>
                   <select
                     className="select-box"
                     id="theme"
