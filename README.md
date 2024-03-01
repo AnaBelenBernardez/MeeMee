@@ -25,6 +25,12 @@ MeeMee it's a platform to connect people with similar interests. You can join, s
   - Create a new event.
   - Sign up for or withdraw from an event.
 
+<div align="center">
+  <img src="https://raw.githubusercontent.com/AnaBelenBernardez/MeeMee/main/assets/MeeMee.png" alt="MeeMee-MockUp">
+</div>
+
+
+
 ## ⚙ Initialization
 
 To initialize the app, follow the steps outlined in the ReadMe in the Backend and Frontend folders.
