@@ -16,18 +16,10 @@
   transition: background-color 0.3s ease;
 }
 
-.confirmation-content {
-  font-size: 3rem;
-}
-
 @media (max-width: 900px) {
   .confirmation-box {
     max-width: 90%;
     padding: 10px;
     max-height: 90vh;
-  }
-
-  .confirmation-content {
-    font-size: 1.5rem;
   }
 }

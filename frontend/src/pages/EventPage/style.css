@@ -162,6 +162,10 @@
     display: none;
   }
 
+  #event-going.clicked-going {
+    transform: scale(0.7);
+  }
+
   #goback-button {
     display: none;
   }
