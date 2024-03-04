@@ -14,6 +14,30 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
   const [error, setError] = useState(null);
   const [isAttendee, setIsAttendee] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
+  const [clickedYes, setClickedYes] = useState(false);
+  const [clickedNo, setClickedNo] = useState(false);
+
+  const handleYesMouseDown = () => {
+    setClickedYes(true);
+    setTimeout(() => {
+      setClickedYes(false);
+    }, 100);
+  };
+
+  const handleYesMouseUp = () => {
+    setClickedYes(false);
+  };
+
+  const handleNoMouseDown = () => {
+    setClickedNo(true);
+    setTimeout(() => {
+      setClickedNo(false);
+    }, 100);
+  };
+
+  const handleNoMouseUp = () => {
+    setClickedNo(false);
+  };
 
   useEffect(() => {
     const checkAttendeeStatus = async () => {
@@ -85,7 +109,7 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
 
   return (
     <div className="attendee-button">
-      {userId === null ? (
+      {/* {userId === null ? (
         <p className="sign-in-message">{t("translation.signInFirst")}</p>
       ) : (
         <button
@@ -103,7 +127,7 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
             ? t("translation.IchangedMyMind")
             : t("translation.signMeUp")}
         </button>
-      )}
+      )} */}
 
       {showConfirmation && (
         <>
@@ -111,10 +135,22 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
           <div className="confirmation-box">
             <p className="no-attendees">{t("translation.changedMind")}</p>
             <div className="button-container">
-              <button id="delete-yes" onClick={handleDeleteMeetup}>
+              <button
+                id="delete-yes"
+                onMouseDown={handleYesMouseDown}
+                onMouseUp={handleYesMouseUp}
+                className={clickedYes ? "clicked-animation" : ""}
+                onClick={handleDeleteMeetup}
+              >
                 {t("translation.yes")}
               </button>
-              <button id="delete-no" onClick={handleCancelDelete}>
+              <button
+                id="delete-no"
+                onMouseDown={handleNoMouseDown}
+                onMouseUp={handleNoMouseUp}
+                className={clickedNo ? "clicked-animation" : ""}
+                onClick={handleCancelDelete}
+              >
                 {t("translation.cancel")}
               </button>
             </div>
