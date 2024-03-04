@@ -133,7 +133,9 @@
     "bioError": "Por favor, insira uma biografia",
     "registrationConflictError": "Nome de usuário ou e-mail já estão em uso.",
     "registrationError": "Erro durante o registro. Por favor, tente novamente mais tarde.",
-    "exploreCategories": "Explorar categorias"
+    "exploreCategories": "Explorar categorias",
+    "IchangedMyMind": "Mudei de ideia",
+    "signMeUp": "Inscreva-me!"
   },
 
   "landingPage": {

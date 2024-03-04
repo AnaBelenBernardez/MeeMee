@@ -134,7 +134,9 @@
     "bioError": "Please enter a bio",
     "registrationConflictError": "Username or email is already in use.",
     "registrationError": "Error during registration. Please try again later.",
-    "exploreCategories": "Explore Categories"
+    "exploreCategories": "Explore Categories",
+    "IchangedMyMind": "I changed my mind",
+    "signMeUp": "Sign me up!"
   },
 
   "landingPage": {

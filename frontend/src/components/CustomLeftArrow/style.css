@@ -12,6 +12,11 @@
   cursor: pointer;
 }
 
+.arrow-button-green.clicked {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
 .black-triangle-inside {
   width: 0;
   height: 0;

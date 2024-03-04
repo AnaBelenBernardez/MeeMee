@@ -99,7 +99,9 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
             alt="signme icon"
             id="icon-signme"
           />
-          {isAttendee ? "I changed my mind" : "Sign me up!"}
+          {isAttendee
+            ? t("translation.IchangedMyMind")
+            : t("translation.signMeUp")}
         </button>
       )}
 
@@ -137,9 +139,9 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
               {t("translation.signInFirst")}
             </NavLink>
           ) : isAttendee ? (
-            "I changed my mind"
+            t("translation.IchangedMyMind")
           ) : (
-            "Sign me up!"
+            t("translation.signMeUp")
           )}
         </button>
       )}

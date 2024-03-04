@@ -43,3 +43,8 @@
   top: -16px;
   left: -32.3px;
 }
+
+.arrow-button.clicked {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}

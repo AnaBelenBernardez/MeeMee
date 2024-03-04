@@ -24,3 +24,9 @@
 .language:hover {
   color: var(--primary);
 }
+
+@media (min-width: 700px) {
+  .languageSelector button {
+    white-space: nowrap;
+  }
+}
