@@ -80,6 +80,7 @@ const DeleteMeetup = ({ meetupId, isOrganizer, onDeleteMeetup }) => {
               <div className="overlay"></div>
               <div className="confirmation-box">
                 <p className="no-attendees">{t("translation.deleteSure")}</p>
+
                 <div className="button-container">
                   <button
                     id="delete-yes"

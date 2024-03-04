@@ -63,3 +63,11 @@
   transform: translate(-3px, 3px);
   box-shadow: none;
 }
+
+@media (max-width: 700px) {
+  .confirmation-box {
+    position: relative; /* Cambia a posición relativa */
+    z-index: 999999;
+    transition: background-color 0.3s ease;
+  }
+}

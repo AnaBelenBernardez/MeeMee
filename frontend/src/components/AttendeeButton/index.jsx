@@ -132,7 +132,7 @@ const AttendeeButton = ({ meetupId, userId, token, updateAttendees }) => {
       {showConfirmation && (
         <>
           <div className="overlay"></div>
-          <div className="confirmation-box">
+          <div id="confirmation-box-attend">
             <p className="no-attendees">{t("translation.changedMind")}</p>
             <div className="button-container">
               <button

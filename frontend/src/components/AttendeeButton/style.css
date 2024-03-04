@@ -59,8 +59,40 @@
   background-color: var(--yellow-ish);
 }
 
+#confirmation-box-attend {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 40rem;
+  overflow: auto;
+  background-color: var(--primary);
+  transform: translate(-50%, -50%);
+  border-radius: none;
+  outline: none;
+  border: 2px solid var(--text);
+  box-shadow: 3px 3px 0 1px rgba(24, 3, 37);
+  padding: 20px;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 #delete-yes.clicked-animation,
 #delete-no.clicked-animation {
   transform: translate(-3px, 3px);
   box-shadow: none;
+}
+
+@media (max-width: 700px) {
+  #delete-yes,
+  #delete-no,
+  .no-attendees {
+    transform: scale(0.8);
+  }
+  #confirmation-box-attend {
+    /* transform: scale(70%); */
+  }
 }
