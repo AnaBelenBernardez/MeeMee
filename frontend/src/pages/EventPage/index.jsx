@@ -28,6 +28,18 @@ function EventPage() {
   const [updatingAttendees, setUpdatingAttendees] = useState(false);
   const [isAttendeesListOpen, setIsAttendeesListOpen] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState(null);
+  const [clicked, setClicked] = useState(false);
+
+  const handleMouseDown = () => {
+    setClicked(true);
+    setTimeout(() => {
+      setClicked(false);
+    }, 5000);
+  };
+
+  const handleMouseUp = () => {
+    setClicked(false);
+  };
 
   const handleLocationSelect = (ciudad, direccion) => {
     setSelectedLocation({ ciudad, direccion });
@@ -254,9 +266,11 @@ function EventPage() {
                 eventData.organizer_id === userId
                   ? "delete-meetup"
                   : "attendee-button"
-              }`}
+              } ${clicked ? "clicked-going" : ""}`}
               id="event-going"
               onClick={() => setIsAttendeesListOpen(true)}
+              onMouseDown={handleMouseDown}
+              onMouseUp={handleMouseUp}
             >
               <img
                 className="event-icon"

@@ -12,6 +12,8 @@ const DeleteMeetup = ({ meetupId, isOrganizer, onDeleteMeetup }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [confirmDelete, setConfirmDelete] = useState(false);
+  const [clickedYes, setClickedYes] = useState(false);
+  const [clickedNo, setClickedNo] = useState(false);
 
   const handleDeleteMeetup = async () => {
     try {
@@ -31,6 +33,28 @@ const DeleteMeetup = ({ meetupId, isOrganizer, onDeleteMeetup }) => {
 
   const handleCancelDelete = () => {
     setConfirmDelete(false);
+  };
+
+  const handleYesMouseDown = () => {
+    setClickedYes(true);
+    setTimeout(() => {
+      setClickedYes(false);
+    }, 100);
+  };
+
+  const handleYesMouseUp = () => {
+    setClickedYes(false);
+  };
+
+  const handleNoMouseDown = () => {
+    setClickedNo(true);
+    setTimeout(() => {
+      setClickedNo(false);
+    }, 100);
+  };
+
+  const handleNoMouseUp = () => {
+    setClickedNo(false);
   };
 
   return (
@@ -57,10 +81,22 @@ const DeleteMeetup = ({ meetupId, isOrganizer, onDeleteMeetup }) => {
               <div className="confirmation-box">
                 <p className="no-attendees">{t("translation.deleteSure")}</p>
                 <div className="button-container">
-                  <button id="delete-yes" onClick={handleDeleteMeetup}>
+                  <button
+                    id="delete-yes"
+                    onMouseDown={handleYesMouseDown}
+                    onMouseUp={handleYesMouseUp}
+                    className={clickedYes ? "clicked-animation" : ""}
+                    onClick={handleDeleteMeetup}
+                  >
                     {t("translation.yes")}
                   </button>
-                  <button id="delete-no" onClick={handleCancelDelete}>
+                  <button
+                    id="delete-no"
+                    onMouseDown={handleNoMouseDown}
+                    onMouseUp={handleNoMouseUp}
+                    className={clickedNo ? "clicked-animation" : ""}
+                    onClick={handleCancelDelete}
+                  >
                     {t("translation.cancel")}
                   </button>
                 </div>

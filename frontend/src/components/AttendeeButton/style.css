@@ -58,3 +58,9 @@
 #signin-first:hover {
   background-color: var(--yellow-ish);
 }
+
+#delete-yes.clicked-animation,
+#delete-no.clicked-animation {
+  transform: translate(-3px, 3px);
+  box-shadow: none;
+}

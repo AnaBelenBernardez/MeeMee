@@ -370,7 +370,7 @@ async function createMeetupsTable(connection) {
       picture:
         'https://media.istockphoto.com/id/610966282/es/foto/chica-mirando-en-el-caj%C3%B3n-del-escritorio.jpg?s=612x612&w=0&k=20&c=c_HCvHuGG2sthWBixm_E8ddDOrh-QalDgLT-Rv6kXTQ=',
       theme: 'Online Events',
-      location: 'Tokyo',
+      location: 'Tokio',
       address: 'Virtual Event',
       date: '2024-04-10',
       time: '18:30:00',
