@@ -9,38 +9,40 @@
 }
 
 .landing-top {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  flex-grow: 0.6;
-  align-content: space-evenly;
-  border-bottom: 2px solid var(--text);
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem;
   background-image: linear-gradient(#f3f27b 10px, transparent 10px),
     linear-gradient(to right, #f3f27b 10px, transparent 10px);
   background-size: 20px 20px;
   background-color: #acf062;
+  border-bottom: 2px solid var(--text);
   background-position: 15px 11px;
-}
-
-.first-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .header-text {
   font-family: IBM Plex Mono;
   font-size: clamp(2vmax, 2vmax, 4rem);
   font-weight: 600;
-  text-align: center;
   color: var(--text);
-  width: 50%;
+  width: 60%;
   padding: 2rem;
-  margin-left: 6rem;
+  text-align: center;
+}
+
+#hello-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  width: 85%;
+  margin-bottom: 2rem;
 }
 
 .Hello {
   background-color: var(--lavender-ish);
-  position: absolute;
   width: fit-content;
   min-width: 15rem;
   height: 7rem;
@@ -52,8 +54,6 @@
   font-weight: 500;
   padding: 0 15px 0 15px;
   color: var(--text);
-  right: 20%;
-  text-align: center;
 }
 
 .Hello::after {
@@ -64,15 +64,6 @@
   border-left: 70px solid var(--text);
   border-bottom: 35px solid transparent;
   transform: rotate(0deg);
-}
-
-.second-row {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  gap: 2rem;
 }
 
 .landing-bottom {
@@ -103,37 +94,30 @@
   border-left: 20px solid var(--text);
   border-bottom: 10px solid transparent;
 }
-/* 
-@media (max-width: 900px) {
-  .LandingPage {
-    display: flex;
+
+@media (max-width: 750px) {
+  .landing-top {
     flex-direction: column;
-  }
-
-  .landing-top,
-  .landing-bottom {
-    flex: auto;
-    height: 40vh;
-  }
-
-  .landing-bottom {
-    background-size: cover;
-  }
-
-  .Hello {
-    margin-top: 10%;
-    bottom: auto;
-    top: 2rem;
-    right: 2rem;
-    right: 25%;
-    transform: scale(0.7);
+    align-items: flex-start;
+    padding: 1rem;
   }
 
   .header-text {
-    width: 90%;
-    margin: 1rem auto;
-    margin-bottom: -20%;
-    text-align: center;
-    font-size: 20px;
+    width: 100%;
+    margin-bottom: 1rem;
   }
-} */
+
+  #hello-container {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2rem;
+    width: 100%;
+    transform: scale(0.7);
+  }
+
+  .Hello::after {
+    display: none;
+  }
+}
