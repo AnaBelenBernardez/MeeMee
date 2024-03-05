@@ -1,3 +1,8 @@
+.next-events {
+  max-width: 100%;
+  height: 100%;
+}
+
 .green-banner {
   background-color: var(--secondary);
   color: var(--text);
@@ -13,78 +18,78 @@
   box-sizing: border-box;
   box-shadow: 3px 3px 0 1px rgba(24, 3, 37);
   margin-left: -3px;
-  text-align: right;
-}
-
-.green-banner p {
-  margin-left: 2.5rem;
 }
 
 #nextevents-banner {
-  margin-top: 1.5rem;
+  position: relative;
+  top: 1rem;
+}
+
+#nextevents-banner p {
+  text-align: right;
+  margin-left: auto;
 }
 
 .carousel-controls {
+  position: relative;
   display: flex;
-  align-items: center;
-  margin-top: -3rem;
-  margin-bottom: 5rem;
+  justify-content: center;
+  top: -2rem;
+}
+
+#buttonback,
+#buttonnext {
+  position: absolute;
 }
 
 #buttonback {
-  border: none;
-  margin-left: 40%;
+  left: calc(50% - 5rem);
 }
 
 #buttonnext {
-  border: none;
-  margin-left: 15rem;
+  left: calc(50% + 5rem);
 }
 
-.slider {
-  margin: 5rem;
-  margin-bottom: 0rem;
+#carousel {
+  width: 100%;
+  height: auto;
 }
 
-@media (max-width: 1500px) {
-  .slider {
-    margin: 3rem;
-    transform: scale(0.8);
-  }
+.slider-container {
+  width: auto;
+  margin-top: 2rem;
+  margin-left: 3rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 750px) {
   #nextevents-banner {
+    font-size: 0.8rem;
     transform: scale(0.8);
-    margin-top: 0.8rem;
     margin-left: -2rem;
   }
+
   .carousel-controls {
-    transform: scale(0.7);
-    margin-top: -2.5rem;
-    margin-bottom: 4rem;
+    transform: scale(0.8);
+    margin-top: 0.3rem;
   }
 
   #buttonback {
-    border: none;
-    margin-left: 40%;
+    left: calc(50% - 3rem);
   }
 
   #buttonnext {
-    border: none;
-    margin-left: 5rem;
-  }
-
-  .slider {
-    margin: 5rem;
-    margin-bottom: 0rem;
+    left: calc(50% + 3rem);
   }
 }
-@media (max-width: 1500px) {
-  .slider {
-    margin: -7.6rem;
-    margin-top: -6.8rem;
 
+@media (max-width: 600px) {
+  .carousel-controls {
     transform: scale(0.5);
+    margin-top: 0.8rem;
+  }
+
+  .slider-container {
+    width: auto;
+    margin-top: -3rem;
   }
 }
