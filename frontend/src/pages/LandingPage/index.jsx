@@ -39,8 +39,8 @@ function LandingPage() {
   return (
     <main className="LandingPage">
       <section className="landing-top">
-        <div className="first-row">
-          <h1 className="header-text">{t("landingPage.joinCommunity")}</h1>
+        <h1 className="header-text">{t("landingPage.joinCommunity")}</h1>
+        <div id="hello-container">
           <div className="Hello">{helloText}</div>
         </div>
       </section>
