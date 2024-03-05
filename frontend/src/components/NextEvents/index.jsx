@@ -24,7 +24,7 @@ function NextEvents() {
   const [meetups, setMeetups] = useState([]);
   const [loading, setLoading] = useState(true);
   const [visibleSlides, setVisibleSlides] = useState(4);
-
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   useEffect(() => {
     const fetchMeetups = async () => {
       try {
@@ -38,28 +38,27 @@ function NextEvents() {
     };
 
     fetchMeetups();
+
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize); //
+
+    return () => {
+      window.removeEventListener("resize", handleResize); //
+    };
   }, []);
 
   useEffect(() => {
-    const handleResize = () => {
-      const screenWidth = window.innerWidth;
-      if (screenWidth > 1500) {
-        setVisibleSlides(4);
-      } else if (screenWidth <= 1500 && screenWidth > 1200) {
-        setVisibleSlides(3);
-      } else {
-        setVisibleSlides(2);
-      }
-    };
-
-    handleResize();
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+    if (screenWidth > 1500) {
+      setVisibleSlides(4);
+    } else if (screenWidth <= 1500 && screenWidth > 950) {
+      setVisibleSlides(3);
+    } else {
+      setVisibleSlides(2);
+    }
+  }, [screenWidth]);
 
   const now = new Date();
   const filteredAndSortedMeetups = meetups
@@ -85,6 +84,7 @@ function NextEvents() {
             infinite="true"
             interval={5000}
             isPlaying={true}
+            id="carousel"
           >
             <div className="carousel-controls">
               <ButtonBack id="buttonback">
@@ -94,13 +94,27 @@ function NextEvents() {
                 <CustomRightArrow />
               </ButtonNext>
             </div>
-            <Slider className="slider">
-              {firstTenMeetups.map((meetup) => (
-                <Slide key={meetup.id}>
-                  <EventCard meetup={meetup} />
-                </Slide>
-              ))}
-            </Slider>
+            <div className="slider-container">
+              <Slider className="slider">
+                {firstTenMeetups.map((meetup) => (
+                  <Slide
+                    key={meetup.id}
+                    style={{
+                      paddingBottom: "25rem",
+                      transform:
+                        screenWidth <= 600
+                          ? "scale(0.5)"
+                          : screenWidth <= 700
+                          ? "scale(0.8)"
+                          : "scale(0.9)",
+                      right: screenWidth <= 600 ? "2.3rem" : "0",
+                    }}
+                  >
+                    <EventCard meetup={meetup} />
+                  </Slide>
+                ))}
+              </Slider>
+            </div>
           </CarouselProvider>
         </div>
       ) : (

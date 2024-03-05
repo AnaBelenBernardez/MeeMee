@@ -43,12 +43,7 @@ function LandingPage() {
           <h1 className="header-text">{t("landingPage.joinCommunity")}</h1>
           <div className="Hello">{helloText}</div>
         </div>
-        {/* <div className="second-row">
-          <SearchBar placeholderText={t("landingPage.searchPlaceholder")} />
-          <button className="landing-signup">{t("landingPage.signUp")}</button>
-        </div> */}
       </section>
-
       <section className="landing-bottom">
         <div className="triangle-left"></div>
         <div className="triangle-right"></div>
