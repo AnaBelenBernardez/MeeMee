@@ -10,6 +10,19 @@ MeeMee it's a platform to connect people with similar interests. You can join, s
   <img src="https://raw.githubusercontent.com/AnaBelenBernardez/MeeMee/main/assets/MeeMee.png" alt="MeeMee-MockUp">
 </div>
 
+## 👩‍💻 Authors
+
+- [@AnaBelenBernardez](https://github.com/AnaBelenBernardez): Full Stack Developer with a focus on FrontEnd.
+- [@AyozeJesus](https://github.com/AyozeJesus): Full Stack Developer with a focus on BackEnd.
+
+- Design by [@Edu0ff](https://github.com/Edu0ff)
+
+## 💻 Tech Stack
+
+<p align="center">
+    <img src="https://skillicons.dev/icons?i=figma,ps,js,html,css,mysql,nodejs,postman,react,github,git,vscode&theme=light" />
+</p>
+
 ## 📋 Description
 
 - Anonymous users can:
@@ -34,16 +47,3 @@ MeeMee it's a platform to connect people with similar interests. You can join, s
 ## ⚙ Initialization
 
 To initialize the app, follow the steps outlined in the ReadMe in the Backend and Frontend folders.
-
-## 👩‍💻 Authors
-
-- [@AnaBelenBernardez](https://github.com/AnaBelenBernardez)
-- [@AyozeJesus](https://github.com/AyozeJesus)
-
-- Design by [@Edu0ff](https://github.com/Edu0ff)
-
-## 💻 Tech Stack
-
-<p align="center">
-    <img src="https://skillicons.dev/icons?i=figma,ps,js,html,css,mysql,nodejs,postman,react,github,git,vscode&theme=light" />
-</p>
